@@ -1,28 +1,36 @@
 "use client";
 
 import { useState } from 'react';
-import { Stethoscope, Code, Wrench, Briefcase, UserCheck, Cpu, Languages, SprayCan, LandPlot, Shield, Search, ToyBrick, Palette, Sparkles, Phone } from 'lucide-react';
+import { Stethoscope, Code, Wrench, Briefcase, UserCheck, Cpu, Languages, SprayCan, LandPlot, Shield, Search, ToyBrick, Palette, Sparkles, Phone, ListFilter } from 'lucide-react';
 import { ALL_COURSES } from '@/lib/data';
 import { CourseCard } from '@/components/course-card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const categories = [
-  { name: 'الكل', slug: 'all', icon: <Code className="h-5 w-5" /> },
-  { name: 'الطب', slug: 'الطب', icon: <Stethoscope className="h-5 w-5" /> },
-  { name: 'البرمجة', slug: 'البرمجة', icon: <Code className="h-5 w-5" /> },
-  { name: 'الهندسة', slug: 'الهندسة', icon: <Wrench className="h-5 w-5" /> },
-  { name: 'التسويق', slug: 'التسويق', icon: <LandPlot className="h-5 w-5" /> },
-  { name: 'التصميم والرسم', slug: 'التصميم والرسم', icon: <Palette className="h-5 w-5" /> },
-  { name: 'الأطفال', slug: 'الأطفال', icon: <ToyBrick className="h-5 w-5" /> },
-  { name: 'دورات نسائية', slug: 'دورات نسائية', icon: <SprayCan className="h-5 w-5" /> },
-  { name: 'صيانة الهواتف', slug: 'صيانة الهواتف', icon: <Phone className="h-5 w-5" /> },
-  { name: 'خدمة العملاء', slug: 'خدمة العملاء', icon: <UserCheck className="h-5 w-5" /> },
-  { name: 'السكرتارية', slug: 'السكرتارية', icon: <Briefcase className="h-5 w-5" /> },
-  { name: 'الأمن السيبراني', slug: 'الأمن السيبراني', icon: <Shield className="h-5 w-5" /> },
-  { name: 'التفكير الإبداعي', slug: 'التفكير الإبداعي', icon: <Sparkles className="h-5 w-5" /> },
-  { name: 'الحاسوب', slug: 'الحاسوب', icon: <Cpu className="h-5 w-5" /> },
-  { name: 'اللغات', slug: 'اللغات', icon: <Languages className="h-5 w-5" /> },
+  { name: 'الكل', slug: 'all' },
+  { name: 'الطب', slug: 'الطب' },
+  { name: 'البرمجة', slug: 'البرمجة' },
+  { name: 'الهندسة', slug: 'الهندسة' },
+  { name: 'التسويق', slug: 'التسويق' },
+  { name: 'التصميم والرسم', slug: 'التصميم والرسم' },
+  { name: 'الأطفال', slug: 'الأطفال' },
+  { name: 'دورات نسائية', slug: 'دورات نسائية' },
+  { name: 'صيانة الهواتف', slug: 'صيانة الهواتف' },
+  { name: 'خدمة العملاء', slug: 'خدمة العملاء' },
+  { name: 'السكرتارية', slug: 'السكرتارية' },
+  { name: 'الأمن السيبراني', slug: 'الأمن السيبراني' },
+  { name: 'التفكير الإبداعي', slug: 'التفكير الإبداعي' },
+  { name: 'الحاسوب', slug: 'الحاسوب' },
+  { name: 'اللغات', slug: 'اللغات' },
+  { name: 'إدارة', slug: 'إدارة' },
 ];
 
 export default function CoursesPage() {
@@ -44,8 +52,8 @@ export default function CoursesPage() {
         </p>
       </section>
 
-      <div className="flex flex-col md:flex-row gap-4 mb-8">
-        <div className="relative flex-grow">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <div className="relative">
           <Input 
             type="text" 
             placeholder="ابحث عن دورة أو مدرب..." 
@@ -55,22 +63,23 @@ export default function CoursesPage() {
           />
           <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
         </div>
+        <div>
+          <Select onValueChange={setActiveCategory} defaultValue={activeCategory}>
+            <SelectTrigger className="w-full">
+                <ListFilter className="h-5 w-5 text-muted-foreground" />
+                <SelectValue placeholder="تصنيف حسب المجال" />
+            </SelectTrigger>
+            <SelectContent>
+              {categories.map((category) => (
+                <SelectItem key={category.slug} value={category.slug}>
+                  {category.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
       </div>
       
-      <div className="mb-12 flex flex-wrap justify-center gap-2">
-        {categories.map(category => (
-          <Button
-            key={category.slug}
-            variant={activeCategory === category.slug ? 'default' : 'outline'}
-            onClick={() => setActiveCategory(category.slug)}
-            className="flex items-center gap-2"
-          >
-            {category.icon}
-            {category.name}
-          </Button>
-        ))}
-      </div>
-
       {filteredCourses.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredCourses.map(course => (
