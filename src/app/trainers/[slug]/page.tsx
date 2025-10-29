@@ -121,7 +121,7 @@ export default function TrainerProfilePage({ params }: { params: { slug: string 
                 {/* Stats */}
                 <Card>
                   <CardHeader><CardTitle>إحصائيات</CardTitle></CardHeader>
-                  <CardContent className="space-y-4">
+                  <CardContent className="space-y-4 pt-6">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3"><BookOpen className="text-primary"/><span>عدد الدورات</span></div>
                         <span className="font-bold text-lg">{formatNumber(trainer.coursesCount)}+</span>
@@ -136,7 +136,7 @@ export default function TrainerProfilePage({ params }: { params: { slug: string 
                 {/* Qualifications */}
                 <Card>
                   <CardHeader><CardTitle>المؤهلات الأكاديمية</CardTitle></CardHeader>
-                  <CardContent>
+                  <CardContent className="pt-6">
                     <ul className="space-y-3">
                       {trainer.qualifications.map((q, i) => (
                         <li key={i} className="flex items-start">
@@ -151,7 +151,7 @@ export default function TrainerProfilePage({ params }: { params: { slug: string 
                 {/* Accreditations */}
                 <Card>
                   <CardHeader><CardTitle>الشهادات المعتمدة</CardTitle></CardHeader>
-                  <CardContent>
+                  <CardContent className="pt-6">
                       <div className="flex flex-wrap gap-2">
                         {trainer.accreditations.map((a, i) => <Badge key={i} variant="secondary">{a}</Badge>)}
                       </div>

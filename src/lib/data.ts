@@ -108,7 +108,7 @@ export const ALL_TRAINERS: Trainer[] = [
     accreditations: ['مدرب معتمد من Microsoft', 'مدرب إسعافات أولية معتمد'],
     coursesCount: 25,
     studentsCount: 1500,
-    socials: { linkedin: '#', twitter: '#', facebook: '#', instagram: '#' },
+    socials: { linkedin: 'https://www.linkedin.com/in/ali-hassan', twitter: 'https://twitter.com/ali_hassan', facebook: 'https://www.facebook.com/ali.hassan', instagram: 'https://www.instagram.com/ali.hassan' },
     reviews: [
       { id: 'tr1', studentName: 'أحمد ياسين', rating: 5, comment: 'مدرب متمكن وشرحه واضح جداً. استفدت منه الكثير.', imageId: 'testimonial-1' },
       { id: 'tr2', studentName: 'نورة سالم', rating: 4, comment: 'كاريزما عالية وقدرة على إيصال المعلومة بسهولة.', imageId: 'testimonial-2' },
@@ -127,7 +127,7 @@ export const ALL_TRAINERS: Trainer[] = [
     accreditations: ['Adobe Certified Expert (ACE)', 'عضو جمعية المترجمين'],
     coursesCount: 40,
     studentsCount: 2200,
-    socials: { linkedin: '#', website: '#', facebook: '#', instagram: '#' },
+    socials: { linkedin: 'https://linkedin.com/in/fatima-alzahraa', website: 'https://fatima-designs.com', facebook: 'https://www.facebook.com/fatima.alzahraa', instagram: 'https://www.instagram.com/fatima.alzahraa' },
     reviews: [
         { id: 'tr3', studentName: 'سارة خالد', rating: 5, comment: 'المدربة فاطمة رائعة وملهمة، تجعل التعلم ممتعًا.', imageId: 'testimonial-2' }
     ],
@@ -145,7 +145,7 @@ export const ALL_TRAINERS: Trainer[] = [
     accreditations: ['Project Management Institute (PMI)', 'LEGO® Education Academy Certified'],
     coursesCount: 30,
     studentsCount: 1800,
-    socials: { twitter: '#', website: '#', facebook: '#', instagram: '#' },
+    socials: { twitter: 'https://twitter.com/mohammed_abdullah', website: 'https://mohammed-abdullah.com', facebook: 'https://www.facebook.com/mohammed.abdullah', instagram: 'https://www.instagram.com/mohammed.abdullah' },
     reviews: [
       { id: 'tr4', studentName: 'عمر الصالح', rating: 5, comment: 'خبرة كبيرة في مجاله وقدرة على تبسيط أعقد المفاهيم. شكراً مهندس محمد.', imageId: 'testimonial-3' },
     ],
