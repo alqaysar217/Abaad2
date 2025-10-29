@@ -1,25 +1,28 @@
 "use client";
 
 import { useState } from 'react';
-import { Code, Palette, Building, Languages, Stethoscope, ToyBrick, SprayCan, LandPlot, ShieldLock, Search } from 'lucide-react';
+import { Stethoscope, Code, Wrench, Briefcase, UserCheck, Cpu, Languages, SprayCan, LandPlot, Shield, Search, ToyBrick, Palette, Sparkles, Phone } from 'lucide-react';
 import { ALL_COURSES } from '@/lib/data';
 import { CourseCard } from '@/components/course-card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { cn } from '@/lib/utils';
 
 const categories = [
   { name: 'الكل', slug: 'all', icon: <Code className="h-5 w-5" /> },
-  { name: 'برمجة', slug: 'برمجة', icon: <Code className="h-5 w-5" /> },
-  { name: 'تصميم', slug: 'تصميم', icon: <Palette className="h-5 w-5" /> },
-  { name: 'إدارة', slug: 'إدارة', icon: <Building className="h-5 w-5" /> },
-  { name: 'لغات', slug: 'لغات', icon: <Languages className="h-5 w-5" /> },
-  { name: 'طب', slug: 'طب', icon: <Stethoscope className="h-5 w-5" /> },
-  { name: 'أطفال', slug: 'أطفال', icon: <ToyBrick className="h-5 w-5" /> },
-  { name: 'نساء', slug: 'نساء', icon: <SprayCan className="h-5 w-5" /> },
-  { name: 'تسويق', slug: 'تسويق', icon: <LandPlot className="h-5 w-5" /> },
-  { name: 'هندسة', slug: 'هندسة', icon: <Code className="h-5 w-5" /> },
-  { name: 'أمن سيبراني', slug: 'أمن سيبراني', icon: <ShieldLock className="h-5 w-5" /> },
+  { name: 'الطب', slug: 'الطب', icon: <Stethoscope className="h-5 w-5" /> },
+  { name: 'البرمجة', slug: 'البرمجة', icon: <Code className="h-5 w-5" /> },
+  { name: 'الهندسة', slug: 'الهندسة', icon: <Wrench className="h-5 w-5" /> },
+  { name: 'التسويق', slug: 'التسويق', icon: <LandPlot className="h-5 w-5" /> },
+  { name: 'التصميم والرسم', slug: 'التصميم والرسم', icon: <Palette className="h-5 w-5" /> },
+  { name: 'الأطفال', slug: 'الأطفال', icon: <ToyBrick className="h-5 w-5" /> },
+  { name: 'دورات نسائية', slug: 'دورات نسائية', icon: <SprayCan className="h-5 w-5" /> },
+  { name: 'صيانة الهواتف', slug: 'صيانة الهواتف', icon: <Phone className="h-5 w-5" /> },
+  { name: 'خدمة العملاء', slug: 'خدمة العملاء', icon: <UserCheck className="h-5 w-5" /> },
+  { name: 'السكرتارية', slug: 'السكرتارية', icon: <Briefcase className="h-5 w-5" /> },
+  { name: 'الأمن السيبراني', slug: 'الأمن السيبراني', icon: <Shield className="h-5 w-5" /> },
+  { name: 'التفكير الإبداعي', slug: 'التفكير الإبداعي', icon: <Sparkles className="h-5 w-5" /> },
+  { name: 'الحاسوب', slug: 'الحاسوب', icon: <Cpu className="h-5 w-5" /> },
+  { name: 'اللغات', slug: 'اللغات', icon: <Languages className="h-5 w-5" /> },
 ];
 
 export default function CoursesPage() {

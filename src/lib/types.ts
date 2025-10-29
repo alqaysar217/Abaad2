@@ -25,6 +25,14 @@ export type Course = {
   }[];
 };
 
+export type TrainerReview = {
+  id: string;
+  studentName: string;
+  rating: number;
+  comment: string;
+  imageId: string;
+};
+
 export type Trainer = {
   id: string;
   slug: string;
@@ -40,8 +48,12 @@ export type Trainer = {
   socials: {
     linkedin?: string;
     twitter?: string;
+    facebook?: string;
+    instagram?: string;
     website?: string;
   };
+  reviews: TrainerReview[];
+  whatsapp: string;
 };
 
 export type Book = {

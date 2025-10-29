@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Star, GraduationCap, Users, Linkedin, Twitter, Globe, BookOpen, CheckCircle, MessageSquare } from 'lucide-react';
+import { Star, GraduationCap, Users, Linkedin, Twitter, Globe, BookOpen, CheckCircle, MessageSquare, Facebook, Instagram, MessageCircle as MessageCircleIcon } from 'lucide-react';
 import { ALL_TRAINERS, ALL_COURSES } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,6 +8,7 @@ import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
 import { formatNumber } from '@/lib/utils';
 import { CourseCard } from '@/components/course-card';
+import { Button } from '@/components/ui/button';
 
 export async function generateStaticParams() {
   return ALL_TRAINERS.map((trainer) => ({
@@ -53,11 +53,19 @@ export default function TrainerProfilePage({ params }: { params: { slug: string 
                 <span className="text-muted-foreground">تقييم عام</span>
               </div>
               <p className="leading-relaxed mb-6">{trainer.bio}</p>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 mb-6">
+                {trainer.socials.facebook && <a href={trainer.socials.facebook} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Facebook /></a>}
                 {trainer.socials.linkedin && <a href={trainer.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Linkedin /></a>}
+                {trainer.socials.instagram && <a href={trainer.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Instagram /></a>}
                 {trainer.socials.twitter && <a href={trainer.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Twitter /></a>}
                 {trainer.socials.website && <a href={trainer.socials.website} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Globe /></a>}
               </div>
+              <Button asChild>
+                <a href={`https://wa.me/${trainer.whatsapp}?text=${encodeURIComponent(`مرحباً ${trainer.name}، أرغب بالاستفسار عن دوراتك.`)}`} target="_blank" rel="noopener noreferrer">
+                  <MessageCircleIcon className="ml-2 h-4 w-4" />
+                  تواصل عبر واتساب
+                </a>
+              </Button>
             </div>
           </div>
         </Card>
@@ -75,6 +83,38 @@ export default function TrainerProfilePage({ params }: { params: { slug: string 
                         <p className="text-muted-foreground">لا توجد دورات حالية لهذا المدرب.</p>
                     )}
                 </div>
+
+                {/* Trainer Reviews */}
+                {trainer.reviews.length > 0 && (
+                  <div>
+                    <h2 className="text-2xl font-headline mb-4">آراء الطلاب في المدرب</h2>
+                    <div className="space-y-6">
+                      {trainer.reviews.map((review) => {
+                        const reviewImage = PlaceHolderImages.find(p => p.id === review.imageId);
+                        return (
+                          <Card key={review.id}>
+                            <CardContent className="p-6">
+                              <div className="flex items-start gap-4">
+                                {reviewImage ? <Image src={reviewImage.imageUrl} alt={review.studentName} width={48} height={48} className="rounded-full" data-ai-hint={reviewImage.imageHint} /> : <Users className="h-12 w-12 text-muted-foreground" />}
+                                <div>
+                                  <div className="flex items-center gap-4 mb-1">
+                                    <h4 className="font-bold">{review.studentName}</h4>
+                                    <div className="flex">
+                                      {[...Array(5)].map((_, i) => (
+                                        <Star key={i} className={`h-4 w-4 ${i < review.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />
+                                      ))}
+                                    </div>
+                                  </div>
+                                  <p className="text-muted-foreground italic">&ldquo;{review.comment}&rdquo;</p>
+                                </div>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        )
+                      })}
+                    </div>
+                  </div>
+                )}
             </div>
             
             <div className="lg:col-span-1 space-y-8">
@@ -95,12 +135,12 @@ export default function TrainerProfilePage({ params }: { params: { slug: string 
 
                 {/* Qualifications */}
                 <Card>
-                  <CardHeader><CardTitle>المؤهلات والشهادات</CardTitle></CardHeader>
+                  <CardHeader><CardTitle>المؤهلات الأكاديمية</CardTitle></CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
                       {trainer.qualifications.map((q, i) => (
                         <li key={i} className="flex items-start">
-                          <CheckCircle className="ml-2 mt-1 h-4 w-4 flex-shrink-0 text-green-500" />
+                          <GraduationCap className="ml-2 mt-1 h-4 w-4 flex-shrink-0 text-primary" />
                           <span>{q}</span>
                         </li>
                       ))}

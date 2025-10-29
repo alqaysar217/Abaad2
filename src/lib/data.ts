@@ -5,7 +5,7 @@ export const ALL_COURSES: Course[] = [
     id: 'c1',
     slug: 'web-development-bootcamp',
     title: 'دورة تطوير الويب الشاملة',
-    category: 'برمجة',
+    category: 'البرمجة',
     trainerName: 'علي حسن',
     trainerSlug: 'ali-hassan',
     duration: '8 أسابيع',
@@ -22,7 +22,7 @@ export const ALL_COURSES: Course[] = [
     id: 'c2',
     slug: 'graphic-design-masterclass',
     title: 'ماستر كلاس التصميم الجرافيكي',
-    category: 'تصميم',
+    category: 'التصميم والرسم',
     trainerName: 'فاطمة الزهراء',
     trainerSlug: 'fatima-alzahraa',
     duration: '6 أسابيع',
@@ -51,7 +51,7 @@ export const ALL_COURSES: Course[] = [
     id: 'c4',
     slug: 'english-for-business',
     title: 'اللغة الإنجليزية للأعمال',
-    category: 'لغات',
+    category: 'اللغات',
     trainerName: 'فاطمة الزهراء',
     trainerSlug: 'fatima-alzahraa',
     duration: '12 أسبوعًا',
@@ -66,7 +66,7 @@ export const ALL_COURSES: Course[] = [
     id: 'c5',
     slug: 'first-aid-basics',
     title: 'مبادئ الإسعافات الأولية',
-    category: 'طب',
+    category: 'الطب',
     trainerName: 'علي حسن',
     trainerSlug: 'ali-hassan',
     duration: 'أسبوع واحد',
@@ -80,7 +80,7 @@ export const ALL_COURSES: Course[] = [
     id: 'c6',
     slug: 'kids-programming-scratch',
     title: 'البرمجة للأطفال باستخدام سكراتش',
-    category: 'أطفال',
+    category: 'الأطفال',
     trainerName: 'محمد عبدالله',
     trainerSlug: 'mohammed-abdullah',
     duration: '4 أسابيع',
@@ -108,7 +108,12 @@ export const ALL_TRAINERS: Trainer[] = [
     accreditations: ['مدرب معتمد من Microsoft', 'مدرب إسعافات أولية معتمد'],
     coursesCount: 25,
     studentsCount: 1500,
-    socials: { linkedin: '#', twitter: '#' },
+    socials: { linkedin: '#', twitter: '#', facebook: '#', instagram: '#' },
+    reviews: [
+      { id: 'tr1', studentName: 'أحمد ياسين', rating: 5, comment: 'مدرب متمكن وشرحه واضح جداً. استفدت منه الكثير.', imageId: 'testimonial-1' },
+      { id: 'tr2', studentName: 'نورة سالم', rating: 4, comment: 'كاريزما عالية وقدرة على إيصال المعلومة بسهولة.', imageId: 'testimonial-2' },
+    ],
+    whatsapp: '967776999568'
   },
   {
     id: 't2',
@@ -122,7 +127,11 @@ export const ALL_TRAINERS: Trainer[] = [
     accreditations: ['Adobe Certified Expert (ACE)', 'عضو جمعية المترجمين'],
     coursesCount: 40,
     studentsCount: 2200,
-    socials: { linkedin: '#', website: '#' },
+    socials: { linkedin: '#', website: '#', facebook: '#', instagram: '#' },
+    reviews: [
+        { id: 'tr3', studentName: 'سارة خالد', rating: 5, comment: 'المدربة فاطمة رائعة وملهمة، تجعل التعلم ممتعًا.', imageId: 'testimonial-2' }
+    ],
+    whatsapp: '967776999568'
   },
   {
     id: 't3',
@@ -136,7 +145,11 @@ export const ALL_TRAINERS: Trainer[] = [
     accreditations: ['Project Management Institute (PMI)', 'LEGO® Education Academy Certified'],
     coursesCount: 30,
     studentsCount: 1800,
-    socials: { twitter: '#', website: '#' },
+    socials: { twitter: '#', website: '#', facebook: '#', instagram: '#' },
+    reviews: [
+      { id: 'tr4', studentName: 'عمر الصالح', rating: 5, comment: 'خبرة كبيرة في مجاله وقدرة على تبسيط أعقد المفاهيم. شكراً مهندس محمد.', imageId: 'testimonial-3' },
+    ],
+    whatsapp: '967776999568'
   },
 ];
 
