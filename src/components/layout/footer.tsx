@@ -45,7 +45,7 @@ export function Footer() {
             <address className="text-sm text-muted-foreground not-italic space-y-2">
               <p>اليمن - صنعاء</p>
               <p>هاتف: <a href="tel:+967776999568" className="hover:text-primary">+967 776 999 568</a></p>
-              <p>بريد: <a href="mailto:info@abaad.com" className="hover:text-primary">info@abaad.com</a></p>
+              <p>بريد: <a href="mailto:abaadinstitute24@gmail.com" className="hover:text-primary">abaadinstitute24@gmail.com</a></p>
             </address>
           </div>
           <div>
