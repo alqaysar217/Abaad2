@@ -2,23 +2,6 @@ import type { Course, Trainer, Book, Testimonial, NewsArticle } from './types';
 
 export const ALL_COURSES: Course[] = [
   {
-    id: 'c1',
-    slug: 'web-development-bootcamp',
-    title: 'دورة تطوير الويب الشاملة',
-    category: 'البرمجة',
-    trainerName: 'علي حسن',
-    trainerSlug: 'ali-hassan',
-    duration: '8 أسابيع',
-    rating: 4.9,
-    tags: ['popular', 'discount'],
-    imageId: 'course-programming',
-    description: 'تعلم تطوير وبناء مواقع وتطبيقات الويب الحديثة من الصفر إلى الاحتراف باستخدام أحدث التقنيات مثل React و Node.js.',
-    outline: ['مقدمة في HTML, CSS, JavaScript', 'أساسيات React', 'بناء واجهات تفاعلية', 'التعامل مع APIs', 'قواعد بيانات MongoDB', 'نشر المشاريع'],
-    studentReviews: [
-      { id: 'sr1', name: 'سارة خالد', quote: 'دورة ممتازة غيرت مساري المهني!', rating: 5, imageId: 'testimonial-2' },
-    ],
-  },
-  {
     id: 'c2',
     slug: 'graphic-design-masterclass',
     title: 'ماستر كلاس التصميم الجرافيكي',
