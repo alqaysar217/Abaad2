@@ -151,6 +151,26 @@ export const ALL_TRAINERS: Trainer[] = [
     ],
     whatsapp: '967776999568'
   },
+  {
+    id: 't4',
+    slug: 'mahmoud-alhasani',
+    name: 'م. محمود الحساني',
+    field: 'البرمجة',
+    rating: 4.8,
+    imageId: 'trainer-4',
+    bio: 'مدرب برمجة متخصص في نظم المعلومات، يمتلك خبرة واسعة في بناء الأنظمة والتطبيقات. حاصل على العديد من الشهادات الدولية.',
+    qualifications: ['بكالوريوس نظم معلومات'],
+    accreditations: ['شهادة مطور تطبيقات من Google', 'شهادة تحليل بيانات من IBM', 'شهادة من جامعة ستانفورد', 'والعديد من الشهادات الأخرى'],
+    coursesCount: 9,
+    studentsCount: 850,
+    socials: { 
+      linkedin: 'https://www.linkedin.com/in/mahmoud-alhasani', 
+      facebook: 'https://www.facebook.com/mahmoud.alhasani',
+      instagram: 'https://www.instagram.com/mahmoud.alhasani'
+    },
+    reviews: [],
+    whatsapp: '967776999568'
+  }
 ];
 
 export const ALL_BOOKS: Book[] = [
