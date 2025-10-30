@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, ChevronLeft, Award, Users, Star, GraduationCap, Building, Rss, MessageSquare } from 'lucide-react';
+import { ArrowLeft, BookOpen, ChevronLeft, Award, Users, Star, GraduationCap, Building, Rss, MessageSquare, ShieldCheck, Target, Eye } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { AbaadLogo } from '@/components/icons';
-import { LATEST_COURSES, TESTIMONIALS } from '@/lib/data';
+import { LATEST_COURSES, TESTIMONIALS, ALL_TRAINERS, ALL_BOOKS } from '@/lib/data';
 import { Course } from '@/lib/types';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { HeroSlider } from '@/components/hero-slider';
@@ -58,18 +58,47 @@ const CourseCard = ({ course }: { course: Course }) => {
 const homeSections = [
     { id: "hero", label: "الرئيسية" },
     { id: "about", label: "من نحن" },
+    { id: 'why-us', label: 'لماذا نحن' },
     { id: "explore", label: "استكشف" },
     { id: "courses", label: "الدورات" },
+    { id: 'trainers', label: 'المدربون' },
+    { id: 'books', label: 'الكتب' },
     { id: "testimonials", label: "آراء الطلاب" },
     { id: "cta", label: "انضم إلينا" },
 ];
 
+const features = [
+  {
+    icon: <Award className="h-8 w-8 text-primary" />,
+    title: 'مدربون معتمدون',
+    description: 'نخبة من أفضل المدربين الخبراء والمعتمدين في مجالاتهم لضمان أعلى جودة تعليمية.',
+  },
+  {
+    icon: <ShieldCheck className="h-8 w-8 text-primary" />,
+    title: 'شهادات رسمية',
+    description: 'شهادات معتمدة ومعترف بها تساعدك على تعزيز سيرتك الذاتية وفتح أبواب الفرص الوظيفية.',
+  },
+  {
+    icon: <BookOpen className="h-8 w-8 text-primary" />,
+    title: 'تدريب عملي وتطبيقي',
+    description: 'نركز على الجانب العملي والتطبيقي لضمان اكتسابك المهارات التي يتطلبها سوق العمل.',
+  },
+  {
+    icon: <Users className="h-8 w-8 text-primary" />,
+    title: 'بيئة تعليمية محفزة',
+    description: 'قاعات مجهزة بأحدث التقنيات ومجتمع طلابي داعم يساعد على تبادل المعرفة والخبرات.',
+  },
+];
+
 export default function Home() {
+  const featuredTrainers = ALL_TRAINERS.slice(0, 2);
+  const featuredBooks = ALL_BOOKS.slice(0, 2);
+
   return (
     <div className="flex flex-col">
       <SideNav sections={homeSections} />
       {/* Hero Section */}
-      <section id="hero" className="relative h-screen">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center">
         <HeroSlider />
         <div className="absolute inset-0 z-10 bg-black/50" />
         <div className="absolute inset-0 z-20 flex h-full items-center justify-center text-center text-white">
@@ -114,8 +143,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
+      <section id="why-us" className="min-h-screen bg-secondary flex items-center justify-center py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-headline text-primary">لماذا تختار معهد أبعاد؟</h2>
+            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
+              نحن نقدم أكثر من مجرد دورات تدريبية، نحن نقدم لك طريقًا للنجاح.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-background p-6 rounded-lg shadow-sm text-center transform transition-transform duration-300 hover:-translate-y-2">
+                <div className="flex justify-center mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                <p className="text-muted-foreground text-sm">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Featured Sections */}
-      <section id="explore" className="min-h-screen bg-secondary flex items-center justify-center py-16">
+      <section id="explore" className="min-h-screen bg-background flex items-center justify-center py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-headline mb-12">استكشف أقسام المعهد</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -140,7 +190,7 @@ export default function Home() {
       </section>
 
       {/* Latest Courses Section */}
-      <section id="courses" className="min-h-screen bg-background flex flex-col justify-center py-16">
+      <section id="courses" className="min-h-screen bg-secondary flex flex-col justify-center py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-headline text-primary">أحدث الدورات التدريبية</h2>
@@ -164,8 +214,100 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trainers Section */}
+      <section id="trainers" className="min-h-screen bg-background flex flex-col justify-center py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-headline text-primary">مدربونا المتميزون</h2>
+            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
+              تعرف على نخبة من الخبراء الذين يقودون رحلتك التعليمية.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {featuredTrainers.map(trainer => {
+              const trainerImage = PlaceHolderImages.find(p => p.id === trainer.imageId);
+              return (
+                <Card key={trainer.id} className="flex flex-col md:flex-row items-center gap-6 p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  {trainerImage && (
+                    <Image
+                      src={trainerImage.imageUrl}
+                      alt={trainer.name}
+                      width={150}
+                      height={150}
+                      className="rounded-full w-36 h-36 object-cover border-4 border-primary/20"
+                      data-ai-hint={trainerImage.imageHint}
+                    />
+                  )}
+                  <div className="text-center md:text-right">
+                    <h3 className="text-2xl font-headline">{trainer.name}</h3>
+                    <p className="text-primary font-semibold">{trainer.field}</p>
+                    <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{trainer.bio}</p>
+                  </div>
+                </Card>
+              );
+            })}
+          </div>
+          <div className="text-center mt-12">
+            <Button asChild size="lg">
+              <Link href="/trainers">
+                تعرف على كل المدربين
+                <ChevronLeft className="h-4 w-4 mr-1" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Books Section */}
+      <section id="books" className="min-h-screen bg-secondary flex flex-col justify-center py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-headline text-primary">من إصداراتنا</h2>
+            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
+              مكتبة غنية بالكتب والمراجع التي أعدها مدربونا الخبراء.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {featuredBooks.map(book => {
+              const bookImage = PlaceHolderImages.find(p => p.id === book.imageId);
+              return (
+                 <Card key={book.id} className="flex items-center gap-6 p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  {bookImage && (
+                    <Link href={`/books/${book.slug}`}>
+                      <Image
+                        src={bookImage.imageUrl}
+                        alt={book.title}
+                        width={120}
+                        height={160}
+                        className="rounded-md shadow-md object-cover aspect-[3/4]"
+                        data-ai-hint={bookImage.imageHint}
+                      />
+                    </Link>
+                  )}
+                  <div className="flex-1">
+                    <CardTitle className="font-headline text-xl mb-1">
+                      <Link href={`/books/${book.slug}`} className="hover:text-primary">{book.title}</Link>
+                    </CardTitle>
+                    <p className="text-sm text-muted-foreground mb-2">للمؤلف: {book.author}</p>
+                    <p className="text-sm text-muted-foreground line-clamp-2">{book.description}</p>
+                  </div>
+                 </Card>
+              );
+            })}
+          </div>
+          <div className="text-center mt-12">
+            <Button asChild size="lg" variant="outline">
+              <Link href="/books">
+                تصفح كل الكتب
+                <ChevronLeft className="h-4 w-4 mr-1" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
-      <section id="testimonials" className="min-h-screen bg-secondary flex flex-col justify-center py-16">
+      <section id="testimonials" className="min-h-screen bg-background flex flex-col justify-center py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-headline text-primary">آراء طلابنا</h2>
@@ -177,7 +319,7 @@ export default function Home() {
             {TESTIMONIALS.map(testimonial => {
                 const testimonialImage = PlaceHolderImages.find(p => p.id === testimonial.imageId);
                 return(
-              <Card key={testimonial.id} className="bg-background flex flex-col">
+              <Card key={testimonial.id} className="bg-secondary flex flex-col">
                 <CardContent className="pt-6 flex-grow">
                     <div className="flex items-start gap-4">
                         {testimonialImage && <Image src={testimonialImage.imageUrl} alt={testimonial.name} width={80} height={80} className="rounded-full border-4 border-accent" data-ai-hint={testimonialImage.imageHint} />}
