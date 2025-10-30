@@ -29,23 +29,6 @@ export default function BookDetailsPage({ params }: { params: { slug: string } }
       <div className="bg-secondary">
         <div className="container mx-auto px-4 py-12">
           <div className="grid lg:grid-cols-3 gap-8 items-center">
-            <div className="lg:col-span-2">
-              <h1 className="text-3xl md:text-4xl font-headline text-primary mb-4">{book.title}</h1>
-              <p className="text-lg text-muted-foreground mb-6">{book.description}</p>
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
-                <div className="flex items-center">
-                  <span>الكاتب: <span className="font-bold">{book.author}</span></span>
-                </div>
-                <div className="flex items-center">
-                  <FileText className="ml-2 h-4 w-4" />
-                  <span>{book.pages} صفحة</span>
-                </div>
-                <div className="flex items-center">
-                  <Star className="ml-2 h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  <span className="font-bold">{book.rating}</span>
-                </div>
-              </div>
-            </div>
             {bookImage && (
               <div className="lg:col-span-1">
                 <Image
@@ -58,6 +41,24 @@ export default function BookDetailsPage({ params }: { params: { slug: string } }
                 />
               </div>
             )}
+            <div className="lg:col-span-2">
+              <h1 className="text-3xl md:text-4xl font-headline text-primary mb-2">{book.title}</h1>
+              <p className="text-lg text-muted-foreground font-semibold mb-4">الكاتب: {book.author}</p>
+              
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm mb-6">
+                <div className="flex items-center">
+                  <FileText className="ml-2 h-4 w-4" />
+                  <span>{book.pages} صفحة</span>
+                </div>
+                <div className="flex items-center">
+                  <Star className="ml-2 h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  <span className="font-bold">{book.rating}</span>
+                </div>
+              </div>
+
+              <h2 className="text-xl font-headline mb-2">نبذة عن الكتاب</h2>
+              <p className="text-muted-foreground leading-relaxed">{book.description}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -84,7 +85,7 @@ export default function BookDetailsPage({ params }: { params: { slug: string } }
               {/* Student Reviews */}
               {book.reviews.length > 0 && (
                 <div>
-                  <h2 className="text-2xl font-headline mb-4">آراء القراء</h2>
+                  <h2 className="text-2xl font-headline mb-4">ماذا قيل عن الكتاب</h2>
                   <div className="space-y-6">
                     {book.reviews.map((review) => {
                       const reviewImage = PlaceHolderImages.find(p => p.id === review.imageId);
@@ -138,4 +139,3 @@ export default function BookDetailsPage({ params }: { params: { slug: string } }
     </div>
   );
 }
-
