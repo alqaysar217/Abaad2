@@ -75,7 +75,7 @@ export default function ContactPage() {
                <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.9868953112347!2d44.1979440751152!3d15.349694985350865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1603db45f4318373%3A0x44604a11f51f50c0!2sAbaad%20Institute!5e0!3m2!1sen!2s" 
                 width="100%" 
-                height="250" 
+                height="350" 
                 style={{ border: 0 }} 
                 allowFullScreen={true}
                 loading="lazy" 
