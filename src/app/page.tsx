@@ -72,7 +72,6 @@ const homeSections = [
     { id: "courses", label: "الدورات" },
     { id: 'trainers', label: 'المدربون' },
     { id: 'books', label: 'الكتب' },
-    { id: "testimonials", label: "آراء الطلاب" },
     { id: "cta", label: "انضم إلينا" },
 ];
 
@@ -103,7 +102,6 @@ export default function Home() {
   const latestCourses = ALL_COURSES.slice(0, 3);
   const featuredTrainers = ALL_TRAINERS.slice(0, 3);
   const featuredBooks = ALL_BOOKS.slice(0, 3);
-  const featuredTestimonials = TESTIMONIALS.slice(0, 3);
 
 
   return (
@@ -324,62 +322,6 @@ export default function Home() {
             <Button asChild size="lg" variant="outline">
               <Link href="/books">
                 تصفح كل الكتب
-                <ChevronLeft className="h-4 w-4 mr-1" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section id="testimonials" className="min-h-screen bg-background flex flex-col justify-center py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-headline text-primary">آراء طلابنا</h2>
-            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-              نفخر بثقة طلابنا وما حققوه من نجاح. استمع إلى قصصهم.
-            </p>
-          </div>
-          <Carousel
-            opts={{
-              align: "center",
-              loop: true,
-            }}
-            className="w-full max-w-6xl mx-auto"
-          >
-            <CarouselContent>
-              {featuredTestimonials.map((testimonial) => {
-                const testimonialImage = PlaceHolderImages.find(p => p.id === testimonial.imageId);
-                return (
-                  <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3 h-full">
-                    <div className="p-1 h-full">
-                      <Card className="bg-secondary flex flex-col h-full">
-                        <CardContent className="pt-6 flex-grow">
-                          <div className="flex flex-col items-center text-center gap-4">
-                            {testimonialImage && <Image src={testimonialImage.imageUrl} alt={testimonial.name} width={80} height={80} className="rounded-full border-4 border-accent" data-ai-hint={testimonialImage.imageHint} />}
-                            <div className="flex-1">
-                              <MessageSquare className="h-8 w-8 text-accent/50 mb-2 mx-auto" />
-                              <p className="text-muted-foreground italic leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
-                            </div>
-                          </div>
-                        </CardContent>
-                        <CardFooter className="flex-col items-center text-center pt-4 mt-auto">
-                          <h4 className="font-bold text-lg">{testimonial.name}</h4>
-                          <p className="text-sm text-primary">{testimonial.course}</p>
-                        </CardFooter>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                );
-              })}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-           <div className="text-center mt-12">
-            <Button asChild size="lg">
-              <Link href="/about#testimonials">
-                عرض كل الآراء
                 <ChevronLeft className="h-4 w-4 mr-1" />
               </Link>
             </Button>
