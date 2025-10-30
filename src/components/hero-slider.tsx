@@ -28,13 +28,16 @@ export function HeroSlider() {
     <Carousel
       plugins={[plugin.current]}
       className="w-full h-full"
+      onMouseEnter={plugin.current.stop}
+      onMouseLeave={plugin.current.reset}
       opts={{
         loop: true,
       }}
     >
-      <CarouselContent className="h-full">
+      <CarouselContent>
         {heroImages.map((image, index) => (
-          <CarouselItem key={image.id} className="relative h-full basis-full flex-shrink-0">
+          <CarouselItem key={image.id}>
+            <div className="w-full h-full relative">
               <Image
                 src={image.imageUrl}
                 alt={image.description || `Hero image ${index + 1}`}
@@ -44,6 +47,7 @@ export function HeroSlider() {
                 data-ai-hint={image.imageHint}
                 priority={index === 0}
               />
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
@@ -52,5 +56,4 @@ export function HeroSlider() {
     </Carousel>
   );
 }
-
     
