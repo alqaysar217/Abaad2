@@ -49,7 +49,7 @@ export default function BooksPage() {
               <Card key={book.id} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl hover:-translate-y-1.5">
                 {bookImage && (
                   <Link href={`/books/${book.slug}`}>
-                    <div className="relative w-full aspect-[3/4]">
+                    <div className="relative w-full aspect-[3/4.5]">
                       <Image
                         src={bookImage.imageUrl}
                         alt={book.title}
