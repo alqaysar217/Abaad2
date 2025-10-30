@@ -10,6 +10,7 @@ import { LATEST_COURSES, TESTIMONIALS } from '@/lib/data';
 import { Course } from '@/lib/types';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { HeroSlider } from '@/components/hero-slider';
+import { SideNav } from '@/components/side-nav';
 
 const CourseCard = ({ course }: { course: Course }) => {
   const courseImage = PlaceHolderImages.find(p => p.id === course.imageId);
@@ -54,11 +55,21 @@ const CourseCard = ({ course }: { course: Course }) => {
   );
 };
 
+const homeSections = [
+    { id: "hero", label: "الرئيسية" },
+    { id: "about", label: "من نحن" },
+    { id: "explore", label: "استكشف" },
+    { id: "courses", label: "الدورات" },
+    { id: "testimonials", label: "آراء الطلاب" },
+    { id: "cta", label: "انضم إلينا" },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-col">
+      <SideNav sections={homeSections} />
       {/* Hero Section */}
-      <section className="relative h-screen">
+      <section id="hero" className="relative h-screen">
         <HeroSlider />
         <div className="absolute inset-0 z-10 bg-black/50" />
         <div className="absolute inset-0 z-20 flex h-full items-center justify-center text-center text-white">
@@ -79,7 +90,7 @@ export default function Home() {
       </section>
 
       {/* About Us Snippet */}
-      <section className="min-h-screen bg-background flex items-center py-16">
+      <section id="about" className="min-h-screen bg-background flex items-center justify-center py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -104,7 +115,7 @@ export default function Home() {
       </section>
 
       {/* Featured Sections */}
-      <section className="min-h-screen bg-secondary flex items-center py-16">
+      <section id="explore" className="min-h-screen bg-secondary flex items-center justify-center py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-headline mb-12">استكشف أقسام المعهد</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -127,7 +138,7 @@ export default function Home() {
       </section>
 
       {/* Latest Courses Section */}
-      <section className="min-h-screen bg-background flex flex-col justify-center py-16">
+      <section id="courses" className="min-h-screen bg-background flex flex-col justify-center py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-headline text-primary">أحدث الدورات التدريبية</h2>
@@ -152,7 +163,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="min-h-screen bg-secondary flex flex-col justify-center py-16">
+      <section id="testimonials" className="min-h-screen bg-secondary flex flex-col justify-center py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-headline text-primary">آراء طلابنا</h2>
@@ -180,7 +191,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary text-primary-foreground min-h-[50vh] flex flex-col justify-center">
+      <section id="cta" className="bg-primary text-primary-foreground min-h-[50vh] flex flex-col justify-center">
         <div className="container mx-auto px-4 py-16 text-center">
           <h2 className="text-3xl font-headline mb-4">انضم إلى معهد أبعاد الآن</h2>
           <p className="max-w-2xl mx-auto mb-8">
