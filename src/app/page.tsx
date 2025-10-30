@@ -120,16 +120,18 @@ export default function Home() {
           <h2 className="text-3xl font-headline mb-12">استكشف أقسام المعهد</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {[
-              { icon: <GraduationCap />, label: "الدورات", href: "/courses" },
-              { icon: <Users />, label: "المدربون", href: "/trainers" },
-              { icon: <BookOpen />, label: "الكتب", href: "/books" },
-              { icon: <Rss />, label: "المدونة", href: "/news" },
-              { icon: <Building />, label: "تواصل معنا", href: "/contact" },
+              { icon: <GraduationCap className="h-10 w-10" />, label: "الدورات", href: "/courses" },
+              { icon: <Users className="h-10 w-10" />, label: "المدربون", href: "/trainers" },
+              { icon: <BookOpen className="h-10 w-10" />, label: "الكتب", href: "/books" },
+              { icon: <Rss className="h-10 w-10" />, label: "المدونة", href: "/news" },
+              { icon: <Building className="h-10 w-10" />, label: "تواصل معنا", href: "/contact" },
             ].map(item => (
               <Link href={item.href} key={item.label} className="group">
-                <div className="p-6 bg-background rounded-lg shadow-sm transition-all duration-300 hover:shadow-primary/20 hover:shadow-lg hover:-translate-y-2">
-                  <div className="text-primary h-12 w-12 mx-auto mb-4 transition-transform duration-300 group-hover:scale-110">{item.icon}</div>
-                  <h3 className="font-headline text-lg">{item.label}</h3>
+                <div className="p-6 bg-background rounded-lg shadow-sm transition-all duration-300 hover:shadow-primary/20 hover:shadow-lg hover:-translate-y-2 flex flex-col items-center gap-4">
+                  <div className="bg-primary/10 text-primary rounded-full p-4 transition-transform duration-300 group-hover:scale-110">
+                    {item.icon}
+                  </div>
+                  <h3 className="font-headline text-xl">{item.label}</h3>
                 </div>
               </Link>
             ))}
