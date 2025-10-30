@@ -1,3 +1,4 @@
+"use client"
 import type { SVGProps } from 'react';
 
 export const AbaadLogo = (props: SVGProps<SVGSVGElement>) => (

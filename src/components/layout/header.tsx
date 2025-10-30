@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Info, GraduationCap, Users, BookOpen, Newspaper, HelpCircle, Mail, Phone } from 'lucide-react';
+import { Home, Info, GraduationCap, Users, BookOpen, Newspaper, HelpCircle, Phone } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { AbaadLogo } from '@/components/icons';
@@ -29,10 +29,12 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo and Name on the right */}
-        <Link href="/" className="flex items-center gap-2">
-          <AbaadLogo className="h-8 w-8" />
-          <span className="font-bold hidden sm:inline-block">معهد أبعاد</span>
-        </Link>
+        <div className="flex items-center justify-start">
+            <Link href="/" className="flex items-center gap-2">
+            <AbaadLogo className="h-8 w-8" />
+            <span className="font-bold hidden sm:inline-block">معهد أبعاد</span>
+            </Link>
+        </div>
 
         {/* Desktop Nav in the middle */}
         <nav className="hidden md:flex flex-1 items-center justify-center gap-4 text-sm">
