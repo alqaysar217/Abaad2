@@ -25,7 +25,7 @@ const navLinks: NavLink[] = [
 function NavigationLinks() {
   const pathname = usePathname();
   return (
-    <>
+    <nav className="hidden md:flex items-center justify-center gap-4 text-sm">
       {navLinks.slice(0, 5).map((link) => (
         <Link
           key={link.href}
@@ -39,7 +39,7 @@ function NavigationLinks() {
           <span>{link.label}</span>
         </Link>
       ))}
-    </>
+    </nav>
   );
 }
 
@@ -54,9 +54,7 @@ export function Header() {
           </Link>
         </div>
 
-        <nav className="hidden md:flex items-center justify-center gap-4 text-sm">
-          <NavigationLinks />
-        </nav>
+        <NavigationLinks />
 
         <div className="flex items-center justify-end gap-2">
           <ThemeToggleButton />
