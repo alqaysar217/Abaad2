@@ -65,12 +65,12 @@ export function SideNav({ sections }: SideNavProps) {
 
   return (
     <div className="fixed left-4 top-1/2 -translate-y-1/2 z-30 flex flex-col items-center gap-4">
-      <div className="flex flex-col items-center gap-3">
+      <div className="flex flex-col items-center gap-2">
         {sections.map((section) => (
           <a
             key={section.id}
             href={`#${section.id}`}
-            className="group relative flex h-6 w-6 items-center justify-center"
+            className="group relative flex h-5 w-5 items-center justify-center"
             onClick={(e) => {
               e.preventDefault();
               document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
@@ -79,8 +79,8 @@ export function SideNav({ sections }: SideNavProps) {
           >
             <span
               className={cn(
-                'h-2 w-2 rounded-full bg-primary/50 transition-all duration-300 group-hover:bg-primary',
-                activeSection === section.id ? 'h-3 w-3 bg-primary' : ''
+                'h-1.5 w-1.5 rounded-full bg-primary/50 transition-all duration-300 group-hover:bg-primary',
+                activeSection === section.id ? 'h-2.5 w-2.5 bg-primary' : ''
               )}
             />
              <span className="absolute left-full ml-4 hidden scale-0 rounded bg-background px-2 py-1 text-sm text-foreground shadow-md transition-all duration-300 group-hover:scale-100 md:block origin-left">
