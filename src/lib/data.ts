@@ -515,24 +515,6 @@ export const ALL_TRAINERS: Trainer[] = [
     whatsapp: '967776999568'
   },
   {
-    id: 't6',
-    slug: 'moataz-al-yazidi',
-    name: 'د. معتز اليزيدي',
-    field: 'الطب واللغات',
-    rating: 4.8,
-    imageId: 'trainer-3',
-    bio: 'صيدلاني ومترجم طبي. متخصص في تدريس المصطلحات الطبية للناطقين بغير الإنجليزية، ويجمع بين الخبرة الطبية واللغوية.',
-    qualifications: ['بكالوريوس صيدلة', 'دبلوم في الترجمة الطبية'],
-    accreditations: ['عضو جمعية المترجمين العلميين'],
-    coursesCount: 10,
-    studentsCount: 700,
-    socials: { 
-      twitter: 'https://twitter.com/moataz-al-yazidi'
-    },
-    reviews: [],
-    whatsapp: '967776999568'
-  },
-  {
     id: 't7',
     slug: 'salem-bajulaida',
     name: 'أ. سالم باجليدة',
@@ -547,6 +529,24 @@ export const ALL_TRAINERS: Trainer[] = [
     socials: { 
       linkedin: 'https://www.linkedin.com/in/salem-bajulaida', 
       instagram: 'https://www.instagram.com/salem.bajulaida'
+    },
+    reviews: [],
+    whatsapp: '967776999568'
+  },
+  {
+    id: 't6',
+    slug: 'moataz-al-yazidi',
+    name: 'د. معتز اليزيدي',
+    field: 'الطب واللغات',
+    rating: 4.8,
+    imageId: 'trainer-3',
+    bio: 'صيدلاني ومترجم طبي. متخصص في تدريس المصطلحات الطبية للناطقين بغير الإنجليزية، ويجمع بين الخبرة الطبية واللغوية.',
+    qualifications: ['بكالوريوس صيدلة', 'دبلوم في الترجمة الطبية'],
+    accreditations: ['عضو جمعية المترجمين العلميين'],
+    coursesCount: 10,
+    studentsCount: 700,
+    socials: { 
+      twitter: 'https://twitter.com/moataz-al-yazidi'
     },
     reviews: [],
     whatsapp: '967776999568'
