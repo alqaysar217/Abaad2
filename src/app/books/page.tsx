@@ -18,7 +18,7 @@ export default function BooksPage() {
         </p>
       </section>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {ALL_BOOKS.map(book => {
           const bookImage = PlaceHolderImages.find(p => p.id === book.imageId);
           return (
