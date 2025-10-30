@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from 'react';
-import { Stethoscope, Code, Wrench, Briefcase, UserCheck, Cpu, Languages, SprayCan, LandPlot, Shield, Search, ToyBrick, Palette, Sparkles, Phone, ListFilter, TrendingUp, Star, Percent } from 'lucide-react';
+import { Stethoscope, Code, Wrench, Briefcase, UserCheck, Cpu, Languages, SprayCan, LandPlot, Shield, Search, ToyBrick, Palette, Sparkles, Phone, ListFilter, TrendingUp, Star, Percent, Wifi } from 'lucide-react';
 import { ALL_COURSES } from '@/lib/data';
 import { CourseCard } from '@/components/course-card';
 import { Input } from '@/components/ui/input';
@@ -37,6 +37,7 @@ const sortOptions = [
   { name: 'الأكثر طلباً', value: 'popular' },
   { name: 'الأعلى تقييماً', value: 'rating' },
   { name: 'عليها خصم', value: 'discount' },
+  { name: 'أونلاين', value: 'online' },
 ];
 
 
@@ -60,6 +61,9 @@ export default function CoursesPage() {
     }
     if (sortBy === 'discount') {
       return course.tags?.includes('discount');
+    }
+    if (sortBy === 'online') {
+        return course.tags?.includes('online');
     }
     return true;
   });
