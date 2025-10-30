@@ -59,11 +59,11 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-[60vh] text-white">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-10">
             <HeroSlider />
         </div>
-        <div className="absolute inset-0 bg-primary/70"></div>
-        <div className="relative z-10 flex h-full items-center justify-center text-center">
+        <div className="absolute inset-0 bg-primary/70 z-0"></div>
+        <div className="relative z-20 flex h-full items-center justify-center text-center">
             <div className="container mx-auto px-4">
             <AbaadLogo className="h-24 w-auto mx-auto mb-4" />
             <h1 className="text-4xl md:text-6xl font-headline mb-4">نصنع المعرفة ونبني المستقبل</h1>
