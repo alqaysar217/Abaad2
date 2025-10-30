@@ -1,7 +1,7 @@
 {
   "placeholderImages": [
     {
-      "id": "hero-main",
+      "id": "hero-1",
       "description": "A modern classroom or learning environment",
       "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjbGFzc3Jvb20lMjBwcmVzZW50YXRpb258ZW58MHx8fHwxNzYyMDk3NTEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "classroom presentation"
