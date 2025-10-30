@@ -1,4 +1,33 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { FaqSection } from "@/components/faq-section";
+
+const staticFaqs = [
+    {
+      question: "ما هي مواعيد الدوام في المعهد؟",
+      answer: "مواعيد الدوام الرسمي في المعهد هي من السبت إلى الخميس، من الساعة 8 صباحًا حتى 8 مساءً."
+    },
+    {
+      question: "هل الشهادات التي يمنحها المعهد معتمدة؟",
+      answer: "نعم، جميع شهاداتنا معتمدة من وزارة التعليم الفني والتدريب المهني، بالإضافة إلى اعتمادات دولية لبعض الدورات المتخصصة."
+    },
+    {
+      question: "كيف يمكنني التسجيل في إحدى الدورات؟",
+      answer: "يمكنك التسجيل إلكترونيًا عبر موقعنا، أو من خلال التواصل معنا عبر واتساب، أو بزيارة مقر المعهد مباشرة في قسم التسجيل."
+    },
+    {
+      question: "هل هناك دورات متاحة عبر الإنترنت (أونلاين)؟",
+      answer: "نعم، نقدم مجموعة من الدورات التدريبية عبر الإنترنت. يمكنك الاطلاع على الدورات المتاحة وتصنيفها كـ 'أونلاين' في صفحة الدورات."
+    },
+    {
+        question: "ما هي طرق الدفع المتاحة؟",
+        answer: "نوفر طرق دفع متعددة تشمل الدفع نقدًا في المعهد، أو عبر التحويل البنكي، أو من خلال خدمات المحافظ الإلكترونية."
+    }
+];
 
 export default function FAQPage() {
   return (
@@ -10,7 +39,24 @@ export default function FAQPage() {
         </p>
       </section>
 
-      <FaqSection />
+      <div className="grid lg:grid-cols-3 gap-12">
+        <div className="lg:col-span-2">
+            <h2 className="text-2xl font-headline mb-6">أسئلة عامة</h2>
+            <Accordion type="single" collapsible className="w-full">
+            {staticFaqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger className="text-right">{faq.question}</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                </AccordionContent>
+                </AccordionItem>
+            ))}
+            </Accordion>
+        </div>
+        <div className="lg:col-span-1">
+            <FaqSection />
+        </div>
+      </div>
     </div>
   );
 }
