@@ -4,7 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { FaqSection } from "@/components/faq-section";
 
 const staticFaqs = [
     {
@@ -47,23 +46,17 @@ export default function FAQPage() {
         </p>
       </section>
 
-      <div className="grid lg:grid-cols-3 gap-12">
-        <div className="lg:col-span-2">
-            <h2 className="text-2xl font-headline mb-6">أسئلة عامة</h2>
-            <Accordion type="single" collapsible className="w-full">
-            {staticFaqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-right">{faq.question}</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
-                    {faq.answer}
-                </AccordionContent>
-                </AccordionItem>
-            ))}
-            </Accordion>
-        </div>
-        <div className="lg:col-span-1">
-            <FaqSection />
-        </div>
+      <div className="max-w-4xl mx-auto">
+        <Accordion type="single" collapsible className="w-full">
+        {staticFaqs.map((faq, index) => (
+            <AccordionItem key={index} value={`item-${index}`}>
+            <AccordionTrigger className="text-right">{faq.question}</AccordionTrigger>
+            <AccordionContent className="text-muted-foreground leading-relaxed">
+                {faq.answer}
+            </AccordionContent>
+            </AccordionItem>
+        ))}
+        </Accordion>
       </div>
     </div>
   );
