@@ -50,7 +50,7 @@ export function Footer() {
           <div>
             <h3 className="font-bold mb-4">تواصل معنا</h3>
             <address className="text-sm text-muted-foreground not-italic space-y-2">
-              <p className="flex items-start gap-2"><MapPin className="h-4 w-4 text-primary mt-1 flex-shrink-0" />المكلا-فوة-الانشاءات-مقابل رئاسة الجامعة</p>
+              <p className="flex items-start gap-2"><MapPin className="h-4 w-4 text-primary mt-1 flex-shrink-0" />المكلا - فوه - الانشاءات</p>
               <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" />هاتف: <a href="tel:+967776999568" className="hover:text-primary">+967 776 999 568</a></p>
               <p className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" />بريد: <a href="mailto:abaadinstitute24@gmail.com" className="hover:text-primary">abaadinstitute24@gmail.com</a></p>
             </address>
