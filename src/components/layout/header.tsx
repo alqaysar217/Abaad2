@@ -26,25 +26,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <div className="mr-4 hidden md:flex">
+        {/* Logo and Name on the right */}
+        <div className="flex items-center justify-start">
           <Link href="/" className="flex items-center space-x-2">
-            <AbaadLogo className="h-8 w-8" />
-            <span className="hidden font-bold sm:inline-block">معهد أبعاد</span>
+            <AbaadLogo className="h-8 w-8 ml-2" />
+            <span className="font-bold">معهد أبعاد</span>
           </Link>
         </div>
-        
-        <div className="flex flex-1 items-center justify-start md:hidden">
-          <MobileNav navLinks={navLinks} />
-        </div>
-        
-        <div className="flex flex-1 items-center justify-center md:justify-start">
-            <Link href="/" className="flex items-center space-x-2 md:hidden">
-                <AbaadLogo className="h-8 w-8" />
-                <span className="font-bold">معهد أبعاد</span>
-            </Link>
-        </div>
-        
-        <nav className="hidden md:flex md:flex-1 md:items-center md:justify-center gap-6 text-sm">
+
+        {/* Desktop Nav in the middle */}
+        <nav className="hidden md:flex flex-1 items-center justify-center gap-6 text-sm">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -59,12 +50,18 @@ export function Header() {
           ))}
         </nav>
 
+        {/* Buttons and Mobile Nav on the left */}
         <div className="flex flex-1 items-center justify-end">
-          <Button asChild>
-            <a href="https://wa.me/967776999568" target="_blank" rel="noopener noreferrer">
-              سجل الآن
-            </a>
-          </Button>
+          <div className="hidden md:flex">
+            <Button asChild>
+              <a href="https://wa.me/967776999568" target="_blank" rel="noopener noreferrer">
+                سجل الآن
+              </a>
+            </Button>
+          </div>
+          <div className="md:hidden">
+            <MobileNav navLinks={navLinks} />
+          </div>
         </div>
       </div>
     </header>
