@@ -28,10 +28,6 @@ describe('A list of frequently asked questions and their answers.'),
 });
 export type GenerateFAQAnswersOutput = z.infer<typeof GenerateFAQAnswersOutputSchema>;
 
-export async function generateFAQAnswers(input: GenerateFAQAnswersInput): Promise<GenerateFAQAnswersOutput> {
-  return generateFAQAnswersFlow(input);
-}
-
 const prompt = ai.definePrompt({
   name: 'generateFAQAnswersPrompt',
   input: {schema: GenerateFAQAnswersInputSchema},
@@ -55,3 +51,8 @@ const generateFAQAnswersFlow = ai.defineFlow(
     return output!;
   }
 );
+
+
+export async function generateFAQAnswers(input: GenerateFAQAnswersInput): Promise<GenerateFAQAnswersOutput> {
+  return generateFAQAnswersFlow(input);
+}
