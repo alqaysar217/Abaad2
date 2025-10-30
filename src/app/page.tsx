@@ -340,7 +340,7 @@ export default function Home() {
           </div>
           <Carousel
             opts={{
-              align: "start",
+              align: "center",
               loop: true,
             }}
             className="w-full max-w-6xl mx-auto"
@@ -349,7 +349,7 @@ export default function Home() {
               {TESTIMONIALS.map((testimonial) => {
                 const testimonialImage = PlaceHolderImages.find(p => p.id === testimonial.imageId);
                 return (
-                  <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3 h-full">
                     <div className="p-1 h-full">
                       <Card className="bg-secondary flex flex-col h-full">
                         <CardContent className="pt-6 flex-grow">
