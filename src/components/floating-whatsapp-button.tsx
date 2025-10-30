@@ -1,4 +1,4 @@
-import { WhatsAppIcon } from './whatsapp-icon';
+import { WhatsAppIcon } from '@/components/whatsapp-icon';
 
 export function FloatingWhatsAppButton() {
   return (
