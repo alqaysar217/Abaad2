@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, ChevronLeft, Award, Users, Star, GraduationCap, Building, Rss, Code, ShoppingCart, Heart, TrendingUp } from 'lucide-react';
+import { ArrowLeft, BookOpen, ChevronLeft, Award, Users, Star, GraduationCap, Building, Rss } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -10,8 +10,6 @@ import { LATEST_COURSES, TESTIMONIALS } from '@/lib/data';
 import { Course } from '@/lib/types';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { HeroSlider } from '@/components/hero-slider';
-
-const heroImage = PlaceHolderImages.find(p => p.id === 'hero-main');
 
 const CourseCard = ({ course }: { course: Course }) => {
   const courseImage = PlaceHolderImages.find(p => p.id === course.imageId);
@@ -61,10 +59,12 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-[60vh] text-white">
-        <HeroSlider />
-        <div className="absolute inset-0 bg-primary/70 -z-10"></div>
-        <div className="absolute inset-0 flex items-center justify-center text-center">
-            <div className="container mx-auto px-4 animate-fade-in-up">
+        <div className="absolute inset-0 z-0">
+            <HeroSlider />
+        </div>
+        <div className="absolute inset-0 bg-primary/70"></div>
+        <div className="relative z-10 flex h-full items-center justify-center text-center">
+            <div className="container mx-auto px-4">
             <AbaadLogo className="h-24 w-auto mx-auto mb-4" />
             <h1 className="text-4xl md:text-6xl font-headline mb-4">نصنع المعرفة ونبني المستقبل</h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
