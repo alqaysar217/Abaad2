@@ -54,7 +54,9 @@ export function Header() {
         </Link>
 
         {/* Center: Navigation */}
-        <NavigationLinks />
+        <div className="flex-1 flex justify-center">
+            <NavigationLinks />
+        </div>
 
         {/* Left Side: Actions */}
         <div className="flex items-center justify-end gap-2">
