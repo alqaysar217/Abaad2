@@ -76,7 +76,7 @@ export default function TrainerProfilePage({ params }: { params: { slug: string 
                 <div>
                     <h2 className="text-2xl font-headline mb-4">الدورات التي يقدمها {trainer.name}</h2>
                     {trainerCourses.length > 0 ? (
-                        <div className="grid sm:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {trainerCourses.map(course => <CourseCard key={course.id} course={course} />)}
                         </div>
                     ) : (
