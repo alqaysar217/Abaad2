@@ -36,8 +36,7 @@ export function HeroSlider() {
     >
       <CarouselContent>
         {heroImages.map((image, index) => (
-          <CarouselItem key={image.id}>
-            <div className="w-full h-full relative">
+          <CarouselItem key={image.id} className="relative w-full h-full">
               <Image
                 src={image.imageUrl}
                 alt={image.description || `Hero image ${index + 1}`}
@@ -47,12 +46,11 @@ export function HeroSlider() {
                 data-ai-hint={image.imageHint}
                 priority={index === 0}
               />
-            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
-      <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
+      <CarouselPrevious className="hidden md:flex" />
+      <CarouselNext className="hidden md:flex" />
     </Carousel>
   );
 }
