@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
-import { ArrowDown, ArrowUp } from 'lucide-react';
 
 type Section = {
   id: string;
@@ -43,31 +42,29 @@ export function SideNav({ sections }: SideNavProps) {
     };
   }, [sections]);
 
-  const handleArrowClick = (direction: 'up' | 'down') => {
-    const currentIndex = sections.findIndex(s => s.id === activeSection);
-    let nextIndex;
-    if (direction === 'down') {
-      nextIndex = Math.min(currentIndex + 1, sections.length - 1);
-    } else {
-      nextIndex = Math.max(currentIndex - 1, 0);
-    }
-    const nextSectionId = sections[nextIndex]?.id;
-    if (nextSectionId) {
-      document.getElementById(nextSectionId)?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  useEffect(() => {
+    const handleSpacebarScroll = (event: KeyboardEvent) => {
+      if (event.code === 'Space') {
+        event.preventDefault();
+        const currentIndex = sections.findIndex(s => s.id === activeSection);
+        const nextIndex = Math.min(currentIndex + 1, sections.length - 1);
+        const nextSectionId = sections[nextIndex]?.id;
+        if (nextSectionId && currentIndex !== nextIndex) {
+            document.getElementById(nextSectionId)?.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+    
+    window.addEventListener('keydown', handleSpacebarScroll);
+
+    return () => {
+      window.removeEventListener('keydown', handleSpacebarScroll);
+    };
+  }, [activeSection, sections]);
 
 
   return (
     <div className="fixed left-4 top-1/2 -translate-y-1/2 z-30 flex flex-col items-center gap-4">
-       <button
-            onClick={() => handleArrowClick('up')}
-            className="text-primary/50 hover:text-primary transition-colors"
-            aria-label="Go to previous section"
-        >
-            <ArrowUp className="h-6 w-6" />
-        </button>
-
       <div className="flex flex-col items-center gap-3">
         {sections.map((section) => (
           <a
@@ -92,13 +89,6 @@ export function SideNav({ sections }: SideNavProps) {
           </a>
         ))}
       </div>
-      <button
-        onClick={() => handleArrowClick('down')}
-        className="text-primary/50 hover:text-primary transition-colors"
-        aria-label="Go to next section"
-      >
-        <ArrowDown className="h-6 w-6" />
-      </button>
     </div>
   );
 }
