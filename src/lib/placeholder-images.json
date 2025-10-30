@@ -3,14 +3,14 @@
     {
       "id": "hero-1",
       "description": "A modern classroom or learning environment",
-      "imageUrl": "https://images.unsplash.com/photo-1559223694-98ed5e272fef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
-      "imageHint": "classroom presentation"
+      "imageUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
+      "imageHint": "classroom students"
     },
     {
       "id": "hero-2",
       "description": "Students collaborating in a workshop",
-      "imageUrl": "https://images.unsplash.com/photo-1596495577886-d920f1fb7238?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
-      "imageHint": "students workshop"
+      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
+      "imageHint": "students collaborating"
     },
     {
       "id": "hero-3",
@@ -21,14 +21,14 @@
     {
       "id": "hero-4",
       "description": "An instructor teaching a class",
-      "imageUrl": "https://images.unsplash.com/photo-1588615143438-b649d211075a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
+      "imageUrl": "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
       "imageHint": "instructor teaching"
     },
     {
       "id": "hero-5",
       "description": "A student focused on learning on a computer",
-      "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
-      "imageHint": "student learning"
+      "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
+      "imageHint": "student working"
     },
     {
       "id": "gallery-1",
