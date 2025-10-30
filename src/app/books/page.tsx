@@ -1,11 +1,12 @@
 
+
 import Image from 'next/image';
-import { Star, BookOpen, User, List, FileText } from 'lucide-react';
+import Link from 'next/link';
+import { Star, FileText, ChevronLeft } from 'lucide-react';
 import { ALL_BOOKS } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 
 export default function BooksPage() {
   return (
@@ -17,40 +18,46 @@ export default function BooksPage() {
         </p>
       </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {ALL_BOOKS.map(book => {
           const bookImage = PlaceHolderImages.find(p => p.id === book.imageId);
           return (
-            <Card key={book.id} className="flex flex-col overflow-hidden transition-shadow hover:shadow-lg">
+            <Card key={book.id} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl hover:-translate-y-1.5">
               {bookImage && (
-                <div className="relative aspect-[3/4]">
-                  <Image
-                    src={bookImage.imageUrl}
-                    alt={book.title}
-                    fill
-                    className="object-cover"
-                    data-ai-hint={bookImage.imageHint}
-                  />
-                </div>
+                <Link href={`/books/${book.slug}`}>
+                  <div className="relative aspect-[3/4]">
+                    <Image
+                      src={bookImage.imageUrl}
+                      alt={book.title}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={bookImage.imageHint}
+                    />
+                  </div>
+                </Link>
               )}
-              <CardHeader>
-                <CardTitle className="font-headline text-xl">{book.title}</CardTitle>
-                <div className="text-sm text-muted-foreground pt-1 flex items-center gap-2">
-                  <User className="h-4 w-4" /> <span>{book.author}</span>
-                </div>
+              <CardHeader className="pb-2">
+                <CardTitle className="font-headline text-md leading-tight">
+                  <Link href={`/books/${book.slug}`} className="hover:text-primary">{book.title}</Link>
+                </CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-sm text-muted-foreground line-clamp-3">{book.description}</p>
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground mt-4">
-                  <div className="flex items-center"><Star className="ml-1 h-4 w-4 fill-yellow-400 text-yellow-400" /> <span>{book.rating} تقييم</span></div>
+              <CardContent className="flex-grow pt-2 pb-4">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
+                  <div className="flex items-center"><Star className="ml-1 h-4 w-4 fill-yellow-400 text-yellow-400" /> <span>{book.rating}</span></div>
                   <div className="flex items-center"><FileText className="ml-1 h-4 w-4" /> <span>{book.pages} صفحة</span></div>
                 </div>
               </CardContent>
-              <CardFooter>
-                <Button asChild className="w-full">
+              <CardFooter className="flex-col items-stretch gap-2 p-4 pt-0">
+                <Button asChild size="sm">
                   <a href={`https://wa.me/967776999568?text=${encodeURIComponent(`أرغب بالاستفسار عن كتاب: ${book.title}`)}`} target="_blank" rel="noopener noreferrer">
-                    اطلب نسخة أو استفسر
+                    اطلب نسخة
                   </a>
+                </Button>
+                <Button asChild variant="outline" size="sm">
+                   <Link href={`/books/${book.slug}`}>
+                    عرض التفاصيل
+                    <ChevronLeft className="mr-1 h-4 w-4" />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>

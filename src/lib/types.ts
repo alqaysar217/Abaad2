@@ -1,3 +1,4 @@
+
 export type NavLink = {
   href: string;
   label: string;
@@ -30,7 +31,7 @@ export type TrainerReview = {
   studentName: string;
   rating: number;
   comment: string;
-  imageId: string;
+  imageId:string;
 };
 
 export type Trainer = {
@@ -56,8 +57,17 @@ export type Trainer = {
   whatsapp: string;
 };
 
+export type BookReview = {
+  id: string;
+  name: string;
+  rating: number;
+  quote: string;
+  imageId: string;
+};
+
 export type Book = {
   id: string;
+  slug: string;
   title: string;
   author: string;
   rating: number;
@@ -65,6 +75,7 @@ export type Book = {
   description: string;
   topics: string[];
   pages: number;
+  reviews: BookReview[];
 };
 
 export type Testimonial = {
@@ -85,3 +96,4 @@ export type NewsArticle = {
   summary: string;
   content: string;
 };
+
