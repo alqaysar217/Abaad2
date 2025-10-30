@@ -20,6 +20,10 @@ export function HeroSlider() {
     Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
 
+  if (heroImages.length === 0) {
+    return <div className="w-full h-full bg-secondary" />;
+  }
+
   return (
     <Carousel
       plugins={[plugin.current]}
@@ -28,10 +32,9 @@ export function HeroSlider() {
         loop: true,
       }}
     >
-      <CarouselContent>
+      <CarouselContent className="h-full">
         {heroImages.map((image, index) => (
-          <CarouselItem key={image.id}>
-            <div className="relative h-[60vh] w-full">
+          <CarouselItem key={image.id} className="relative h-full">
               <Image
                 src={image.imageUrl}
                 alt={image.description || `Hero image ${index + 1}`}
@@ -41,7 +44,6 @@ export function HeroSlider() {
                 data-ai-hint={image.imageHint}
                 priority={index === 0}
               />
-            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
@@ -50,5 +52,3 @@ export function HeroSlider() {
     </Carousel>
   );
 }
-
-    
