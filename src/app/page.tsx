@@ -172,7 +172,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {TESTIMONIALS.slice(0, 3).map(testimonial => {
+            {TESTIMONIALS.map(testimonial => {
                 const testimonialImage = PlaceHolderImages.find(p => p.id === testimonial.imageId);
                 return(
               <Card key={testimonial.id} className="text-center bg-background">
