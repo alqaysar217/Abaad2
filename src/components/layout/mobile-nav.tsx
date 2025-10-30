@@ -43,6 +43,13 @@ export function MobileNav({ navLinks }: MobileNavProps) {
               </SheetClose>
             ))}
           </nav>
+           <div className="border-t p-4">
+            <Button asChild className="w-full">
+              <a href="https://wa.me/967776999568" target="_blank" rel="noopener noreferrer">
+                سجل الآن
+              </a>
+            </Button>
+          </div>
         </div>
       </SheetContent>
     </Sheet>
