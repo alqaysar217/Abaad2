@@ -3,50 +3,32 @@
     {
       "id": "hero-1",
       "description": "A modern classroom or learning environment",
-      "imageUrl": "https://images.unsplash.com/photo-1559223694-98ed5e272fef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbGFzc3Jvb20lMjBwcmVzZW50YXRpb258ZW58MHx8fHwxNzYxODMyMTUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1559223694-98ed5e272fef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
       "imageHint": "classroom presentation"
     },
     {
       "id": "hero-2",
       "description": "Students collaborating in a workshop",
-      "imageUrl": "https://images.unsplash.com/photo-1596495577886-d920f1fb7238?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3R1ZGVudHMlMjB3b3Jrc2hvcHxlbnwwfHx8fDE3NjE3NTExNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1596495577886-d920f1fb7238?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
       "imageHint": "students workshop"
     },
     {
       "id": "hero-3",
       "description": "A training hall with attendees",
-      "imageUrl": "https://images.unsplash.com/photo-1760115965226-4b54026aa6f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0cmFpbmluZyUyMGV2ZW50fGVufDB8fHx8MTc2MTgzMjE1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
       "imageHint": "training event"
     },
     {
       "id": "hero-4",
       "description": "An instructor teaching a class",
-      "imageUrl": "https://images.unsplash.com/photo-1758274535024-be3faa30f507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxpbnN0cnVjdG9yJTIwdGVhY2hpbmd8ZW58MHx8fHwxNzYxNzcxNTk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1588615143438-b649d211075a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
       "imageHint": "instructor teaching"
     },
     {
       "id": "hero-5",
       "description": "A student focused on learning on a computer",
-      "imageUrl": "https://images.unsplash.com/photo-1610500796385-3ffc1ae2f046?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdHVkZW50JTIwbGVhcm5pbmd8ZW58MHx8fHwxNzYxNzg4ODEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
       "imageHint": "student learning"
-    },
-    {
-      "id": "hero-6",
-      "description": "A group of diverse students in a classroom.",
-      "imageUrl": "https://images.unsplash.com/photo-1758270704113-9fb2ac81788f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGl2ZXJzZSUyMHN0dWRlbnRzfGVufDB8fHx8MTc2MTgzMjE1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "diverse students"
-    },
-    {
-      "id": "hero-7",
-      "description": "A speaker at a conference.",
-      "imageUrl": "https://images.unsplash.com/photo-1626125345510-4603468eedfb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb25mZXJlbmNlJTIwc3BlYWtlcnxlbnwwfHx8fDE3NjE3ODY3MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "conference speaker"
-    },
-    {
-      "id": "hero-8",
-      "description": "Online learning setup with a laptop.",
-      "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8b25saW5lJTIwbGVhcm5pbmd8ZW58MHx8fHwxNzYxODA4Njk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "online learning"
     },
     {
       "id": "gallery-1",
