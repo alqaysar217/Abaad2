@@ -79,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* About Us Snippet */}
-      <section className="py-16 bg-background">
+      <section className="min-h-screen bg-background flex items-center py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -104,7 +104,7 @@ export default function Home() {
       </section>
 
       {/* Featured Sections */}
-      <section className="py-16 bg-secondary">
+      <section className="min-h-screen bg-secondary flex items-center py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-headline mb-12">استكشف أقسام المعهد</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -127,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* Latest Courses Section */}
-      <section className="py-16 bg-background">
+      <section className="min-h-screen bg-background flex flex-col justify-center py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-headline text-primary">أحدث الدورات التدريبية</h2>
@@ -152,7 +152,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-secondary">
+      <section className="min-h-screen bg-secondary flex flex-col justify-center py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-headline text-primary">آراء طلابنا</h2>
@@ -180,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary text-primary-foreground">
+      <section className="bg-primary text-primary-foreground min-h-[50vh] flex flex-col justify-center">
         <div className="container mx-auto px-4 py-16 text-center">
           <h2 className="text-3xl font-headline mb-4">انضم إلى معهد أبعاد الآن</h2>
           <p className="max-w-2xl mx-auto mb-8">
