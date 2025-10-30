@@ -2,14 +2,14 @@
 import * as React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, ChevronLeft, Award, Users, Star, GraduationCap, Building, Rss, MessageSquare, ShieldCheck, Target, Eye, FileText } from 'lucide-react';
+import { ArrowLeft, BookOpen, ChevronLeft, Award, Users, Star, GraduationCap, Building, Rss, MessageSquare, ShieldCheck, Target, Eye, FileText, MessageCircle } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { AbaadLogo } from '@/components/icons';
 import { ALL_COURSES, TESTIMONIALS, ALL_TRAINERS, ALL_BOOKS } from '@/lib/data';
-import { Course } from '@/lib/types';
+import { Course, Testimonial } from '@/lib/types';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { HeroSlider } from '@/components/hero-slider';
 import { SideNav } from '@/components/side-nav';
@@ -72,6 +72,7 @@ const homeSections = [
     { id: "courses", label: "الدورات" },
     { id: 'trainers', label: 'المدربون' },
     { id: 'books', label: 'الكتب' },
+    { id: 'testimonials', label: 'آراء الطلاب' },
     { id: "cta", label: "انضم إلينا" },
 ];
 
@@ -97,6 +98,37 @@ const features = [
     description: 'قاعات مجهزة بأحدث التقنيات ومجتمع طلابي داعم يساعد على تبادل المعرفة والخبرات.',
   },
 ];
+
+const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
+  const testimonialImage = PlaceHolderImages.find(p => p.id === testimonial.imageId);
+  return (
+    <Card className="h-full bg-background flex flex-col">
+      <CardContent className="p-6 flex flex-col flex-grow">
+        <p className="text-muted-foreground italic relative pr-8 flex-grow">
+          <MessageCircle className="absolute right-0 top-0 h-5 w-5 text-accent" />
+          &ldquo;{testimonial.quote}&rdquo;
+        </p>
+        <div className="flex items-center gap-4 mt-4 pt-4 border-t">
+          {testimonialImage && (
+            <Image
+              src={testimonialImage.imageUrl}
+              alt={testimonial.name}
+              width={56}
+              height={56}
+              className="rounded-full border-2 border-accent"
+              data-ai-hint={testimonialImage.imageHint}
+            />
+          )}
+          <div>
+            <h3 className="font-bold text-lg">{testimonial.name}</h3>
+            <p className="text-sm text-primary">{testimonial.course}</p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+
 
 export default function Home() {
   const latestCourses = ALL_COURSES.slice(0, 3);
@@ -341,6 +373,45 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section id="testimonials" className="min-h-screen bg-background flex flex-col justify-center py-16">
+        <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+            <h2 className="text-3xl font-headline text-primary">ماذا يقول طلابنا عنا؟</h2>
+            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
+                نفخر بثقة طلابنا ونسعد بمشاركة قصص نجاحهم وتجاربهم الملهمة في معهد أبعاد.
+            </p>
+            </div>
+            <Carousel
+                opts={{
+                    align: "center",
+                    loop: true,
+                }}
+                className="w-full max-w-5xl mx-auto"
+            >
+            <CarouselContent>
+                {TESTIMONIALS.map((testimonial) => (
+                    <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3 h-full">
+                        <div className="p-1 h-full">
+                            <TestimonialCard testimonial={testimonial} />
+                        </div>
+                    </CarouselItem>
+                ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+            </Carousel>
+            <div className="text-center mt-12">
+                <Button asChild size="lg">
+                    <Link href="/about#testimonials">
+                        عرض كل الآراء
+                        <ChevronLeft className="h-4 w-4 mr-1" />
+                    </Link>
+                </Button>
+            </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section id="cta" className="bg-primary text-primary-foreground min-h-[50vh] flex flex-col justify-center">
         <div className="container mx-auto px-4 py-16 text-center">
@@ -358,5 +429,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
