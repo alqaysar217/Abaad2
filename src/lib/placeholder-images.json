@@ -81,7 +81,7 @@
     {
       "id": "course-medicine",
       "description": "Image for a medicine course",
-      "imageUrl": "https://images.unsplash.com/photo-1612349316228-5942a9b489c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZWRpY2FsJTIwZG9jdG9yfGVufDB8fHx8MTc2MTY5MDYzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1612349316228-5942a9b489c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZWRpY2FsJTIwZG9jdG9yfGVufDB8fHx8MTc2MTY5MDYzN3ww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "medical doctor"
     },
     {
@@ -93,7 +93,7 @@
     {
       "id": "course-women",
       "description": "Image for a women's course",
-      "imageUrl": "https://images.unsplash.com/photo-1633329712165-4e578376eb87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMGVtcG93ZXJtZW50fGVufDB8fHx8MTc2MTc1ODYyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1633329712165-4e578376eb87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMGVtcG93ZXJtZW50fGVufDB8fHx8MTc2MTc1ODYyMHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "women empowerment"
     },
     {
@@ -105,7 +105,7 @@
     {
       "id": "course-engineering",
       "description": "Image for an engineering course",
-      "imageUrl": "https://images.unsplash.com/photo-1744627049721-73c27008ad28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxlbmdpbmVlcmluZyUyMGJsdWVwcmludHxlbnwwfHx8fDE3NjE2OTg0ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1744627049721-73c27008ad28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxlbmdpbmVlcmluZyUyMGJsdWVwcmludHxlbnwwfHx8fDE3NjE2OTg0ODV8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "engineering blueprint"
     },
     {
@@ -203,6 +203,24 @@
       "description": "Image for a news article about a special offer",
       "imageUrl": "https://images.unsplash.com/photo-1758795679604-5f9ffcadc030?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3BlY2lhbCUyMG9mZmVyfGVufDB8fHx8MTc2MTc2ODg1OHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "special offer"
+    },
+    {
+      "id": "news-4",
+      "description": "Image for a student project showcase",
+      "imageUrl": "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdHVkZW50JTIwcHJvamVjdHxlbnwwfHx8fDE3NjIwNDkxODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "student project"
+    },
+    {
+      "id": "news-5",
+      "description": "Image for a seminar or evening event",
+      "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzZW1pbmFyfGVufDB8fHx8fDE3NjIwNDkxODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "seminar talk"
+    },
+    {
+      "id": "news-6",
+      "description": "Image representing a course conclusion or graduation",
+      "imageUrl": "https://images.unsplash.com/photo-1568940562394-a28c3b0365f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjZXJ0aWZpY2F0ZXxlbnwwfHx8fDE3NjIwNDkxODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "certificate success"
     }
   ]
 }
