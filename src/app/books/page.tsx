@@ -46,46 +46,36 @@ export default function BooksPage() {
           {filteredBooks.map(book => {
             const bookImage = PlaceHolderImages.find(p => p.id === book.imageId);
             return (
-              <Card key={book.id} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl hover:-translate-y-1.5">
+              <Card key={book.id} className="flex flex-col text-center items-center p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 {bookImage && (
-                  <Link href={`/books/${book.slug}`}>
-                    <div className="relative w-full aspect-[3/4.5]">
-                      <Image
-                        src={bookImage.imageUrl}
-                        alt={book.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        data-ai-hint={bookImage.imageHint}
-                      />
-                    </div>
+                  <Link href={`/books/${book.slug}`} className="flex-shrink-0 mb-4">
+                    <Image
+                      src={bookImage.imageUrl}
+                      alt={book.title}
+                      width={150}
+                      height={200}
+                      className="rounded-md shadow-lg object-cover aspect-[3/4] hover:opacity-90 transition-opacity"
+                      data-ai-hint={bookImage.imageHint}
+                    />
                   </Link>
                 )}
-                <CardHeader className="pb-2">
-                  <CardTitle className="font-headline text-md leading-tight h-12 overflow-hidden">
+                <div className="flex flex-col flex-1">
+                  <CardTitle className="font-headline text-lg mb-1 flex-grow">
                     <Link href={`/books/${book.slug}`} className="hover:text-primary">{book.title}</Link>
                   </CardTitle>
-                  <p className="text-sm text-muted-foreground pt-1">{book.author}</p>
-                </CardHeader>
-                <CardContent className="flex-grow pt-2 pb-4">
-                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
-                    <div className="flex items-center"><Star className="ml-1 h-4 w-4 fill-yellow-400 text-yellow-400" /> <span>{book.rating}</span></div>
-                    <div className="flex items-center"><FileText className="ml-1 h-4 w-4" /> <span>{book.pages} صفحة</span></div>
+                  <p className="text-sm text-muted-foreground mb-2">للمؤلف: {book.author}</p>
+                  
+                  <div className="flex justify-center items-center gap-4 text-xs text-muted-foreground my-2">
+                    <div className="flex items-center gap-1"><Star className="h-4 w-4 fill-yellow-400 text-yellow-400" /> <span>{book.rating}</span></div>
+                    <div className="flex items-center gap-1"><FileText className="h-4 w-4" /> <span>{book.pages} صفحة</span></div>
                   </div>
-                </CardContent>
-                <CardFooter className="flex-col items-stretch gap-2 p-4 pt-0">
-                  <Button asChild size="sm">
-                    <a href={`https://wa.me/967776999568?text=${encodeURIComponent(`أرغب بالاستفسار عن كتاب: ${book.title}`)}`} target="_blank" rel="noopener noreferrer">
-                      اطلب نسخة
-                    </a>
-                  </Button>
-                  <Button asChild variant="outline" size="sm">
-                     <Link href={`/books/${book.slug}`}>
-                      عرض التفاصيل
-                      <ChevronLeft className="mr-1 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardFooter>
+
+                   <Button asChild variant="link" size="sm" className="mt-auto">
+                      <Link href={`/books/${book.slug}`}>
+                        عرض التفاصيل <ChevronLeft className="mr-1 h-4 w-4" />
+                      </Link>
+                    </Button>
+                </div>
               </Card>
             );
           })}
