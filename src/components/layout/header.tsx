@@ -28,7 +28,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-16 items-center">
         <div className="flex items-center justify-start">
           <Link href="/" className="flex items-center gap-2">
             <AbaadLogo className="h-8 w-8" />
@@ -52,7 +52,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center justify-end gap-2">
+        <div className="flex items-center justify-end">
           <ThemeToggleButton />
           <div className="hidden md:flex">
             <Button asChild>
