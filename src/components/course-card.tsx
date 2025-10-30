@@ -7,6 +7,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { ALL_TRAINERS } from '@/lib/data';
 
 type CourseCardProps = {
   course: Course;
@@ -14,6 +15,8 @@ type CourseCardProps = {
 
 export function CourseCard({ course }: CourseCardProps) {
   const courseImage = PlaceHolderImages.find((p) => p.id === course.imageId);
+  const trainer = ALL_TRAINERS.find(t => t.slug === course.trainerSlug);
+  const trainerImage = trainer ? PlaceHolderImages.find(p => p.id === trainer.imageId) : undefined;
 
   return (
     <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5">
@@ -45,7 +48,16 @@ export function CourseCard({ course }: CourseCardProps) {
       </CardHeader>
       <CardContent className="flex-grow space-y-3 text-sm text-muted-foreground">
         <div className="flex items-center">
-          <GraduationCap className="ml-2 h-4 w-4 text-primary" />
+          {trainerImage && (
+            <Image
+              src={trainerImage.imageUrl}
+              alt={course.trainerName}
+              width={24}
+              height={24}
+              className="rounded-full ml-2"
+              data-ai-hint={trainerImage.imageHint}
+            />
+          )}
           <span>المدرب: {course.trainerName}</span>
         </div>
         <div className="flex items-center">

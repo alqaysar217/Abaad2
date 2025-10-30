@@ -23,6 +23,8 @@ import {
 
 const CourseCard = ({ course }: { course: Course }) => {
   const courseImage = PlaceHolderImages.find(p => p.id === course.imageId);
+  const trainer = ALL_TRAINERS.find(t => t.slug === course.trainerSlug);
+  const trainerImage = trainer ? PlaceHolderImages.find(p => p.id === trainer.imageId) : undefined;
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
       <div className="relative">
@@ -38,7 +40,16 @@ const CourseCard = ({ course }: { course: Course }) => {
       </CardHeader>
       <CardContent className="flex-grow">
         <div className="flex items-center text-sm text-muted-foreground mb-4">
-          <GraduationCap className="w-4 h-4 ml-2 text-primary" />
+          {trainerImage && (
+            <Image
+              src={trainerImage.imageUrl}
+              alt={course.trainerName}
+              width={24}
+              height={24}
+              className="rounded-full ml-2"
+              data-ai-hint={trainerImage.imageHint}
+            />
+          )}
           <span>المدرب: {course.trainerName}</span>
         </div>
         <div className="flex items-center text-sm text-muted-foreground">
