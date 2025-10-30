@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, ChevronLeft, Award, Users, Star, GraduationCap, Building, Rss } from 'lucide-react';
+import { ArrowLeft, BookOpen, ChevronLeft, Award, Users, Star, GraduationCap, Building, Rss, MessageSquare } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -120,15 +120,15 @@ export default function Home() {
           <h2 className="text-3xl font-headline mb-12">استكشف أقسام المعهد</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {[
-              { icon: <GraduationCap className="h-10 w-10" />, label: "الدورات", href: "/courses" },
-              { icon: <Users className="h-10 w-10" />, label: "المدربون", href: "/trainers" },
-              { icon: <BookOpen className="h-10 w-10" />, label: "الكتب", href: "/books" },
-              { icon: <Rss className="h-10 w-10" />, label: "المدونة", href: "/news" },
-              { icon: <Building className="h-10 w-10" />, label: "تواصل معنا", href: "/contact" },
+              { icon: <GraduationCap className="h-12 w-12" />, label: "الدورات", href: "/courses" },
+              { icon: <Users className="h-12 w-12" />, label: "المدربون", href: "/trainers" },
+              { icon: <BookOpen className="h-12 w-12" />, label: "الكتب", href: "/books" },
+              { icon: <Rss className="h-12 w-12" />, label: "المدونة", href: "/news" },
+              { icon: <Building className="h-12 w-12" />, label: "تواصل معنا", href: "/contact" },
             ].map(item => (
               <Link href={item.href} key={item.label} className="group">
                 <div className="p-6 bg-background rounded-lg shadow-sm transition-all duration-300 hover:shadow-primary/20 hover:shadow-lg hover:-translate-y-2 flex flex-col items-center gap-4">
-                  <div className="bg-primary/10 text-primary rounded-full p-4 transition-transform duration-300 group-hover:scale-110">
+                  <div className="bg-primary/10 text-primary rounded-full p-5 transition-transform duration-300 group-hover:scale-110">
                     {item.icon}
                   </div>
                   <h3 className="font-headline text-xl">{item.label}</h3>
@@ -177,13 +177,18 @@ export default function Home() {
             {TESTIMONIALS.map(testimonial => {
                 const testimonialImage = PlaceHolderImages.find(p => p.id === testimonial.imageId);
                 return(
-              <Card key={testimonial.id} className="text-center bg-background">
-                <CardContent className="pt-6">
-                  {testimonialImage && <Image src={testimonialImage.imageUrl} alt={testimonial.name} width={80} height={80} className="rounded-full mx-auto mb-4 border-4 border-accent" data-ai-hint={testimonialImage.imageHint} />}
-                  <p className="text-muted-foreground italic">&ldquo;{testimonial.quote}&rdquo;</p>
+              <Card key={testimonial.id} className="bg-background flex flex-col">
+                <CardContent className="pt-6 flex-grow">
+                    <div className="flex items-start gap-4">
+                        {testimonialImage && <Image src={testimonialImage.imageUrl} alt={testimonial.name} width={80} height={80} className="rounded-full border-4 border-accent" data-ai-hint={testimonialImage.imageHint} />}
+                        <div className="flex-1 text-right">
+                           <MessageSquare className="h-8 w-8 text-accent/50 mb-2" />
+                           <p className="text-muted-foreground italic leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
+                        </div>
+                    </div>
                 </CardContent>
-                <CardFooter className="flex-col">
-                  <h4 className="font-bold">{testimonial.name}</h4>
+                <CardFooter className="flex-col items-center text-center pt-4 mt-auto">
+                  <h4 className="font-bold text-lg">{testimonial.name}</h4>
                   <p className="text-sm text-primary">{testimonial.course}</p>
                 </CardFooter>
               </Card>
