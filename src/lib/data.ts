@@ -488,7 +488,9 @@ export const ALL_TRAINERS: Trainer[] = [
       facebook: 'https://www.facebook.com/mahmoud.alhasani',
       instagram: 'https://www.instagram.com/mahmoud.alhasani'
     },
-    reviews: [],
+    reviews: [
+        { id: 'tr1', studentName: 'عبدالله العامري', rating: 5, comment: 'شرح المهندس محمود مبسط وواضح جدًا، استفدت كثيرًا من خبرته.', imageId: 'testimonial-1' }
+    ],
     whatsapp: '967776999568'
   },
   {
@@ -507,7 +509,9 @@ export const ALL_TRAINERS: Trainer[] = [
       linkedin: 'https://www.linkedin.com/in/ali-bajamaza', 
       facebook: 'https://www.facebook.com/ali.bajamaza'
     },
-    reviews: [],
+    reviews: [
+       { id: 'tr2', studentName: 'فاطمة النهدي', rating: 5, comment: 'الدكتور علي مدرب متمكن ومتميزة في تبسيط المعلومات الطبية المعقدة. كانت الدورة عملية ومفيدة جدًا.', imageId: 'testimonial-2' }
+    ],
     whatsapp: '967776999568'
   },
   {
@@ -705,7 +709,7 @@ export const ALL_BOOKS: Book[] = [
     title: 'أساسيات بايثون للمبتدئين',
     author: 'م. محمود الحساني',
     rating: 4.9,
-    imageId: 'book-1',
+    imageId: 'book-python',
     description: 'يهدف إلى تعليم المفاهيم الأساسية في لغة Python بأسلوب مبسط يناسب المبتدئين في عالم البرمجة.',
     topics: ['المتغيرات', 'أنواع البيانات', 'الشروط', 'التكرار', 'الدوال'],
     pages: 135,
@@ -719,7 +723,7 @@ export const ALL_BOOKS: Book[] = [
     title: 'قواعد البيانات SQL',
     author: 'م. محمود الحساني',
     rating: 4.8,
-    imageId: 'book-2',
+    imageId: 'book-sql',
     description: 'يتناول المفاهيم الأساسية لقواعد البيانات، وطريقة التعامل مع جمل SQL لإنشاء واستعلام وتحديث البيانات.',
     topics: ['مفاهيم قواعد البيانات', 'إنشاء الجداول', 'استعلام البيانات', 'تحديث وحذف البيانات'],
     pages: 107,
@@ -731,7 +735,7 @@ export const ALL_BOOKS: Book[] = [
     title: 'البرمجة المرئية windows forms',
     author: 'م. محمود الحساني',
     rating: 4.7,
-    imageId: 'book-3',
+    imageId: 'book-winforms',
     description: 'يشرح كيفية بناء تطبيقات سطح المكتب التفاعلية باستخدام واجهات Windows Forms بلغة C#.',
     topics: ['واجهات المستخدم', 'الأدوات والعناصر', 'برمجة الأحداث', 'تطبيقات عملية'],
     pages: 105,
@@ -743,7 +747,7 @@ export const ALL_BOOKS: Book[] = [
     title: 'تعلم أساسيات البرمجة Console (C#)',
     author: 'م. محمود الحساني',
     rating: 4.8,
-    imageId: 'book-1',
+    imageId: 'book-csharp',
     description: 'يركز على المفاهيم الأساسية في البرمجة باستخدام C# من خلال بيئة الكونسول، مع تطبيقات عملية وتمارين متنوعة.',
     topics: ['أساسيات C#', 'البرمجة كائنية التوجه', 'التعامل مع الملفات', 'تمارين متنوعة'],
     pages: 133,
@@ -755,7 +759,7 @@ export const ALL_BOOKS: Book[] = [
     title: 'Go Go 1',
     author: 'قسم اللغة الإنجليزية',
     rating: 4.6,
-    imageId: 'book-english',
+    imageId: 'book-english-1',
     description: 'مخصص للمبتدئين لتعلم المفردات الأساسية وقواعد اللغة الإنجليزية بطريقة ممتعة وتفاعلية.',
     topics: ['المفردات الأساسية', 'قواعد بسيطة', 'تمارين تفاعلية', 'بداية النطق'],
     pages: 90,
@@ -767,7 +771,7 @@ export const ALL_BOOKS: Book[] = [
     title: 'Go Go 2',
     author: 'قسم اللغة الإنجليزية',
     rating: 4.7,
-    imageId: 'book-english',
+    imageId: 'book-english-2',
     description: 'يطور مهارات المحادثة والاستماع والقراءة للطلاب في المستوى المتوسط.',
     topics: ['محادثات متوسطة', 'فهم المقروء', 'تمارين استماع', 'قواعد متقدمة'],
     pages: 110,
@@ -779,7 +783,7 @@ export const ALL_BOOKS: Book[] = [
     title: 'English for Everyone',
     author: 'قسم اللغة الإنجليزية',
     rating: 4.8,
-    imageId: 'book-english',
+    imageId: 'book-english-3',
     description: 'منهج شامل لتقوية المهارات اللغوية الأربع (الاستماع، القراءة، الكتابة، المحادثة) مع تمارين تطبيقية متنوعة.',
     topics: ['الاستماع', 'القراءة', 'الكتابة', 'المحادثة', 'تمارين شاملة'],
     pages: 250,
@@ -791,7 +795,7 @@ export const ALL_BOOKS: Book[] = [
     title: 'Daily English Conversations',
     author: 'قسم اللغة الإنجليزية',
     rating: 4.7,
-    imageId: 'book-english',
+    imageId: 'book-english-4',
     description: 'يركز على العبارات اليومية والمواقف الحياتية لتقوية مهارات التحدث بطلاقة وثقة.',
     topics: ['محادثات يومية', 'عبارات شائعة', 'مواقف حياتية', 'تعزيز الثقة بالنفس'],
     pages: 120,
