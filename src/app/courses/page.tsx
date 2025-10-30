@@ -1,10 +1,10 @@
+
 "use client";
 
 import { useState } from 'react';
-import { Stethoscope, Code, Wrench, Briefcase, UserCheck, Cpu, Languages, SprayCan, LandPlot, Shield, Search, ToyBrick, Palette, Sparkles, Phone, ListFilter } from 'lucide-react';
+import { Stethoscope, Code, Wrench, Briefcase, UserCheck, Cpu, Languages, SprayCan, LandPlot, Shield, Search, ToyBrick, Palette, Sparkles, Phone, ListFilter, TrendingUp, Star, Percent } from 'lucide-react';
 import { ALL_COURSES } from '@/lib/data';
 import { CourseCard } from '@/components/course-card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
   Select,
@@ -33,14 +33,36 @@ const categories = [
   { name: 'إدارة', slug: 'إدارة' },
 ];
 
+const sortOptions = [
+  { name: 'الكل', value: 'all' },
+  { name: 'الأكثر طلباً', value: 'popular' },
+  { name: 'الأعلى تقييماً', value: 'rating' },
+  { name: 'عليها خصم', value: 'discount' },
+];
+
+
 export default function CoursesPage() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('all');
 
   const filteredCourses = ALL_COURSES.filter(course => {
     const matchesCategory = activeCategory === 'all' || course.category === activeCategory;
     const matchesSearch = course.title.toLowerCase().includes(searchTerm.toLowerCase()) || course.trainerName.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
+  }).sort((a, b) => {
+    if (sortBy === 'rating') {
+      return b.rating - a.rating;
+    }
+    return 0; // default order
+  }).filter(course => {
+    if (sortBy === 'popular') {
+      return course.tags?.includes('popular');
+    }
+    if (sortBy === 'discount') {
+      return course.tags?.includes('discount');
+    }
+    return true;
   });
 
   return (
@@ -52,8 +74,8 @@ export default function CoursesPage() {
         </p>
       </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-        <div className="relative">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div className="relative md:col-span-1">
           <Input 
             type="text" 
             placeholder="ابحث عن دورة أو مدرب..." 
@@ -63,7 +85,7 @@ export default function CoursesPage() {
           />
           <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
         </div>
-        <div>
+        <div className="md:col-span-1">
           <Select onValueChange={setActiveCategory} defaultValue={activeCategory}>
             <SelectTrigger className="w-full">
                 <ListFilter className="h-5 w-5 text-muted-foreground" />
@@ -77,6 +99,21 @@ export default function CoursesPage() {
               ))}
             </SelectContent>
           </Select>
+        </div>
+        <div className="md:col-span-1">
+            <Select onValueChange={setSortBy} defaultValue={sortBy}>
+                <SelectTrigger className="w-full">
+                    <TrendingUp className="h-5 w-5 text-muted-foreground" />
+                    <SelectValue placeholder="فرز حسب" />
+                </SelectTrigger>
+                <SelectContent>
+                    {sortOptions.map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                        {option.name}
+                    </SelectItem>
+                    ))}
+                </SelectContent>
+            </Select>
         </div>
       </div>
       
