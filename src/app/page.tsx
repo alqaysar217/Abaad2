@@ -283,8 +283,8 @@ export default function Home() {
             {featuredTrainers.map(trainer => {
               const trainerImage = PlaceHolderImages.find(p => p.id === trainer.imageId);
               return (
-                <Card key={trainer.id} className="text-center flex flex-col items-center p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1.5">
-                   {trainerImage && (
+                <Card key={trainer.id} className="text-center flex flex-col items-center p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1.5 border">
+                  {trainerImage && (
                     <Image
                       src={trainerImage.imageUrl}
                       alt={trainer.name}
@@ -294,20 +294,20 @@ export default function Home() {
                       data-ai-hint={trainerImage.imageHint}
                     />
                   )}
-                  <CardHeader className="p-0">
+                  <CardHeader className="p-0 text-center flex-grow">
                     <CardTitle className="font-headline text-xl">{trainer.name}</CardTitle>
-                     <p className="text-primary font-semibold">{trainer.field}</p>
-                     <div className="flex items-center justify-center gap-1 pt-2">
-                        {[...Array(5)].map((_, i) => (
-                            <Star key={i} className={`w-4 h-4 ${i < Math.floor(trainer.rating) ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />
-                        ))}
-                        <span className="text-xs text-muted-foreground ml-1">({trainer.rating})</span>
+                    <p className="text-primary font-semibold">{trainer.field}</p>
+                    <div className="flex items-center justify-center gap-1 pt-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className={`w-4 h-4 ${i < Math.floor(trainer.rating) ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />
+                      ))}
+                      <span className="text-xs text-muted-foreground ml-1">({trainer.rating})</span>
                     </div>
                   </CardHeader>
                   <CardContent className="p-4 flex-grow">
                     <p className="text-sm text-muted-foreground line-clamp-3">{trainer.bio}</p>
                   </CardContent>
-                  <CardFooter className="p-0 w-full">
+                  <CardFooter className="p-0 w-full mt-auto">
                     <Button asChild variant="outline" className="w-full">
                       <Link href={`/trainers/${trainer.slug}`}>
                         عرض الملف الشخصي
