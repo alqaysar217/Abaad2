@@ -1205,7 +1205,16 @@ export const ALL_BOOKS: Book[] = [
     topics: ['المتغيرات', 'أنواع البيانات', 'الشروط', 'التكرار', 'الدوال'],
     pages: 135,
     reviews: [
-      { id: 'br1', name: 'علي حسن', rating: 5, quote: 'كتاب رائع ومباشر، ساعدني كثيرًا في فهم أساسيات بايثون.', imageId: 'testimonial-1' }
+      { id: 'br-py-1', name: 'علي حسن', rating: 5, quote: 'كتاب رائع ومباشر، ساعدني كثيرًا في فهم أساسيات بايثون.', imageId: 'testimonial-1' },
+      { id: 'br-py-2', name: 'سارة عبدالله', rating: 5, quote: 'أفضل كتاب للمبتدئين في بايثون، الشرح واضح والأمثلة عملية.', imageId: 'testimonial-2' },
+      { id: 'br-py-3', name: 'محمد خالد', rating: 4, quote: 'محتوى منظم وممتاز، لكن كنت أتمنى وجود تمارين أكثر.', imageId: 'testimonial-3' },
+      { id: 'br-py-4', name: 'فاطمة أحمد', rating: 5, quote: 'كتاب لا غنى عنه لكل من يريد البدء في البرمجة.', imageId: 'testimonial-4' },
+      { id: 'br-py-5', name: 'حسن علي', rating: 5, quote: 'الأسلوب بسيط ويصل للقارئ بسهولة.', imageId: 'testimonial-5' },
+      { id: 'br-py-6', name: 'مريم ياسر', rating: 4, quote: 'مرجع ممتاز للعودة إليه عند الحاجة.', imageId: 'testimonial-6' },
+      { id: 'br-py-7', name: 'خالد محمد', rating: 5, quote: 'أنهيت الكتاب في وقت قصير بفضل سلاسة الشرح.', imageId: 'testimonial-1' },
+      { id: 'br-py-8', name: 'نورة سالم', rating: 5, quote: 'أنصح به بشدة!', imageId: 'testimonial-2' },
+      { id: 'br-py-9', name: 'يوسف إبراهيم', rating: 4, quote: 'كتاب جيد جدًا، شكرا للمؤلف.', imageId: 'testimonial-3' },
+      { id: 'br-py-10', name: 'زينب عمر', rating: 5, quote: 'أفضل استثمار قمت به لتعلم البرمجة.', imageId: 'testimonial-4' }
     ]
   },
   {
@@ -1218,7 +1227,18 @@ export const ALL_BOOKS: Book[] = [
     description: 'يتناول المفاهيم الأساسية لقواعد البيانات، وطريقة التعامل مع جمل SQL لإنشاء واستعلام وتحديث البيانات.',
     topics: ['مفاهيم قواعد البيانات', 'إنشاء الجداول', 'استعلام البيانات', 'تحديث وحذف البيانات'],
     pages: 107,
-    reviews: []
+    reviews: [
+      { id: 'br-sql-1', name: 'أحمد صالح', rating: 5, quote: 'كتاب مختصر ومفيد جدًا لفهم أساسيات SQL.', imageId: 'testimonial-1' },
+      { id: 'br-sql-2', name: 'عائشة علي', rating: 4, quote: 'شرح جيد ومباشر.', imageId: 'testimonial-2' },
+      { id: 'br-sql-3', name: 'سالم محمد', rating: 5, quote: 'ساعدني في التحضير للمقابلات الوظيفية.', imageId: 'testimonial-3' },
+      { id: 'br-sql-4', name: 'فاطمة عبدالله', rating: 5, quote: 'مادة علمية ممتازة.', imageId: 'testimonial-4' },
+      { id: 'br-sql-5', name: 'عبدالرحمن خالد', rating: 4, quote: 'كنت أتمنى وجود أمثلة أكثر تعقيدًا.', imageId: 'testimonial-5' },
+      { id: 'br-sql-6', name: 'مريم حسن', rating: 5, quote: 'مرجع رائع للمبتدئين.', imageId: 'testimonial-6' },
+      { id: 'br-sql-7', name: 'خالد أحمد', rating: 5, quote: 'كتاب واضح وموجز.', imageId: 'testimonial-1' },
+      { id: 'br-sql-8', name: 'نورة علي', rating: 4, quote: 'استفدت منه كثيرًا.', imageId: 'testimonial-2' },
+      { id: 'br-sql-9', name: 'ياسر محمد', rating: 5, quote: 'أنصح به.', imageId: 'testimonial-3' },
+      { id: 'br-sql-10', name: 'زينب سالم', rating: 5, quote: 'شكرًا للمؤلف على هذا العمل القيم.', imageId: 'testimonial-4' }
+    ]
   },
   {
     id: 'b3',
@@ -1230,7 +1250,18 @@ export const ALL_BOOKS: Book[] = [
     description: 'يشرح كيفية بناء تطبيقات سطح المكتب التفاعلية باستخدام واجهات Windows Forms بلغة C#.',
     topics: ['واجهات المستخدم', 'الأدوات والعناصر', 'برمجة الأحداث', 'تطبيقات عملية'],
     pages: 105,
-    reviews: []
+    reviews: [
+      { id: 'br-wf-1', name: 'علي محمد', rating: 5, quote: 'الكتاب عملي جدًا، ساعدني في بناء أول تطبيق لي.', imageId: 'testimonial-1' },
+      { id: 'br-wf-2', name: 'سارة خالد', rating: 4, quote: 'شرح جيد ومبسط للمفاهيم.', imageId: 'testimonial-2' },
+      { id: 'br-wf-3', name: 'محمد أحمد', rating: 5, quote: 'مرجع ممتاز لتطبيقات سطح المكتب.', imageId: 'testimonial-3' },
+      { id: 'br-wf-4', name: 'فاطمة حسن', rating: 5, quote: 'الأمثلة كانت مفيدة وواضحة.', imageId: 'testimonial-4' },
+      { id: 'br-wf-5', name: 'حسن علي', rating: 4, quote: 'كتاب جيد جدًا.', imageId: 'testimonial-5' },
+      { id: 'br-wf-6', name: 'مريم عبدالله', rating: 5, quote: 'أنصح به للمبتدئين في برمجة الواجهات.', imageId: 'testimonial-6' },
+      { id: 'br-wf-7', name: 'خالد صالح', rating: 4, quote: 'محتوى قيم.', imageId: 'testimonial-1' },
+      { id: 'br-wf-8', name: 'نورة سالم', rating: 5, quote: 'كتاب رائع.', imageId: 'testimonial-2' },
+      { id: 'br-wf-9', name: 'يوسف خالد', rating: 5, quote: 'أفضل كتاب في هذا المجال.', imageId: 'testimonial-3' },
+      { id: 'br-wf-10', name: 'زينب أحمد', rating: 4, quote: 'مفيد وعملي.', imageId: 'testimonial-4' }
+    ]
   },
   {
     id: 'b4',
@@ -1242,7 +1273,18 @@ export const ALL_BOOKS: Book[] = [
     description: 'يركز على المفاهيم الأساسية في البرمجة باستخدام C# من خلال بيئة الكونسول، مع تطبيقات عملية وتمارين متنوعة.',
     topics: ['أساسيات C#', 'البرمجة كائنية التوجه', 'التعامل مع الملفات', 'تمارين متنوعة'],
     pages: 133,
-    reviews: []
+    reviews: [
+      { id: 'br-cs-1', name: 'سالم علي', rating: 5, quote: 'مدخل ممتاز لتعلم لغة سي شارب.', imageId: 'testimonial-1' },
+      { id: 'br-cs-2', name: 'عائشة محمد', rating: 4, quote: 'الكتاب منظم والشرح واضح.', imageId: 'testimonial-2' },
+      { id: 'br-cs-3', name: 'أحمد عبدالله', rating: 5, quote: 'التمارين كانت مفيدة جدًا لترسيخ المفاهيم.', imageId: 'testimonial-3' },
+      { id: 'br-cs-4', name: 'فاطمة خالد', rating: 5, quote: 'كتاب ضروري لكل مبتدئ.', imageId: 'testimonial-4' },
+      { id: 'br-cs-5', name: 'محمد حسن', rating: 4, quote: 'محتوى جيد وأسلوب سهل.', imageId: 'testimonial-5' },
+      { id: 'br-cs-6', name: 'مريم علي', rating: 5, quote: 'أفضل بداية لي مع C#.', imageId: 'testimonial-6' },
+      { id: 'br-cs-7', name: 'خالد ياسر', rating: 4, quote: 'استفدت من قسم البرمجة الكائنية.', imageId: 'testimonial-1' },
+      { id: 'br-cs-8', name: 'نورة أحمد', rating: 5, quote: 'كتاب متكامل للمبتدئين.', imageId: 'testimonial-2' },
+      { id: 'br-cs-9', name: 'ياسر عبدالله', rating: 5, quote: 'شكرًا للمؤلف.', imageId: 'testimonial-3' },
+      { id: 'br-cs-10', name: 'زينب علي', rating: 4, quote: 'مفيد جدًا.', imageId: 'testimonial-4' }
+    ]
   },
   {
     id: 'b5',
@@ -1254,7 +1296,18 @@ export const ALL_BOOKS: Book[] = [
     description: 'مخصص للمبتدئين لتعلم المفردات الأساسية وقواعد اللغة الإنجليزية بطريقة ممتعة وتفاعلية.',
     topics: ['المفردات الأساسية', 'قواعد بسيطة', 'تمارين تفاعلية', 'بداية النطق'],
     pages: 90,
-    reviews: []
+    reviews: [
+      { id: 'br-gg1-1', name: 'أحمد', rating: 5, quote: 'كتاب ممتاز للأطفال والمبتدئين.', imageId: 'testimonial-1' },
+      { id: 'br-gg1-2', name: 'سارة', rating: 4, quote: 'التمارين تفاعلية وممتعة.', imageId: 'testimonial-2' },
+      { id: 'br-gg1-3', name: 'علي', rating: 5, quote: 'ساعد ابني كثيرًا في تعلم الإنجليزية.', imageId: 'testimonial-3' },
+      { id: 'br-gg1-4', name: 'فاطمة', rating: 5, quote: 'طريقة عرض المحتوى جذابة.', imageId: 'testimonial-4' },
+      { id: 'br-gg1-5', name: 'حسن', rating: 4, quote: 'بداية جيدة لتعلم اللغة.', imageId: 'testimonial-5' },
+      { id: 'br-gg1-6', name: 'مريم', rating: 5, quote: 'الرسومات والألوان جميلة.', imageId: 'testimonial-6' },
+      { id: 'br-gg1-7', name: 'خالد', rating: 4, quote: 'كتاب مفيد.', imageId: 'testimonial-1' },
+      { id: 'br-gg1-8', name: 'نورة', rating: 5, quote: 'أنصح به.', imageId: 'testimonial-2' },
+      { id: 'br-gg1-9', name: 'يوسف', rating: 5, quote: 'عمل رائع.', imageId: 'testimonial-3' },
+      { id: 'br-gg1-10', name: 'زينب', rating: 4, quote: 'محتوى جيد.', imageId: 'testimonial-4' }
+    ]
   },
   {
     id: 'b6',
@@ -1266,7 +1319,18 @@ export const ALL_BOOKS: Book[] = [
     description: 'يطور مهارات المحادثة والاستماع والقراءة للطلاب في المستوى المتوسط.',
     topics: ['محادثات متوسطة', 'فهم المقروء', 'تمارين استماع', 'قواعد متقدمة'],
     pages: 110,
-    reviews: []
+    reviews: [
+      { id: 'br-gg2-1', name: 'عبدالله', rating: 5, quote: 'نقلة نوعية بعد الكتاب الأول.', imageId: 'testimonial-1' },
+      { id: 'br-gg2-2', name: 'آمنة', rating: 4, quote: 'تمارين الاستماع كانت مفيدة جدًا.', imageId: 'testimonial-2' },
+      { id: 'br-gg2-3', name: 'سالم', rating: 5, quote: 'الكتاب ساعدني على التحدث بثقة أكبر.', imageId: 'testimonial-3' },
+      { id: 'br-gg2-4', name: 'فاطمة', rating: 5, quote: 'محتوى متقدم وممتاز.', imageId: 'testimonial-4' },
+      { id: 'br-gg2-5', name: 'عمر', rating: 4, quote: 'كتاب جيد جدًا.', imageId: 'testimonial-5' },
+      { id: 'br-gg2-6', name: 'خديجة', rating: 5, quote: 'أحببت قصص القراءة.', imageId: 'testimonial-6' },
+      { id: 'br-gg2-7', name: 'راشد', rating: 4, quote: 'مفيد جدًا.', imageId: 'testimonial-1' },
+      { id: 'br-gg2-8', name: 'موزة', rating: 5, quote: 'أنصح به بشدة.', imageId: 'testimonial-2' },
+      { id: 'br-gg2-9', name: 'حمد', rating: 5, quote: 'استمروا في هذه السلسلة الرائعة.', imageId: 'testimonial-3' },
+      { id: 'br-gg2-10', name: 'لطيفة', rating: 4, quote: 'كتاب قيم.', imageId: 'testimonial-4' }
+    ]
   },
   {
     id: 'b7',
@@ -1278,7 +1342,18 @@ export const ALL_BOOKS: Book[] = [
     description: 'منهج شامل لتقوية المهارات اللغوية الأربع (الاستماع، القراءة، الكتابة، المحادثة) مع تمارين تطبيقية متنوعة.',
     topics: ['الاستماع', 'القراءة', 'الكتابة', 'المحادثة', 'تمارين شاملة'],
     pages: 250,
-    reviews: []
+    reviews: [
+      { id: 'br-efe-1', name: 'محمد', rating: 5, quote: 'كتاب شامل ويغطي كل المهارات.', imageId: 'testimonial-1' },
+      { id: 'br-efe-2', name: 'سارة', rating: 5, quote: 'أفضل كتاب لغة إنجليزية اقتنيته.', imageId: 'testimonial-2' },
+      { id: 'br-efe-3', name: 'علي', rating: 4, quote: 'الكتاب دسم ويحتاج إلى وقت، لكنه يستحق.', imageId: 'testimonial-3' },
+      { id: 'br-efe-4', name: 'فاطمة', rating: 5, quote: 'التمارين متنوعة وتغطي كل الجوانب.', imageId: 'testimonial-4' },
+      { id: 'br-efe-5', name: 'حسن', rating: 5, quote: 'مرجع متكامل.', imageId: 'testimonial-5' },
+      { id: 'br-efe-6', name: 'مريم', rating: 4, quote: 'مفيد جدًا للدراسة الذاتية.', imageId: 'testimonial-6' },
+      { id: 'br-efe-7', name: 'خالد', rating: 5, quote: 'ساعدني في التحضير لاختبار الآيلتس.', imageId: 'testimonial-1' },
+      { id: 'br-efe-8', name: 'نورة', rating: 5, quote: 'لا تتردد في شرائه.', imageId: 'testimonial-2' },
+      { id: 'br-efe-9', name: 'يوسف', rating: 4, quote: 'كتاب ممتاز.', imageId: 'testimonial-3' },
+      { id: 'br-efe-10', name: 'زينب', rating: 5, quote: 'أشعر بفرق كبير في مستواي بعد دراسة هذا الكتاب.', imageId: 'testimonial-4' }
+    ]
   },
   {
     id: 'b8',
@@ -1290,7 +1365,18 @@ export const ALL_BOOKS: Book[] = [
     description: 'يركز على العبارات اليومية والمواقف الحياتية لتقوية مهارات التحدث بطلاقة وثقة.',
     topics: ['محادثات يومية', 'عبارات شائعة', 'مواقف حياتية', 'تعزيز الثقة بالنفس'],
     pages: 120,
-    reviews: []
+    reviews: [
+      { id: 'br-dec-1', name: 'ياسين', rating: 5, quote: 'كتاب عملي ومفيد جدًا للمحادثة.', imageId: 'testimonial-1' },
+      { id: 'br-dec-2', name: 'حصة', rating: 4, quote: 'أعجبني تركيزه على المواقف الواقعية.', imageId: 'testimonial-2' },
+      { id: 'br-dec-3', name: 'جاسم', rating: 5, quote: 'ساعدني على كسر حاجز الخوف من التحدث.', imageId: 'testimonial-3' },
+      { id: 'br-dec-4', name: 'فاطمة', rating: 5, quote: 'كتاب خفيف وممتع.', imageId: 'testimonial-4' },
+      { id: 'br-dec-5', name: 'منصور', rating: 4, quote: 'العبارات المستخدمة حديثة ومفيدة.', imageId: 'testimonial-5' },
+      { id: 'br-dec-6', name: 'مريم', rating: 5, quote: 'أنصح به لمن يريد تحسين محادثته.', imageId: 'testimonial-6' },
+      { id: 'br-dec-7', name: 'ناصر', rating: 4, quote: 'كتاب جيد.', imageId: 'testimonial-1' },
+      { id: 'br-dec-8', name: 'شيخة', rating: 5, quote: 'أستخدمه يوميًا لممارسة اللغة.', imageId: 'testimonial-2' },
+      { id: 'br-dec-9', name: 'سعود', rating: 5, quote: 'مفيد للغاية.', imageId: 'testimonial-3' },
+      { id: 'br-dec-10', name: 'وضحى', rating: 4, quote: 'محتوى ممتاز.', imageId: 'testimonial-4' }
+    ]
   }
 ];
 
@@ -1403,3 +1489,6 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     }
   ];
 
+
+
+    
