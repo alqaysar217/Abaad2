@@ -113,30 +113,32 @@ const features = [
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
   const testimonialImage = PlaceHolderImages.find(p => p.id === testimonial.imageId);
   return (
-    <Card className="h-full bg-background flex flex-col">
-      <CardContent className="p-6 flex flex-col flex-grow">
-        <p className="text-muted-foreground italic relative pr-8 flex-grow">
-          <MessageCircle className="absolute right-0 top-0 h-5 w-5 text-accent" />
-          &ldquo;{testimonial.quote}&rdquo;
-        </p>
-        <div className="flex items-center gap-4 mt-4 pt-4 border-t">
-          {testimonialImage && (
-            <Image
-              src={testimonialImage.imageUrl}
-              alt={testimonial.name}
-              width={56}
-              height={56}
-              className="rounded-full border-2 border-accent"
-              data-ai-hint={testimonialImage.imageHint}
-            />
-          )}
-          <div>
-            <h3 className="font-bold text-lg">{testimonial.name}</h3>
-            <p className="text-sm text-primary">{testimonial.course}</p>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
+    <div className="break-inside-avoid">
+        <Card className="h-full bg-background">
+        <CardContent className="p-6">
+            <div className="flex items-center gap-4 mb-4">
+            {testimonialImage && (
+                <Image
+                src={testimonialImage.imageUrl}
+                alt={testimonial.name}
+                width={56}
+                height={56}
+                className="rounded-full border-2 border-accent"
+                data-ai-hint={testimonialImage.imageHint}
+                />
+            )}
+            <div>
+                <h3 className="font-bold text-lg">{testimonial.name}</h3>
+                <p className="text-sm text-primary">{testimonial.course}</p>
+            </div>
+            </div>
+            <p className="text-muted-foreground italic relative pr-8">
+            <MessageCircle className="absolute right-0 top-0 h-5 w-5 text-accent" />
+            &ldquo;{testimonial.quote}&rdquo;
+            </p>
+        </CardContent>
+        </Card>
+    </div>
   );
 };
 
@@ -281,7 +283,7 @@ export default function Home() {
             {featuredTrainers.map(trainer => {
               const trainerImage = PlaceHolderImages.find(p => p.id === trainer.imageId);
               return (
-                <Card key={trainer.id} className="text-center flex flex-col items-center p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <Card key={trainer.id} className="text-center flex flex-col items-center p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1.5">
                    {trainerImage && (
                     <Image
                       src={trainerImage.imageUrl}
@@ -396,9 +398,7 @@ export default function Home() {
           </div>
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
             {featuredTestimonials.map(testimonial => (
-              <div key={testimonial.id} className="break-inside-avoid">
-                <TestimonialCard testimonial={testimonial} />
-              </div>
+              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
             ))}
           </div>
           <div className="text-center mt-12">
