@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -23,9 +22,28 @@ const navLinks: NavLink[] = [
   { href: '/contact', label: 'تواصل معنا', icon: <Phone /> },
 ];
 
-export function Header() {
+function NavigationLinks() {
   const pathname = usePathname();
+  return (
+    <>
+      {navLinks.slice(0, 5).map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          className={cn(
+            'flex items-center gap-2 transition-colors hover:text-primary',
+            pathname === link.href ? 'font-bold text-primary' : 'text-muted-foreground'
+          )}
+        >
+          {link.icon}
+          <span>{link.label}</span>
+        </Link>
+      ))}
+    </>
+  );
+}
 
+export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
@@ -37,22 +55,10 @@ export function Header() {
         </div>
 
         <nav className="hidden md:flex flex-1 items-center justify-center gap-4 text-sm">
-          {navLinks.slice(0, 5).map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                'flex items-center gap-2 transition-colors hover:text-primary',
-                pathname === link.href ? 'font-bold text-primary' : 'text-muted-foreground'
-              )}
-            >
-              {link.icon}
-              <span>{link.label}</span>
-            </Link>
-          ))}
+          <NavigationLinks />
         </nav>
 
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-end gap-2">
           <ThemeToggleButton />
           <div className="hidden md:flex">
             <Button asChild>
