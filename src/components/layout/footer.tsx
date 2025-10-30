@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Twitter, Linkedin, Youtube, Facebook, Info, GraduationCap, Users, Phone } from 'lucide-react';
+import { Twitter, Linkedin, Youtube, Facebook, Info, GraduationCap, Users, Phone, MapPin, Mail } from 'lucide-react';
 import { AbaadLogo } from '@/components/icons';
 import type { NavLink } from '@/lib/types';
 
@@ -46,9 +46,9 @@ export function Footer() {
           <div>
             <h3 className="font-bold mb-4">تواصل معنا</h3>
             <address className="text-sm text-muted-foreground not-italic space-y-2">
-              <p>اليمن - صنعاء</p>
-              <p>هاتف: <a href="tel:+967776999568" className="hover:text-primary">+967 776 999 568</a></p>
-              <p>بريد: <a href="mailto:abaadinstitute24@gmail.com" className="hover:text-primary">abaadinstitute24@gmail.com</a></p>
+              <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" />اليمن - صنعاء</p>
+              <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" />هاتف: <a href="tel:+967776999568" className="hover:text-primary">+967 776 999 568</a></p>
+              <p className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" />بريد: <a href="mailto:abaadinstitute24@gmail.com" className="hover:text-primary">abaadinstitute24@gmail.com</a></p>
             </address>
           </div>
           <div>
