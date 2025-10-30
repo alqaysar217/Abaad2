@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { AbaadLogo } from '@/components/icons';
-import { LATEST_COURSES, TESTIMONIALS, ALL_TRAINERS, ALL_BOOKS } from '@/lib/data';
+import { ALL_COURSES, TESTIMONIALS, ALL_TRAINERS, ALL_BOOKS } from '@/lib/data';
 import { Course } from '@/lib/types';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { HeroSlider } from '@/components/hero-slider';
@@ -93,8 +93,9 @@ const features = [
 ];
 
 export default function Home() {
+  const latestCourses = ALL_COURSES.slice(0, 3);
   const featuredTrainers = ALL_TRAINERS.slice(0, 3);
-  const featuredBooks = ALL_BOOKS.slice(0, 2);
+  const featuredBooks = ALL_BOOKS.slice(0, 3);
 
   return (
     <div className="flex flex-col">
@@ -172,18 +173,18 @@ export default function Home() {
           <h2 className="text-3xl font-headline mb-12">استكشف أقسام المعهد</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {[
-              { icon: <GraduationCap className="h-12 w-12" />, label: "الدورات", href: "/courses" },
-              { icon: <Users className="h-12 w-12" />, label: "المدربون", href: "/trainers" },
-              { icon: <BookOpen className="h-12 w-12" />, label: "الكتب", href: "/books" },
-              { icon: <Rss className="h-12 w-12" />, label: "المدونة", href: "/news" },
-              { icon: <Building className="h-12 w-12" />, label: "تواصل معنا", href: "/contact" },
+              { icon: <GraduationCap />, label: "الدورات", href: "/courses" },
+              { icon: <Users />, label: "المدربون", href: "/trainers" },
+              { icon: <BookOpen />, label: "الكتب", href: "/books" },
+              { icon: <Rss />, label: "المدونة", href: "/news" },
+              { icon: <Building />, label: "تواصل معنا", href: "/contact" },
             ].map(item => (
               <Link href={item.href} key={item.label} className="group">
-                <div className="p-6 bg-card rounded-lg shadow-md transition-all duration-300 hover:shadow-primary/20 hover:shadow-lg hover:-translate-y-2 flex flex-col items-center gap-4 border">
-                  <div className="bg-primary/10 text-primary rounded-full p-6 transition-transform duration-300 group-hover:scale-110">
-                    {React.cloneElement(item.icon, { className: 'h-10 w-10 md:h-12 md:w-12' })}
+                <div className="p-6 bg-card rounded-lg shadow-sm transition-all duration-300 hover:shadow-primary/20 hover:shadow-lg hover:-translate-y-2 flex flex-col items-center gap-4 border">
+                   <div className="bg-primary/10 text-primary rounded-full p-4 sm:p-6 transition-transform duration-300 group-hover:scale-110">
+                    {React.cloneElement(item.icon, { className: 'h-10 w-10 sm:h-12 sm:w-12' })}
                   </div>
-                  <h3 className="font-headline text-lg md:text-xl">{item.label}</h3>
+                  <h3 className="font-headline text-lg sm:text-xl">{item.label}</h3>
                 </div>
               </Link>
             ))}
@@ -201,7 +202,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {LATEST_COURSES.map(course => (
+            {latestCourses.map(course => (
               <CourseCard key={course.id} course={course} />
             ))}
           </div>
@@ -278,30 +279,34 @@ export default function Home() {
               مكتبة غنية بالكتب والمراجع التي أعدها مدربونا الخبراء.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredBooks.map(book => {
               const bookImage = PlaceHolderImages.find(p => p.id === book.imageId);
               return (
-                 <Card key={book.id} className="flex flex-col md:flex-row items-center gap-6 p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                  {bookImage && (
-                    <Link href={`/books/${book.slug}`} className="flex-shrink-0">
-                      <Image
-                        src={bookImage.imageUrl}
-                        alt={book.title}
-                        width={120}
-                        height={160}
-                        className="rounded-md shadow-md object-cover aspect-[3/4] hover:opacity-90 transition-opacity"
-                        data-ai-hint={bookImage.imageHint}
-                      />
-                    </Link>
-                  )}
-                  <div className="flex-1 text-center md:text-right">
-                    <CardTitle className="font-headline text-xl mb-1">
-                      <Link href={`/books/${book.slug}`} className="hover:text-primary">{book.title}</Link>
-                    </CardTitle>
-                    <p className="text-sm text-muted-foreground mb-3">للمؤلف: {book.author}</p>
-                    <p className="text-sm text-muted-foreground line-clamp-2">{book.description}</p>
-                  </div>
+                 <Card key={book.id} className="flex flex-col text-center items-center p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    {bookImage && (
+                      <Link href={`/books/${book.slug}`} className="flex-shrink-0 mb-4">
+                        <Image
+                          src={bookImage.imageUrl}
+                          alt={book.title}
+                          width={150}
+                          height={200}
+                          className="rounded-md shadow-lg object-cover aspect-[3/4] hover:opacity-90 transition-opacity"
+                          data-ai-hint={bookImage.imageHint}
+                        />
+                      </Link>
+                    )}
+                    <div className="flex-1">
+                      <CardTitle className="font-headline text-lg mb-1">
+                        <Link href={`/books/${book.slug}`} className="hover:text-primary">{book.title}</Link>
+                      </CardTitle>
+                      <p className="text-sm text-muted-foreground mb-3">للمؤلف: {book.author}</p>
+                       <Button asChild variant="link" size="sm">
+                          <Link href={`/books/${book.slug}`}>
+                            عرض التفاصيل <ChevronLeft className="mr-1 h-4 w-4" />
+                          </Link>
+                        </Button>
+                    </div>
                  </Card>
               );
             })}
@@ -332,10 +337,10 @@ export default function Home() {
                 return(
               <Card key={testimonial.id} className="bg-secondary flex flex-col">
                 <CardContent className="pt-6 flex-grow">
-                    <div className="flex items-start gap-4">
+                    <div className="flex flex-col items-center text-center gap-4">
                         {testimonialImage && <Image src={testimonialImage.imageUrl} alt={testimonial.name} width={80} height={80} className="rounded-full border-4 border-accent" data-ai-hint={testimonialImage.imageHint} />}
-                        <div className="flex-1 text-right">
-                           <MessageSquare className="h-8 w-8 text-accent/50 mb-2" />
+                        <div className="flex-1">
+                           <MessageSquare className="h-8 w-8 text-accent/50 mb-2 mx-auto" />
                            <p className="text-muted-foreground italic leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
                         </div>
                     </div>
@@ -367,5 +372,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
