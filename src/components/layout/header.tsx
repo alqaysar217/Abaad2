@@ -25,18 +25,17 @@ const navLinks: NavLink[] = [
 function NavigationLinks() {
   const pathname = usePathname();
   return (
-    <nav className="hidden md:flex items-center justify-center gap-4 text-sm">
+    <nav className="hidden md:flex items-center justify-center gap-4 lg:gap-6 text-sm">
       {navLinks.slice(0, 5).map((link) => (
         <Link
           key={link.href}
           href={link.href}
           className={cn(
-            'flex items-center gap-2 transition-colors hover:text-primary',
+            'transition-colors hover:text-primary',
             pathname === link.href ? 'font-bold text-primary' : 'text-muted-foreground'
           )}
         >
-          {link.icon}
-          <span>{link.label}</span>
+          {link.label}
         </Link>
       ))}
     </nav>
@@ -46,17 +45,17 @@ function NavigationLinks() {
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         {/* Right Side: Logo */}
         <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2">
-            <AbaadLogo className="h-8 w-8" />
-            <span className="font-bold hidden sm:inline-block">معهد أبعاد</span>
+                <AbaadLogo className="h-8 w-8" />
+                <span className="font-bold hidden sm:inline-block">معهد أبعاد</span>
             </Link>
         </div>
 
         {/* Center: Navigation */}
-        <div className="flex-1 flex justify-center">
+        <div className="hidden md:flex flex-1 justify-center">
             <NavigationLinks />
         </div>
 
