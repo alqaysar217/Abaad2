@@ -37,7 +37,7 @@ export default function BooksPage() {
                 </Link>
               )}
               <CardHeader className="pb-2">
-                <CardTitle className="font-headline text-md leading-tight">
+                <CardTitle className="font-headline text-md leading-tight h-12 overflow-hidden">
                   <Link href={`/books/${book.slug}`} className="hover:text-primary">{book.title}</Link>
                 </CardTitle>
               </CardHeader>
