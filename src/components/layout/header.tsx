@@ -9,6 +9,7 @@ import { AbaadLogo } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import type { NavLink } from '@/lib/types';
 import { MobileNav } from './mobile-nav';
+import { ThemeToggleButton } from '../theme-toggle-button';
 
 const navLinks: NavLink[] = [
   { href: '/', label: 'الرئيسية', icon: <Home /> },
@@ -28,7 +29,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         {/* Logo and Name on the right */}
-        <div className="flex items-center justify-start">
+        <div className="flex items-center gap-4">
           <Link href="/" className="flex items-center space-x-2">
             <AbaadLogo className="h-8 w-8 ml-2" />
             <span className="font-bold">معهد أبعاد</span>
@@ -37,7 +38,7 @@ export function Header() {
 
         {/* Desktop Nav in the middle */}
         <nav className="hidden md:flex flex-1 items-center justify-center gap-4 text-sm">
-          {navLinks.map((link) => (
+          {navLinks.slice(0, 5).map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -53,7 +54,8 @@ export function Header() {
         </nav>
 
         {/* Buttons and Mobile Nav on the left */}
-        <div className="flex flex-1 items-center justify-end">
+        <div className="flex items-center justify-end gap-2">
+            <ThemeToggleButton />
           <div className="hidden md:flex">
             <Button asChild>
               <a href="https://wa.me/967776999568" target="_blank" rel="noopener noreferrer">
