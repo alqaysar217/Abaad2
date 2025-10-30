@@ -27,17 +27,15 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
+      <div className="container flex h-16 items-center justify-between">
         {/* Right side: Logo and Name */}
-        <div className="flex items-center justify-start flex-1">
-          <Link href="/" className="flex items-center gap-2">
-            <AbaadLogo className="h-8 w-8" />
-            <span className="hidden font-bold sm:inline-block">معهد أبعاد</span>
-          </Link>
-        </div>
+        <Link href="/" className="flex items-center gap-2">
+          <AbaadLogo className="h-8 w-8" />
+          <span className="font-bold hidden sm:inline-block">معهد أبعاد</span>
+        </Link>
 
         {/* Middle: Desktop Navigation */}
-        <nav className="hidden md:flex flex-none items-center justify-center gap-4 text-sm">
+        <nav className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-4 text-sm">
           {navLinks.slice(0, 5).map((link) => (
             <Link
               key={link.href}
@@ -54,7 +52,7 @@ export function Header() {
         </nav>
 
         {/* Left side: Buttons and Mobile Nav */}
-        <div className="flex flex-1 items-center justify-end gap-2">
+        <div className="flex items-center justify-end gap-2">
           <ThemeToggleButton />
           <div className="hidden md:flex">
             <Button asChild>
