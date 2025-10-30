@@ -54,9 +54,9 @@ export function FaqSection() {
     <div className="space-y-8">
       <Card className="sticky top-24">
         <CardHeader>
-          <CardTitle className='text-xl'>اسأل الذكاء الاصطناعي</CardTitle>
+          <CardTitle className='text-xl'>مولّد الأسئلة الشائعة</CardTitle>
           <CardDescription>
-            لديك سؤال محدد؟ أدخل الموضوع واحصل على إجابات فورية.
+            ألا تجد سؤالك؟ أدخل أي موضوع يهمك، وسيقوم الذكاء الاصطناعي بتوليد قائمة بالأسئلة الشائعة وإجاباتها حوله.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -90,7 +90,7 @@ export function FaqSection() {
               />
               <Button type="submit" disabled={isLoading} className="w-full">
                 {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Wand2 className="mr-2 h-4 w-4" />}
-                إنشاء الأسئلة
+                ولّد الأسئلة
               </Button>
             </form>
           </Form>
