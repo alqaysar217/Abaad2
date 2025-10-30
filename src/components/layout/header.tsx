@@ -58,13 +58,6 @@ export function Header() {
 
         <div className="flex items-center justify-end gap-2">
           <ThemeToggleButton />
-          <div className="hidden md:flex">
-            <Button asChild>
-              <a href="https://wa.me/967776999568" target="_blank" rel="noopener noreferrer">
-                سجل الآن
-              </a>
-            </Button>
-          </div>
           <div className="md:hidden">
             <MobileNav navLinks={navLinks} />
           </div>

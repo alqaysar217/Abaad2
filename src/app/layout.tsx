@@ -5,6 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { ThemeProvider } from '@/components/theme-provider';
+import { FloatingWhatsAppButton } from '@/components/floating-whatsapp-button';
 
 export const metadata: Metadata = {
   title: 'معهد أبعاد للدراسات والتدريب والتأهيل | Abaad Institute',
@@ -38,6 +39,7 @@ export default function RootLayout({
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
+            <FloatingWhatsAppButton />
           </div>
           <Toaster />
         </ThemeProvider>
