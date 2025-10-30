@@ -91,7 +91,7 @@ const features = [
 ];
 
 export default function Home() {
-  const featuredTrainers = ALL_TRAINERS.slice(0, 2);
+  const featuredTrainers = ALL_TRAINERS.slice(0, 3);
   const featuredBooks = ALL_BOOKS.slice(0, 2);
 
   return (
@@ -223,26 +223,35 @@ export default function Home() {
               تعرف على نخبة من الخبراء الذين يقودون رحلتك التعليمية.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
             {featuredTrainers.map(trainer => {
               const trainerImage = PlaceHolderImages.find(p => p.id === trainer.imageId);
               return (
-                <Card key={trainer.id} className="flex flex-col md:flex-row items-center gap-6 p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                  {trainerImage && (
+                <Card key={trainer.id} className="text-center flex flex-col items-center p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                   {trainerImage && (
                     <Image
                       src={trainerImage.imageUrl}
                       alt={trainer.name}
-                      width={150}
-                      height={150}
-                      className="rounded-full w-36 h-36 object-cover border-4 border-primary/20"
+                      width={128}
+                      height={128}
+                      className="rounded-full w-32 h-32 object-cover border-4 border-primary/20 mb-4"
                       data-ai-hint={trainerImage.imageHint}
                     />
                   )}
-                  <div className="text-center md:text-right">
-                    <h3 className="text-2xl font-headline">{trainer.name}</h3>
-                    <p className="text-primary font-semibold">{trainer.field}</p>
-                    <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{trainer.bio}</p>
-                  </div>
+                  <CardHeader className="p-0">
+                    <CardTitle className="font-headline text-xl">{trainer.name}</CardTitle>
+                     <p className="text-primary font-semibold">{trainer.field}</p>
+                  </CardHeader>
+                  <CardContent className="p-4 flex-grow">
+                    <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{trainer.bio}</p>
+                  </CardContent>
+                  <CardFooter className="p-0 w-full">
+                    <Button asChild variant="outline" className="w-full">
+                      <Link href={`/trainers/${trainer.slug}`}>
+                        عرض الملف الشخصي
+                      </Link>
+                    </Button>
+                  </CardFooter>
                 </Card>
               );
             })}
