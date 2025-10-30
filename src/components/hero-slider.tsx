@@ -21,13 +21,13 @@ export function HeroSlider() {
   );
 
   if (heroImages.length === 0) {
-    return <div className="w-full h-full bg-secondary" />;
+    return <div className="absolute inset-0 w-full h-full bg-secondary" />;
   }
 
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-full h-full"
+      className="absolute inset-0 w-full h-full"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
       opts={{
@@ -36,7 +36,8 @@ export function HeroSlider() {
     >
       <CarouselContent>
         {heroImages.map((image, index) => (
-          <CarouselItem key={image.id} className="relative w-full h-full">
+          <CarouselItem key={image.id}>
+            <div className="relative w-full h-full">
               <Image
                 src={image.imageUrl}
                 alt={image.description || `Hero image ${index + 1}`}
@@ -46,12 +47,12 @@ export function HeroSlider() {
                 data-ai-hint={image.imageHint}
                 priority={index === 0}
               />
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="hidden md:flex" />
-      <CarouselNext className="hidden md:flex" />
+      <CarouselPrevious />
+      <CarouselNext />
     </Carousel>
   );
 }
-    
