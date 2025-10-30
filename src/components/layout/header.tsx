@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -28,22 +27,24 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        {/* Logo and Name on the right */}
-        <Link href="/" className="flex items-center gap-2">
+      <div className="container flex h-16 items-center">
+        {/* Right side: Logo and Name */}
+        <div className="flex items-center justify-start flex-1">
+          <Link href="/" className="flex items-center gap-2">
             <AbaadLogo className="h-8 w-8" />
-            <span className="font-bold hidden sm:inline-block">معهد أبعاد</span>
-        </Link>
+            <span className="hidden font-bold sm:inline-block">معهد أبعاد</span>
+          </Link>
+        </div>
 
-        {/* Desktop Nav in the middle */}
-        <nav className="hidden md:flex flex-1 items-center justify-center gap-4 text-sm">
+        {/* Middle: Desktop Navigation */}
+        <nav className="hidden md:flex flex-none items-center justify-center gap-4 text-sm">
           {navLinks.slice(0, 5).map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
                 'flex items-center gap-2 transition-colors hover:text-primary',
-                pathname === link.href ? 'text-primary font-bold' : 'text-muted-foreground'
+                pathname === link.href ? 'font-bold text-primary' : 'text-muted-foreground'
               )}
             >
               {link.icon}
@@ -52,8 +53,8 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Buttons and Mobile Nav on the left */}
-        <div className="flex items-center gap-2">
+        {/* Left side: Buttons and Mobile Nav */}
+        <div className="flex flex-1 items-center justify-end gap-2">
           <ThemeToggleButton />
           <div className="hidden md:flex">
             <Button asChild>
