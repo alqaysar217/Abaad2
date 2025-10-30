@@ -31,10 +31,11 @@ function NavigationLinks() {
           key={link.href}
           href={link.href}
           className={cn(
-            'transition-colors hover:text-primary',
+            'flex items-center gap-2 transition-colors hover:text-primary',
             pathname === link.href ? 'font-bold text-primary' : 'text-muted-foreground'
           )}
         >
+          {link.icon}
           {link.label}
         </Link>
       ))}
@@ -52,7 +53,7 @@ export function Header() {
         </Link>
 
         <div className="hidden md:flex flex-1 justify-center">
-          <NavigationLinks />
+            <NavigationLinks />
         </div>
 
         <div className="flex items-center justify-end gap-2">
