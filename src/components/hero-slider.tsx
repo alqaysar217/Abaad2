@@ -17,15 +17,13 @@ const heroImages = PlaceHolderImages.filter(p => p.id.startsWith('gallery-') || 
 
 export function HeroSlider() {
   const plugin = React.useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: false })
+    Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
 
   return (
     <Carousel
       plugins={[plugin.current]}
       className="w-full h-full"
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={plugin.current.reset}
       opts={{
         loop: true,
       }}
@@ -33,15 +31,17 @@ export function HeroSlider() {
       <CarouselContent>
         {heroImages.map((image, index) => (
           <CarouselItem key={image.id}>
-            <Image
-              src={image.imageUrl}
-              alt={image.description || `Hero image ${index + 1}`}
-              fill
-              sizes="100vw"
-              className="object-cover"
-              data-ai-hint={image.imageHint}
-              priority={index === 0}
-            />
+            <div className="relative h-[60vh] w-full">
+              <Image
+                src={image.imageUrl}
+                alt={image.description || `Hero image ${index + 1}`}
+                fill
+                sizes="100vw"
+                className="object-cover"
+                data-ai-hint={image.imageHint}
+                priority={index === 0}
+              />
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
