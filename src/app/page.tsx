@@ -251,6 +251,12 @@ export default function Home() {
                   <CardHeader className="p-0">
                     <CardTitle className="font-headline text-xl">{trainer.name}</CardTitle>
                      <p className="text-primary font-semibold">{trainer.field}</p>
+                     <div className="flex items-center justify-center gap-1 pt-2">
+                        {[...Array(5)].map((_, i) => (
+                            <Star key={i} className={`w-4 h-4 ${i < Math.floor(trainer.rating) ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />
+                        ))}
+                        <span className="text-xs text-muted-foreground ml-1">({trainer.rating})</span>
+                    </div>
                   </CardHeader>
                   <CardContent className="p-4 flex-grow">
                     <p className="text-sm text-muted-foreground line-clamp-3">{trainer.bio}</p>
