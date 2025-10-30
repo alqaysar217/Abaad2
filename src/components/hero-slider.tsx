@@ -13,11 +13,11 @@ import {
 } from '@/components/ui/carousel';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const heroImages = PlaceHolderImages.filter(p => p.id.startsWith('gallery-') || p.id.startsWith('hero-')).slice(0, 5);
+const heroImages = PlaceHolderImages.filter(p => p.id.startsWith('hero-'));
 
 export function HeroSlider() {
   const plugin = React.useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })
+    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
 
   return (
@@ -50,3 +50,5 @@ export function HeroSlider() {
     </Carousel>
   );
 }
+
+    

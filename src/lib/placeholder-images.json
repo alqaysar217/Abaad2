@@ -3,8 +3,32 @@
     {
       "id": "hero-main",
       "description": "A modern classroom or learning environment",
-      "imageUrl": "https://images.unsplash.com/photo-1746862932765-c450b9d2f3c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2Rlcm4lMjBjbGFzc3Jvb218ZW58MHx8fHwxNzYxNjQ0NDU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern classroom"
+      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjbGFzc3Jvb20lMjBwcmVzZW50YXRpb258ZW58MHx8fHwxNzYyMDk3NTEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "classroom presentation"
+    },
+    {
+      "id": "hero-2",
+      "description": "Students collaborating in a workshop",
+      "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMHdvcmtzaG9wfGVufDB8fHx8MTc2MjA5NzYxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "students workshop"
+    },
+    {
+      "id": "hero-3",
+      "description": "A training hall with attendees",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-b413da4baf72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0cmFpbmluZyUyMGV2ZW50fGVufDB8fHx8MTc2MjA5NzYxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "training event"
+    },
+    {
+      "id": "hero-4",
+      "description": "An instructor teaching a class",
+      "imageUrl": "https://images.unsplash.com/photo-1591115765373-5207764f72e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnN0cnVjdG9yJTIwdGVhY2hpbmd8ZW58MHx8fHwxNzYyMDk3NzMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "instructor teaching"
+    },
+    {
+      "id": "hero-5",
+      "description": "A student focused on learning on a computer",
+      "imageUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdHVkZW50JTIwbGVhcm5pbmd8ZW58MHx8fHwxNzYyMDk3NzMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "student learning"
     },
     {
       "id": "gallery-1",
@@ -15,19 +39,19 @@
     {
       "id": "gallery-2",
       "description": "A training hall with attendees",
-      "imageUrl": "https://images.unsplash.com/photo-1641201124212-9d314413e5d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0cmFpbmluZyUyMGhhbGx8ZW58MHx8fHwxNzYxNzcxNTk5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1641201124212-9d314413e5d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0cmFpbmluZyUyMGhhbGx8ZW58MHx8fHwxNzYxNzcxNTk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "training hall"
     },
     {
       "id": "gallery-3",
       "description": "A close-up of a student learning",
-      "imageUrl": "https://images.unsplash.com/photo-1610500796385-3ffc1ae2f046?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdHVkZW50JTIwbGVhcm5pbmd8ZW58MHx8fHwxNzYxNjYyMjM0fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1610500796385-3ffc1ae2f046?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdHVkZW50JTIwbGVhcm5pbmd8ZW58MHx8fHwxNzYxNjYyMjM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "student learning"
     },
     {
       "id": "gallery-4",
       "description": "An instructor teaching a class",
-      "imageUrl": "https://images.unsplash.com/photo-1758599879693-9e06f55a4ded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbnN0cnVjdG9yJTIwdGVhY2hpbmd8ZW58MHx8fHwxNzYxNzcxNTk5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1758599879693-9e06f55a4ded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbnN0cnVjdG9yJTIwdGVhY2hpbmd8ZW58MHx8fHwxNzYxNzcxNTk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "instructor teaching"
     },
     {
@@ -255,7 +279,7 @@
     {
       "id": "trainer-2",
       "description": "Portrait of a confident female professional giving a presentation.",
-      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb2FjaCUyMHdvbWFufGVufDB8fHx8MTc2MjA1OTA2NHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb2FjaCUyMHdvbWFufGVufDB8fHx8MTc2MjA1OTA2NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "coach woman"
     },
     {
@@ -267,157 +291,157 @@
     {
       "id": "trainer-5",
       "description": "Portrait of a photographer.",
-      "imageUrl": "https://images.unsplash.com/photo-1608889825205-e9ff504838e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwaG90b2dyYXBoZXJ8ZW58MHx8fHwxNzYyMDU5MzYwfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1608889825205-e9ff504838e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwaG90b2dyYXBoZXJ8ZW58MHx8fHwxNzYyMDU5MzYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "photographer man"
     },
     {
       "id": "trainer-6",
       "description": "Portrait of a female filmmaker.",
-      "imageUrl": "https://images.unsplash.com/photo-1579582218802-9591e847732d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBmaWxtbWFrZXJ8ZW58MHx8fHwxNzYyMDU5Mzk1fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1579582218802-9591e847732d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBmaWxtbWFrZXJ8ZW58MHx8fHwxNzYyMDU5Mzk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "female filmmaker"
     },
     {
       "id": "trainer-7",
       "description": "Portrait of a professional man in a suit.",
-      "imageUrl": "https://images.unsplash.com/photo-1605370295175-adef37357c39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXJrZXRpbmclMjBleHBlcnR8ZW58MHx8fHwxNzYyMDU5NDM3fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1605370295175-adef37357c39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXJrZXRpbmclMjBleHBlcnR8ZW58MHx8fHwxNzYyMDU5NDM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "marketing expert"
     },
     {
       "id": "trainer-9",
       "description": "Portrait of a male software developer.",
-      "imageUrl": "https://images.unsplash.com/photo-1624571409412-1f253e1ecc89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwc29mdHdhcmUlMjBkZXZlbG9wZXJ8ZW58MHx8fHwxNzYyMDU5NDc5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1624571409412-1f253e1ecc89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwc29mdHdhcmUlMjBkZXZlbG9wZXJ8ZW58MHx8fHwxNzYyMDU5NDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "male developer"
     },
     {
       "id": "trainer-10",
       "description": "Portrait of a male graphic designer.",
-      "imageUrl": "https://images.unsplash.com/photo-1621839673705-66174b1c8907?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncmFwaGljJTIwZGVzaWduZXJ8ZW58MHx8fHwxNzYyMDU5NTIyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1621839673705-66174b1c8907?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncmFwaGljJTIwZGVzaWduZXJ8ZW58MHx8fHwxNzYyMDU5NTIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "graphic designer"
     },
     {
       "id": "trainer-11",
       "description": "Portrait of a male architect.",
-      "imageUrl": "https://images.unsplash.com/photo-1581093450021-4a7362aa96b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwYXJjaGl0ZWN0fGVufDB8fHx8fDE3NjIwNTk1NjF8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1581093450021-4a7362aa96b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwYXJjaGl0ZWN0fGVufDB8fHx8fDE3NjIwNTk1NjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "male architect"
     },
     {
       "id": "trainer-12",
       "description": "Portrait of a female beautician.",
-      "imageUrl": "https://images.unsplash.com/photo-1596701062314-93331365a183?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBiZWF1dGljaWFufGVufDB8fHx8fDE3NjIwNTk2MTJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1596701062314-93331365a183?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBiZWF1dGljaWFufGVufDB8fHx8fDE3NjIwNTk2MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "female beautician"
     },
     {
       "id": "trainer-13",
       "description": "Portrait of a male graphic artist.",
-      "imageUrl": "https://images.unsplash.com/photo-1626785774573-4b799315345d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZ3JhcGhpYyUyMGFydGlzdHxlbnwwfHx8fDE3NjIwNTk2NTJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1626785774573-4b799315345d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZ3JhcGhpYyUyMGFydGlzdHxlbnwwfHx8fDE3NjIwNTk2NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "male artist"
     },
     {
       "id": "testimonial-1",
       "description": "Portrait of a happy male student",
-      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdHVkZW50JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYxNzcxNTk5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdHVkZW50JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYxNzcxNTk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "student portrait"
     },
     {
       "id": "testimonial-2",
       "description": "Portrait of a happy female student",
-      "imageUrl": "https://images.unsplash.com/photo-1631131426255-90290157af71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdHVkZW50JTIwc21pbGluZ3xlbnwwfHx8fDE3NjE2ODg4ODR8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1631131426255-90290157af71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdHVkZW50JTIwc21pbGluZ3xlbnwwfHx8fDE3NjE2ODg4ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "student smiling"
     },
     {
       "id": "testimonial-3",
       "description": "Portrait of a happy student",
-      "imageUrl": "https://images.unsplash.com/photo-1533147670608-2a2f9775d3a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoYXBweSUyMHBlcnNvbnxlbnwwfHx8fDE3NjE3NjgxOTl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1533147670608-2a2f9775d3a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoYXBweSUyMHBlcnNvbnxlbnwwfHx8fDE3NjE3NjgxOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "happy person"
     },
     {
       "id": "book-python",
       "description": "Cover of a Python programming book",
-      "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxweXRob24lMjBib29rfGVufDB8fHx8fDE3NjIwNjEwMDV8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxweXRob24lMjBib29rfGVufDB8fHx8fDE3NjIwNjEwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "python book"
     },
     {
       "id": "book-sql",
       "description": "Cover of a SQL database book",
-      "imageUrl": "https://images.unsplash.com/photo-1599587120331-995232a45037?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXRhYmFzZSUyMGJvb2t8ZW58MHx8fHwxNzYyMDYxMDM4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1599587120331-995232a45037?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXRhYmFzZSUyMGJvb2t8ZW58MHx8fHwxNzYyMDYxMDM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "database book"
     },
     {
       "id": "book-winforms",
       "description": "Cover of a visual programming book",
-      "imageUrl": "https://images.unsplash.com/photo-1550439062-609e1531270e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1aSUyMGRlc2lnbiUyMGJvb2t8ZW58MHx8fHwxNzYyMDYxMDc2fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1550439062-609e1531270e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1aSUyMGRlc2lnbiUyMGJvb2t8ZW58MHx8fHwxNzYyMDYxMDc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ui design"
     },
     {
       "id": "book-csharp",
       "description": "Cover of a C# programming book",
-      "imageUrl": "https://images.unsplash.com/photo-1505682614136-0a12f93e9742?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWluZyUyMGJvb2slMjBjb3ZlcnxlbnwwfHx8fDE3NjIwNjExMjF8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1505682614136-0a12f93e9742?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWluZyUyMGJvb2slMjBjb3ZlcnxlbnwwfHx8fDE3NjIwNjExMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "programming book"
     },
     {
       "id": "book-english-1",
       "description": "Cover of a beginner's English book",
-      "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbmdsaXNoJTIwbGFuZ3VhZ2UlMjBib29rfGVufDB8fHx8MTc2MjAwNTY1OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbmdsaXNoJTIwbGFuZ3VhZ2UlMjBib29rfGVufDB8fHx8MTc2MjAwNTY1OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "english book"
     },
     {
       "id": "book-english-2",
       "description": "Cover of an intermediate English language book",
-      "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlbmdsaXNoJTIwYm9va3xlbnwwfHx8fDE3NjIwNjExNzR8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlbmdsaXNoJTIwYm9va3xlbnwwfHx8fDE3NjIwNjExNzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "english book"
     },
     {
       "id": "book-english-3",
       "description": "Cover of a comprehensive English textbook",
-      "imageUrl": "https://images.unsplash.com/photo-1589998059171-988d887df646?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxib29rfGVufDB8fHx8fDE3NjIwNjEyMDN8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1589998059171-988d887df646?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxib29rfGVufDB8fHx8fDE3NjIwNjEyMDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "open book"
     },
     {
       "id": "book-english-4",
       "description": "Cover of an English conversation guide",
-      "imageUrl": "https://images.unsplash.com/photo-1491841550275-5b462bf97579?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb252ZXJzYXRpb24lMjBib29rfGVufDB8fHx8fDE3NjIwNjEyMzV8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1491841550275-5b462bf97579?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb252ZXJzYXRpb24lMjBib29rfGVufDB8fHx8fDE3NjIwNjEyMzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "conversation book"
     },
     {
       "id": "about-hero",
       "description": "A wide shot of the institute's modern building or reception",
-      "imageUrl": "https://images.unsplash.com/photo-1525286376485-60c84ee403d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzYxNzYyNjYzfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1525286376485-60c84ee403d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzYxNzYyNjYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern building"
     },
     {
       "id": "news-1",
       "description": "Image for a news article about an event",
-      "imageUrl": "https://images.unsplash.com/photo-1758810411514-1cffb1420a4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxldmVudCUyMGNlbGVicmF0aW9ufGVufDB8fHx8MTc2MTY5NTM0MXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1758810411514-1cffb1420a4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxldmVudCUyMGNlbGVicmF0aW9ufGVufDB8fHx8MTc2MTY5NTM0MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "event celebration"
     },
     {
       "id": "news-2",
       "description": "Image for a news article about a new course",
-      "imageUrl": "https://images.unsplash.com/photo-1754681920848-d20733e4ef23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbm5vdW5jZW1lbnQlMjBwb3N0ZXJ8ZW58MHx8fHwxNzYxNzcxNTk5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1754681920848-d20733e4ef23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbm5vdW5jZW1lbnQlMjBwb3N0ZXJ8ZW58MHx8fHwxNzYxNzcxNTk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "announcement poster"
     },
     {
       "id": "news-3",
       "description": "Image for a news article about a special offer",
-      "imageUrl": "https://images.unsplash.com/photo-1758795679604-5f9ffcadc030?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3BlY2lhbCUyMG9mZmVyfGVufDB8fHx8MTc2MTc2ODg1OHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1758795679604-5f9ffcadc030?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3BlY2lhbCUyMG9mZmVyfGVufDB8fHx8MTc2MTc2ODg1OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "special offer"
     },
     {
       "id": "news-4",
       "description": "Image for a student project showcase",
-      "imageUrl": "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdHVkZW50JTIwcHJvamVjdHxlbnwwfHx8fDE3NjIwNDkxODF8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdHVkZW50JTIwcHJvamVjdHxlbnwwfHx8fDE3NjIwNDkxODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "student project"
     },
     {
       "id": "news-5",
       "description": "Image for a seminar or evening event",
-      "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzZW1pbmFyfGVufDB8fHx8fDE3NjIwNDkxODF8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzZW1pbmFyfGVufDB8fHx8fDE3NjIwNDkxODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "seminar talk"
     },
     {
       "id": "news-6",
       "description": "Image for a course conclusion or graduation",
-      "imageUrl": "https://images.unsplash.com/photo-1568940562394-a28c3b0365f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjZXJ0aWZpY2F0ZXxlbnwwfHx8fDE3NjIwNDkxODF8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1568940562394-a28c3b0365f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjZXJ0aWZpY2F0ZXxlbnwwfHx8fDE3NjIwNDkxODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "certificate success"
     }
   ]
