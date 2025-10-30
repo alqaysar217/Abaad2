@@ -13,6 +13,13 @@ import { Course } from '@/lib/types';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { HeroSlider } from '@/components/hero-slider';
 import { SideNav } from '@/components/side-nav';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const CourseCard = ({ course }: { course: Course }) => {
   const courseImage = PlaceHolderImages.find(p => p.id === course.imageId);
@@ -331,27 +338,42 @@ export default function Home() {
               نفخر بثقة طلابنا وما حققوه من نجاح. استمع إلى قصصهم.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {TESTIMONIALS.map(testimonial => {
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            <CarouselContent>
+              {TESTIMONIALS.map((testimonial) => {
                 const testimonialImage = PlaceHolderImages.find(p => p.id === testimonial.imageId);
-                return(
-              <Card key={testimonial.id} className="bg-secondary flex flex-col">
-                <CardContent className="pt-6 flex-grow">
-                    <div className="flex flex-col items-center text-center gap-4">
-                        {testimonialImage && <Image src={testimonialImage.imageUrl} alt={testimonial.name} width={80} height={80} className="rounded-full border-4 border-accent" data-ai-hint={testimonialImage.imageHint} />}
-                        <div className="flex-1">
-                           <MessageSquare className="h-8 w-8 text-accent/50 mb-2 mx-auto" />
-                           <p className="text-muted-foreground italic leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
-                        </div>
+                return (
+                  <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1 h-full">
+                      <Card className="bg-secondary flex flex-col h-full">
+                        <CardContent className="pt-6 flex-grow">
+                          <div className="flex flex-col items-center text-center gap-4">
+                            {testimonialImage && <Image src={testimonialImage.imageUrl} alt={testimonial.name} width={80} height={80} className="rounded-full border-4 border-accent" data-ai-hint={testimonialImage.imageHint} />}
+                            <div className="flex-1">
+                              <MessageSquare className="h-8 w-8 text-accent/50 mb-2 mx-auto" />
+                              <p className="text-muted-foreground italic leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
+                            </div>
+                          </div>
+                        </CardContent>
+                        <CardFooter className="flex-col items-center text-center pt-4 mt-auto">
+                          <h4 className="font-bold text-lg">{testimonial.name}</h4>
+                          <p className="text-sm text-primary">{testimonial.course}</p>
+                        </CardFooter>
+                      </Card>
                     </div>
-                </CardContent>
-                <CardFooter className="flex-col items-center text-center pt-4 mt-auto">
-                  <h4 className="font-bold text-lg">{testimonial.name}</h4>
-                  <p className="text-sm text-primary">{testimonial.course}</p>
-                </CardFooter>
-              </Card>
-            )})}
-          </div>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
 
@@ -372,7 +394,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
