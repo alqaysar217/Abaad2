@@ -15,7 +15,18 @@ export const ALL_COURSES: Course[] = [
     imageId: 'course-python-basics',
     description: 'التعرف على لغة بايثون، المتغيرات، الشروط، التكرار، الدوال.',
     outline: ['مقدمة إلى لغة بايثون', 'المتغيرات وأنواع البيانات', 'العمليات الحسابية والمنطقية', 'الجمل الشرطية والتكرارية', 'الدوال والوظائف'],
-    studentReviews: [],
+    studentReviews: [
+        { id: 'csr-py-1', name: 'أحمد', quote: 'شرح ممتاز ومبسط، استفدت كثيرًا.', rating: 5, imageId: 'testimonial-1' },
+        { id: 'csr-py-2', name: 'سارة', quote: 'الدورة كانت رائعة والمدرب متعاون جدًا.', rating: 4, imageId: 'testimonial-2' },
+        { id: 'csr-py-3', name: 'علي', quote: 'محتوى الدورة قيم والتطبيق العملي مفيد.', rating: 5, imageId: 'testimonial-3' },
+        { id: 'csr-py-4', name: 'فاطمة', quote: 'أنصح بهذه الدورة لكل مبتدئ.', rating: 5, imageId: 'testimonial-4' },
+        { id: 'csr-py-5', name: 'حسن', quote: 'تجربة تعليمية ممتازة.', rating: 4, imageId: 'testimonial-5' },
+        { id: 'csr-py-6', name: 'مريم', quote: 'المدرب متمكن والمادة العلمية منظمة.', rating: 5, imageId: 'testimonial-6' },
+        { id: 'csr-py-7', name: 'خالد', quote: 'استفدت من الأمثلة العملية.', rating: 4, imageId: 'testimonial-1' },
+        { id: 'csr-py-8', name: 'نورة', quote: 'الدورة فاقت توقعاتي.', rating: 5, imageId: 'testimonial-2' },
+        { id: 'csr-py-9', name: 'يوسف', quote: 'شكرًا للمدرب على جهوده.', rating: 5, imageId: 'testimonial-3' },
+        { id: 'csr-py-10', name: 'زينب', quote: 'محتوى قيم وسهل الفهم.', rating: 4, imageId: 'testimonial-4' },
+    ],
   },
   {
     id: 'c8',
@@ -29,7 +40,18 @@ export const ALL_COURSES: Course[] = [
     imageId: 'course-csharp-console',
     description: 'تعلم مفاهيم البرمجة باستخدام C# في بيئة الكونسول.',
     outline: ['إعداد بيئة العمل', 'أساسيات C#', 'البرمجة كائنية التوجه (OOP)', 'التعامل مع الملفات', 'مشروع تطبيقي'],
-    studentReviews: [],
+    studentReviews: [
+        { id: 'csr-cs-1', name: 'أحمد', quote: 'شرح ممتاز ومبسط، استفدت كثيرًا.', rating: 5, imageId: 'testimonial-1' },
+        { id: 'csr-cs-2', name: 'سارة', quote: 'الدورة كانت رائعة والمدرب متعاون جدًا.', rating: 4, imageId: 'testimonial-2' },
+        { id: 'csr-cs-3', name: 'علي', quote: 'محتوى الدورة قيم والتطبيق العملي مفيد.', rating: 5, imageId: 'testimonial-3' },
+        { id: 'csr-cs-4', name: 'فاطمة', quote: 'أنصح بهذه الدورة لكل مبتدئ.', rating: 5, imageId: 'testimonial-4' },
+        { id: 'csr-cs-5', name: 'حسن', quote: 'تجربة تعليمية ممتازة.', rating: 4, imageId: 'testimonial-5' },
+        { id: 'csr-cs-6', name: 'مريم', quote: 'المدرب متمكن والمادة العلمية منظمة.', rating: 5, imageId: 'testimonial-6' },
+        { id: 'csr-cs-7', name: 'خالد', quote: 'استفدت من الأمثلة العملية.', rating: 4, imageId: 'testimonial-1' },
+        { id: 'csr-cs-8', name: 'نورة', quote: 'الدورة فاقت توقعاتي.', rating: 5, imageId: 'testimonial-2' },
+        { id: 'csr-cs-9', name: 'يوسف', quote: 'شكرًا للمدرب على جهوده.', rating: 5, imageId: 'testimonial-3' },
+        { id: 'csr-cs-10', name: 'زينب', quote: 'محتوى قيم وسهل الفهم.', rating: 4, imageId: 'testimonial-4' },
+    ],
   },
   {
     id: 'c9',
@@ -43,7 +65,13 @@ export const ALL_COURSES: Course[] = [
     imageId: 'course-sql-intro',
     description: 'مقدمة عملية في أوامر SQL الأساسية لإدارة البيانات.',
     outline: ['مفاهيم قواعد البيانات', 'لغة الاستعلام الهيكلية (SQL)', 'إنشاء وتعديل الجداول', 'الاستعلام عن البيانات (SELECT)', 'ربط الجداول (JOIN)'],
-    studentReviews: [],
+    studentReviews: [
+        { id: 'csr-sql-1', name: 'أحمد', quote: 'شرح ممتاز ومبسط، استفدت كثيرًا.', rating: 5, imageId: 'testimonial-1' },
+        { id: 'csr-sql-2', name: 'سارة', quote: 'الدورة كانت رائعة والمدرب متعاون جدًا.', rating: 4, imageId: 'testimonial-2' },
+        { id: 'csr-sql-3', name: 'علي', quote: 'محتوى الدورة قيم والتطبيق العملي مفيد.', rating: 5, imageId: 'testimonial-3' },
+        { id: 'csr-sql-4', name: 'فاطمة', quote: 'أنصح بهذه الدورة لكل مبتدئ.', rating: 5, imageId: 'testimonial-4' },
+        { id: 'csr-sql-5', name: 'حسن', quote: 'تجربة تعليمية ممتازة.', rating: 4, imageId: 'testimonial-5' },
+    ],
   },
   {
     id: 'c10',
@@ -57,7 +85,13 @@ export const ALL_COURSES: Course[] = [
     imageId: 'course-winforms',
     description: 'تصميم واجهات تطبيقات سطح المكتب باستخدام C#.',
     outline: ['مقدمة إلى Windows Forms', 'الأدوات والعناصر', 'برمجة الأحداث', 'بناء تطبيق متكامل', 'نشر التطبيق'],
-    studentReviews: [],
+    studentReviews: [
+        { id: 'csr-wf-1', name: 'مريم', quote: 'المدرب متمكن والمادة العلمية منظمة.', rating: 5, imageId: 'testimonial-6' },
+        { id: 'csr-wf-2', name: 'خالد', quote: 'استفدت من الأمثلة العملية.', rating: 4, imageId: 'testimonial-1' },
+        { id: 'csr-wf-3', name: 'نورة', quote: 'الدورة فاقت توقعاتي.', rating: 5, imageId: 'testimonial-2' },
+        { id: 'csr-wf-4', name: 'يوسف', quote: 'شكرًا للمدرب على جهوده.', rating: 5, imageId: 'testimonial-3' },
+        { id: 'csr-wf-5', name: 'زينب', quote: 'محتوى قيم وسهل الفهم.', rating: 4, imageId: 'testimonial-4' },
+    ],
   },
   {
     id: 'c11',
@@ -128,7 +162,10 @@ export const ALL_COURSES: Course[] = [
     imageId: 'course-first-aid',
     description: 'تعلم التعامل مع الحالات الطارئة والإصابات البسيطة. التدريب العملي على الإسعاف الميداني والإنعاش القلبي الرئوي.',
     outline: ['تقييم الحالات الطارئة', 'التعامل مع الجروح والنزيف', 'الإنعاش القلبي الرئوي (CPR)', 'تثبيت الكسور', 'الإسعافات الأولية للحروق والاختناق'],
-    studentReviews: [],
+    studentReviews: [
+      { id: 'csr-fa-1', name: 'أحمد', quote: 'دورة لا غنى عنها، المدرب كان رائعًا.', rating: 5, imageId: 'testimonial-1' },
+      { id: 'csr-fa-2', name: 'سارة', quote: 'أشعر بثقة أكبر في التعامل مع الطوارئ الآن.', rating: 5, imageId: 'testimonial-2' },
+    ],
   },
   {
     id: 'c16',
@@ -911,13 +948,3 @@ export const NEWS_ARTICLES: NewsArticle[] = [
       content: 'شهد معهد أبعاد اختتام دورة الإسعافات الأولية التي حظيت بإقبال كبير. عبر المشاركون عن استفادتهم الكبيرة من التدريب العملي والمحتوى الغني الذي قدمه د. علي باجامزة، مؤكدين على أهمية هذه المهارات في الحياة اليومية والمهنية.'
     }
   ];
-
-
-
-
-
-    
-
-    
-
-    

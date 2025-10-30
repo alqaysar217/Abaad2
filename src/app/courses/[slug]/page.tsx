@@ -1,8 +1,9 @@
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Star, GraduationCap, Clock, CheckCircle, UserCircle, MessageCircle } from 'lucide-react';
-import { ALL_COURSES } from '@/lib/data';
+import { ALL_COURSES, ALL_TRAINERS } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -22,7 +23,9 @@ export default function CourseDetailsPage({ params }: { params: { slug: string }
   }
 
   const courseImage = PlaceHolderImages.find((p) => p.id === course.imageId);
-  const trainerImage = PlaceHolderImages.find((p) => p.id.includes('trainer'));
+  const trainer = ALL_TRAINERS.find(t => t.slug === course.trainerSlug);
+  const trainerImage = trainer ? PlaceHolderImages.find((p) => p.id === trainer.imageId) : undefined;
+
 
   return (
     <div className="bg-background">
@@ -36,7 +39,7 @@ export default function CourseDetailsPage({ params }: { params: { slug: string }
               <p className="text-lg text-muted-foreground mb-6">{course.description}</p>
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
                 <div className="flex items-center">
-                  <GraduationCap className="ml-2 h-4 w-4" />
+                  {trainerImage && <Image src={trainerImage.imageUrl} alt={course.trainerName} width={24} height={24} className="rounded-full ml-2 object-cover" data-ai-hint={trainerImage.imageHint} />}
                   المدرب: <Link href={`/trainers/${course.trainerSlug}`} className="text-primary font-bold mr-1 hover:underline">{course.trainerName}</Link>
                 </div>
                 <div className="flex items-center">
