@@ -337,6 +337,24 @@
       "imageHint": "happy person"
     },
     {
+      "id": "testimonial-4",
+      "description": "Portrait of a professional woman",
+      "imageUrl": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8fDE3MjE1MDQ2NzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional woman"
+    },
+    {
+      "id": "testimonial-5",
+      "description": "Portrait of a young man smiling",
+      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx5b3VuZyUyMG1hbiUyMHNtaWxpbmd8ZW58MHx8fHwxNzIxNTA0NzMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "young man"
+    },
+    {
+      "id": "testimonial-6",
+      "description": "Portrait of a female design student",
+      "imageUrl": "https://images.unsplash.com/photo-1552838680-10330a13343d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmZW1hbGUlMjBkZXNpZ24lMjBzdHVkZW50fGVufDB8fHx8fDE3MjE1MDQ3ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "design student"
+    },
+    {
       "id": "book-python",
       "description": "Cover of a Python programming book",
       "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxweXRob24lMjBib29rfGVufDB8fHx8fDE3NjIwNjEwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
