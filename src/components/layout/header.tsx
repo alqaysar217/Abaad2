@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Home, Info, GraduationCap, Users, BookOpen, Newspaper, HelpCircle, Mail, Phone } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { AbaadLogo } from '@/components/icons';
@@ -10,14 +11,14 @@ import type { NavLink } from '@/lib/types';
 import { MobileNav } from './mobile-nav';
 
 const navLinks: NavLink[] = [
-  { href: '/', label: 'الرئيسية' },
-  { href: '/about', label: 'من نحن' },
-  { href: '/courses', label: 'الدورات' },
-  { href: '/trainers', label: 'المدربون' },
-  { href: '/books', label: 'الكتب' },
-  { href: '/news', label: 'الأخبار' },
-  { href: '/faq', label: 'الأسئلة الشائعة' },
-  { href: '/contact', label: 'تواصل معنا' },
+  { href: '/', label: 'الرئيسية', icon: <Home /> },
+  { href: '/about', label: 'من نحن', icon: <Info /> },
+  { href: '/courses', label: 'الدورات', icon: <GraduationCap /> },
+  { href: '/trainers', label: 'المدربون', icon: <Users /> },
+  { href: '/books', label: 'الكتب', icon: <BookOpen /> },
+  { href: '/news', label: 'الأخبار', icon: <Newspaper /> },
+  { href: '/faq', label: 'الأسئلة الشائعة', icon: <HelpCircle /> },
+  { href: '/contact', label: 'تواصل معنا', icon: <Phone /> },
 ];
 
 export function Header() {
@@ -35,17 +36,18 @@ export function Header() {
         </div>
 
         {/* Desktop Nav in the middle */}
-        <nav className="hidden md:flex flex-1 items-center justify-center gap-6 text-sm">
+        <nav className="hidden md:flex flex-1 items-center justify-center gap-4 text-sm">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                'transition-colors hover:text-primary',
+                'flex items-center gap-2 transition-colors hover:text-primary',
                 pathname === link.href ? 'text-primary font-bold' : 'text-muted-foreground'
               )}
             >
-              {link.label}
+              {link.icon}
+              <span>{link.label}</span>
             </Link>
           ))}
         </nav>

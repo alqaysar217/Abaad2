@@ -1,12 +1,14 @@
 import Link from 'next/link';
-import { Twitter, Linkedin, Youtube, Facebook } from 'lucide-react';
+import { Twitter, Linkedin, Youtube, Facebook, Info, GraduationCap, Users, Phone } from 'lucide-react';
 import { AbaadLogo } from '@/components/icons';
+import type { NavLink } from '@/lib/types';
 
-const navLinks = [
-  { href: '/about', label: 'من نحن' },
-  { href: '/courses', label: 'الدورات' },
-  { href: '/trainers', label: 'المدربون' },
-  { href: '/contact', label: 'تواصل معنا' },
+
+const navLinks: NavLink[] = [
+  { href: '/about', label: 'من نحن', icon: <Info /> },
+  { href: '/courses', label: 'الدورات', icon: <GraduationCap /> },
+  { href: '/trainers', label: 'المدربون', icon: <Users /> },
+  { href: '/contact', label: 'تواصل معنا', icon: <Phone /> },
 ];
 
 const socialLinks = [
@@ -33,7 +35,8 @@ export function Footer() {
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link href={link.href} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                    {link.icon}
                     {link.label}
                   </Link>
                 </li>

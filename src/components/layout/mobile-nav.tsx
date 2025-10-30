@@ -35,8 +35,9 @@ export function MobileNav({ navLinks }: MobileNavProps) {
               <SheetClose asChild key={link.href}>
                 <Link
                   href={link.href}
-                  className="block rounded-md px-3 py-2 text-base font-medium text-muted-foreground hover:bg-secondary hover:text-primary"
+                  className="flex items-center gap-3 rounded-md px-3 py-2 text-base font-medium text-muted-foreground hover:bg-secondary hover:text-primary"
                 >
+                  {link.icon}
                   {link.label}
                 </Link>
               </SheetClose>
