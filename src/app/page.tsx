@@ -1,3 +1,5 @@
+
+import * as React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, ChevronLeft, Award, Users, Star, GraduationCap, Building, Rss, MessageSquare, ShieldCheck, Target, Eye } from 'lucide-react';
@@ -177,11 +179,11 @@ export default function Home() {
               { icon: <Building className="h-12 w-12" />, label: "تواصل معنا", href: "/contact" },
             ].map(item => (
               <Link href={item.href} key={item.label} className="group">
-                <div className="p-6 bg-background rounded-lg shadow-sm transition-all duration-300 hover:shadow-primary/20 hover:shadow-lg hover:-translate-y-2 flex flex-col items-center gap-4">
-                  <div className="bg-primary/10 text-primary rounded-full p-5 transition-transform duration-300 group-hover:scale-110">
-                    {item.icon}
+                <div className="p-6 bg-card rounded-lg shadow-md transition-all duration-300 hover:shadow-primary/20 hover:shadow-lg hover:-translate-y-2 flex flex-col items-center gap-4 border">
+                  <div className="bg-primary/10 text-primary rounded-full p-6 transition-transform duration-300 group-hover:scale-110">
+                    {React.cloneElement(item.icon, { className: 'h-10 w-10 md:h-12 md:w-12' })}
                   </div>
-                  <h3 className="font-headline text-xl">{item.label}</h3>
+                  <h3 className="font-headline text-lg md:text-xl">{item.label}</h3>
                 </div>
               </Link>
             ))}
@@ -243,7 +245,7 @@ export default function Home() {
                      <p className="text-primary font-semibold">{trainer.field}</p>
                   </CardHeader>
                   <CardContent className="p-4 flex-grow">
-                    <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{trainer.bio}</p>
+                    <p className="text-sm text-muted-foreground line-clamp-3">{trainer.bio}</p>
                   </CardContent>
                   <CardFooter className="p-0 w-full">
                     <Button asChild variant="outline" className="w-full">
@@ -280,24 +282,24 @@ export default function Home() {
             {featuredBooks.map(book => {
               const bookImage = PlaceHolderImages.find(p => p.id === book.imageId);
               return (
-                 <Card key={book.id} className="flex items-center gap-6 p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                 <Card key={book.id} className="flex flex-col md:flex-row items-center gap-6 p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   {bookImage && (
-                    <Link href={`/books/${book.slug}`}>
+                    <Link href={`/books/${book.slug}`} className="flex-shrink-0">
                       <Image
                         src={bookImage.imageUrl}
                         alt={book.title}
                         width={120}
                         height={160}
-                        className="rounded-md shadow-md object-cover aspect-[3/4]"
+                        className="rounded-md shadow-md object-cover aspect-[3/4] hover:opacity-90 transition-opacity"
                         data-ai-hint={bookImage.imageHint}
                       />
                     </Link>
                   )}
-                  <div className="flex-1">
+                  <div className="flex-1 text-center md:text-right">
                     <CardTitle className="font-headline text-xl mb-1">
                       <Link href={`/books/${book.slug}`} className="hover:text-primary">{book.title}</Link>
                     </CardTitle>
-                    <p className="text-sm text-muted-foreground mb-2">للمؤلف: {book.author}</p>
+                    <p className="text-sm text-muted-foreground mb-3">للمؤلف: {book.author}</p>
                     <p className="text-sm text-muted-foreground line-clamp-2">{book.description}</p>
                   </div>
                  </Card>
@@ -365,3 +367,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
