@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Info, GraduationCap, Users, BookOpen, Newspaper, HelpCircle, Phone } from 'lucide-react';
+import { Home, GraduationCap, Users, BookOpen, Rss, HelpCircle, Info, Phone } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { AbaadLogo } from '@/components/icons';
@@ -13,12 +13,12 @@ import { ThemeToggleButton } from '../theme-toggle-button';
 
 const navLinks: NavLink[] = [
   { href: '/', label: 'الرئيسية', icon: <Home /> },
-  { href: '/about', label: 'من نحن', icon: <Info /> },
   { href: '/courses', label: 'الدورات', icon: <GraduationCap /> },
   { href: '/trainers', label: 'المدربون', icon: <Users /> },
   { href: '/books', label: 'الكتب', icon: <BookOpen /> },
-  { href: '/news', label: 'الأخبار', icon: <Newspaper /> },
+  { href: '/news', label: 'المدونة', icon: <Rss /> },
   { href: '/faq', label: 'الأسئلة الشائعة', icon: <HelpCircle /> },
+  { href: '/about', label: 'من نحن', icon: <Info /> },
   { href: '/contact', label: 'تواصل معنا', icon: <Phone /> },
 ];
 
@@ -26,7 +26,7 @@ function NavigationLinks() {
   const pathname = usePathname();
   return (
     <nav className="hidden md:flex items-center justify-center gap-4 lg:gap-6 text-sm">
-      {navLinks.slice(0, 5).map((link) => (
+      {navLinks.map((link) => (
         <Link
           key={link.href}
           href={link.href}

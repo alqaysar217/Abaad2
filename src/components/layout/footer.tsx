@@ -1,13 +1,17 @@
 import Link from 'next/link';
-import { Twitter, Linkedin, Youtube, Facebook, Info, GraduationCap, Users, Phone, MapPin, Mail } from 'lucide-react';
+import { Twitter, Linkedin, Youtube, Facebook, Home, GraduationCap, Users, BookOpen, Rss, HelpCircle, Info, Phone, MapPin, Mail } from 'lucide-react';
 import { AbaadLogo } from '@/components/icons';
 import type { NavLink } from '@/lib/types';
 
 
 const navLinks: NavLink[] = [
-  { href: '/about', label: 'من نحن', icon: <Info /> },
+  { href: '/', label: 'الرئيسية', icon: <Home /> },
   { href: '/courses', label: 'الدورات', icon: <GraduationCap /> },
   { href: '/trainers', label: 'المدربون', icon: <Users /> },
+  { href: '/books', label: 'الكتب', icon: <BookOpen /> },
+  { href: '/news', label: 'المدونة', icon: <Rss /> },
+  { href: '/faq', label: 'الأسئلة الشائعة', icon: <HelpCircle /> },
+  { href: '/about', label: 'من نحن', icon: <Info /> },
   { href: '/contact', label: 'تواصل معنا', icon: <Phone /> },
 ];
 

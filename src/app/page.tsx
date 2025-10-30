@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, ChevronLeft, Award, Users, Star, GraduationCap, Building, Languages, Code, ShoppingCart, Heart, TrendingUp } from 'lucide-react';
+import { ArrowLeft, BookOpen, ChevronLeft, Award, Users, Star, GraduationCap, Building, Rss, Code, ShoppingCart, Heart, TrendingUp } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -111,7 +111,7 @@ export default function Home() {
               { icon: <GraduationCap />, label: "الدورات", href: "/courses" },
               { icon: <Users />, label: "المدربون", href: "/trainers" },
               { icon: <BookOpen />, label: "الكتب", href: "/books" },
-              { icon: <TrendingUp />, label: "الأخبار", href: "/news" },
+              { icon: <Rss />, label: "المدونة", href: "/news" },
               { icon: <Building />, label: "تواصل معنا", href: "/contact" },
             ].map(item => (
               <Link href={item.href} key={item.label} className="group">

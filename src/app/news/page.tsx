@@ -17,7 +17,7 @@ export default function NewsPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <section className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-headline text-primary mb-4">الأخبار والإعلانات</h1>
+        <h1 className="text-4xl md:text-5xl font-headline text-primary mb-4">المدونة والإعلانات</h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
           ابق على اطلاع بآخر مستجدات المعهد من فعاليات ودورات جديدة وعروض خاصة.
         </p>
