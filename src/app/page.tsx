@@ -12,7 +12,6 @@ import { ALL_COURSES, TESTIMONIALS, ALL_TRAINERS, ALL_BOOKS } from '@/lib/data';
 import { Course, Testimonial } from '@/lib/types';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { HeroSlider } from '@/components/hero-slider';
-import { SideNav } from '@/components/side-nav';
 import {
   Carousel,
   CarouselContent,
@@ -75,41 +74,6 @@ const CourseCard = ({ course }: { course: Course }) => {
   );
 };
 
-const homeSections = [
-    { id: "hero", label: "الرئيسية" },
-    { id: "about", label: "من نحن" },
-    { id: 'why-us', label: 'لماذا نحن' },
-    { id: "explore", label: "استكشف" },
-    { id: "courses", label: "الدورات" },
-    { id: 'trainers', label: 'المدربون' },
-    { id: 'books', label: 'الكتب' },
-    { id: 'testimonials', label: 'آراء الطلاب' },
-    { id: "cta", label: "انضم إلينا" },
-];
-
-const features = [
-  {
-    icon: <Award className="h-8 w-8 text-primary" />,
-    title: 'مدربون معتمدون',
-    description: 'نخبة من أفضل المدربين الخبراء والمعتمدين في مجالاتهم لضمان أعلى جودة تعليمية.',
-  },
-  {
-    icon: <ShieldCheck className="h-8 w-8 text-primary" />,
-    title: 'شهادات رسمية',
-    description: 'شهادات معتمدة ومعترف بها تساعدك على تعزيز سيرتك الذاتية وفتح أبواب الفرص الوظيفية.',
-  },
-  {
-    icon: <BookOpen className="h-8 w-8 text-primary" />,
-    title: 'تدريب عملي وتطبيقي',
-    description: 'نركز على الجانب العملي والتطبيقي لضمان اكتسابك المهارات التي يتطلبها سوق العمل.',
-  },
-  {
-    icon: <Users className="h-8 w-8 text-primary" />,
-    title: 'بيئة تعليمية محفزة',
-    description: 'قاعات مجهزة بأحدث التقنيات ومجتمع طلابي داعم يساعد على تبادل المعرفة والخبرات.',
-  },
-];
-
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
   const testimonialImage = PlaceHolderImages.find(p => p.id === testimonial.imageId);
   return (
@@ -152,7 +116,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <SideNav sections={homeSections} />
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center">
         <HeroSlider />
@@ -209,7 +172,28 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {[
+              {
+                icon: <Award className="h-8 w-8 text-primary" />,
+                title: 'مدربون معتمدون',
+                description: 'نخبة من أفضل المدربين الخبراء والمعتمدين في مجالاتهم لضمان أعلى جودة تعليمية.',
+              },
+              {
+                icon: <ShieldCheck className="h-8 w-8 text-primary" />,
+                title: 'شهادات رسمية',
+                description: 'شهادات معتمدة ومعترف بها تساعدك على تعزيز سيرتك الذاتية وفتح أبواب الفرص الوظيفية.',
+              },
+              {
+                icon: <BookOpen className="h-8 w-8 text-primary" />,
+                title: 'تدريب عملي وتطبيقي',
+                description: 'نركز على الجانب العملي والتطبيقي لضمان اكتسابك المهارات التي يتطلبها سوق العمل.',
+              },
+              {
+                icon: <Users className="h-8 w-8 text-primary" />,
+                title: 'بيئة تعليمية محفزة',
+                description: 'قاعات مجهزة بأحدث التقنيات ومجتمع طلابي داعم يساعد على تبادل المعرفة والخبرات.',
+              },
+            ].map((feature, index) => (
               <div key={index} className="bg-background p-6 rounded-lg shadow-sm text-center transform transition-transform duration-300 hover:-translate-y-2">
                 <div className="flex justify-center mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
