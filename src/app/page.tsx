@@ -58,12 +58,9 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[60vh] text-white">
-        <div className="absolute inset-0 z-0">
-          <HeroSlider />
-        </div>
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <div className="relative z-20 flex h-full items-center justify-center text-center">
+      <section className="relative h-screen text-white">
+        <HeroSlider />
+        <div className="absolute inset-0 z-20 flex h-full items-center justify-center text-center">
             <div className="container mx-auto px-4">
             <AbaadLogo className="h-24 w-auto mx-auto mb-4" />
             <h1 className="text-4xl md:text-6xl font-headline mb-4">نصنع المعرفة ونبني المستقبل</h1>
