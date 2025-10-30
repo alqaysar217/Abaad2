@@ -40,6 +40,7 @@ export default function BooksPage() {
                 <CardTitle className="font-headline text-md leading-tight h-12 overflow-hidden">
                   <Link href={`/books/${book.slug}`} className="hover:text-primary">{book.title}</Link>
                 </CardTitle>
+                <p className="text-sm text-muted-foreground pt-1">{book.author}</p>
               </CardHeader>
               <CardContent className="flex-grow pt-2 pb-4">
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
