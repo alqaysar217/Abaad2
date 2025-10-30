@@ -52,9 +52,9 @@ export function CourseCard({ course }: CourseCardProps) {
             <Image
               src={trainerImage.imageUrl}
               alt={course.trainerName}
-              width={24}
-              height={24}
-              className="rounded-full ml-2"
+              width={32}
+              height={32}
+              className="rounded-full ml-2 object-cover"
               data-ai-hint={trainerImage.imageHint}
             />
           )}
