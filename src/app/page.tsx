@@ -46,7 +46,7 @@ const CourseCard = ({ course }: { course: Course }) => {
               alt={course.trainerName}
               width={32}
               height={32}
-              className="rounded-full ml-2 object-cover"
+              className="rounded-full ml-2 object-cover w-8 h-8"
               data-ai-hint={trainerImage.imageHint}
             />
           )}
@@ -288,9 +288,9 @@ export default function Home() {
                     <Image
                       src={trainerImage.imageUrl}
                       alt={trainer.name}
-                      width={128}
-                      height={128}
-                      className="rounded-full w-32 h-32 object-cover border-4 border-primary/20 mb-4"
+                      width={144}
+                      height={144}
+                      className="rounded-full w-36 h-36 object-cover border-4 border-primary/20 mb-4"
                       data-ai-hint={trainerImage.imageHint}
                     />
                   )}

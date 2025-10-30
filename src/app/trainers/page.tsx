@@ -51,9 +51,9 @@ export default function TrainersPage() {
                     <Image
                       src={trainerImage.imageUrl}
                       alt={trainer.name}
-                      width={128}
-                      height={128}
-                      className="rounded-full w-32 h-32 object-cover border-4 border-primary/20 mb-4"
+                      width={144}
+                      height={144}
+                      className="rounded-full w-36 h-36 object-cover border-4 border-primary/20 mb-4"
                       data-ai-hint={trainerImage.imageHint}
                     />
                   )}
