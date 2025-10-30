@@ -103,6 +103,8 @@ export default function Home() {
   const latestCourses = ALL_COURSES.slice(0, 3);
   const featuredTrainers = ALL_TRAINERS.slice(0, 3);
   const featuredBooks = ALL_BOOKS.slice(0, 3);
+  const featuredTestimonials = TESTIMONIALS.slice(0, 3);
+
 
   return (
     <div className="flex flex-col">
@@ -346,7 +348,7 @@ export default function Home() {
             className="w-full max-w-6xl mx-auto"
           >
             <CarouselContent>
-              {TESTIMONIALS.map((testimonial) => {
+              {featuredTestimonials.map((testimonial) => {
                 const testimonialImage = PlaceHolderImages.find(p => p.id === testimonial.imageId);
                 return (
                   <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3 h-full">
@@ -374,6 +376,14 @@ export default function Home() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
+           <div className="text-center mt-12">
+            <Button asChild size="lg">
+              <Link href="/about#testimonials">
+                عرض كل الآراء
+                <ChevronLeft className="h-4 w-4 mr-1" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 

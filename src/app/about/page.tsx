@@ -1,6 +1,9 @@
+
 import Image from 'next/image';
-import { Award, Target, Eye, Users, BookOpen, ShieldCheck } from 'lucide-react';
+import { Award, Target, Eye, Users, BookOpen, ShieldCheck, MessageCircle } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { TESTIMONIALS } from '@/lib/data';
+import { Card, CardContent } from '@/components/ui/card';
 
 const features = [
   {
@@ -115,6 +118,51 @@ export default function AboutPage() {
                     />
                 </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-16 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-headline text-primary">ماذا يقول طلابنا عنا؟</h2>
+            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
+              نفخر بثقة طلابنا ونسعد بمشاركة قصص نجاحهم وتجاربهم الملهمة في معهد أبعاد.
+            </p>
+          </div>
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
+            {TESTIMONIALS.map(testimonial => {
+              const testimonialImage = PlaceHolderImages.find(p => p.id === testimonial.imageId);
+              return (
+                <div key={testimonial.id} className="break-inside-avoid">
+                  <Card className="h-full bg-background">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-4 mb-4">
+                        {testimonialImage && (
+                          <Image
+                            src={testimonialImage.imageUrl}
+                            alt={testimonial.name}
+                            width={56}
+                            height={56}
+                            className="rounded-full border-2 border-accent"
+                            data-ai-hint={testimonialImage.imageHint}
+                          />
+                        )}
+                        <div>
+                          <h3 className="font-bold text-lg">{testimonial.name}</h3>
+                          <p className="text-sm text-primary">{testimonial.course}</p>
+                        </div>
+                      </div>
+                      <p className="text-muted-foreground italic relative pr-8">
+                        <MessageCircle className="absolute right-0 top-0 h-5 w-5 text-accent" />
+                        &ldquo;{testimonial.quote}&rdquo;
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
