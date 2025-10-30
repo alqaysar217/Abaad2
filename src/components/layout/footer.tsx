@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Twitter, Linkedin, Youtube, Facebook, Home, GraduationCap, Users, BookOpen, Rss, HelpCircle, Info, Phone, MapPin, Mail } from 'lucide-react';
-import { AbaadLogo } from '@/components/icons';
 import type { NavLink } from '@/lib/types';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 
 const navLinks: NavLink[] = [
@@ -23,13 +24,14 @@ const socialLinks = [
 ];
 
 export function Footer() {
+    const logoImage = PlaceHolderImages.find((p) => p.id === 'abaad-logo');
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <AbaadLogo className="h-10 w-10" />
+              {logoImage && <Image src={logoImage.imageUrl} alt="Abaad Logo" width={40} height={40} className="h-10 w-10" data-ai-hint={logoImage.imageHint} />}
               <span className="text-xl font-headline font-bold">معهد أبعاد</span>
             </Link>
             <p className="text-sm text-muted-foreground">نصنع المعرفة ونبني المستقبل.</p>
@@ -73,3 +75,5 @@ export function Footer() {
     </footer>
   );
 }
+
+    

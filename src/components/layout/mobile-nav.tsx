@@ -1,16 +1,18 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu } from 'lucide-react';
 
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-import { AbaadLogo } from '@/components/icons';
 import type { NavLink } from '@/lib/types';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 type MobileNavProps = {
   navLinks: NavLink[];
 };
 
 export function MobileNav({ navLinks }: MobileNavProps) {
+    const logoImage = PlaceHolderImages.find((p) => p.id === 'abaad-logo');
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -25,7 +27,7 @@ export function MobileNav({ navLinks }: MobileNavProps) {
           <div className="border-b p-4">
             <SheetClose asChild>
                 <Link href="/" className="flex items-center gap-2">
-                <AbaadLogo className="h-8 w-8" />
+                {logoImage && <Image src={logoImage.imageUrl} alt="Abaad Logo" width={32} height={32} className="h-8 w-8" data-ai-hint={logoImage.imageHint} />}
                 <span className="font-bold">معهد أبعاد</span>
                 </Link>
             </SheetClose>
@@ -48,3 +50,5 @@ export function MobileNav({ navLinks }: MobileNavProps) {
     </Sheet>
   );
 }
+
+    

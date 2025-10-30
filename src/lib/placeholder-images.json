@@ -1,6 +1,12 @@
 {
   "placeholderImages": [
     {
+      "id": "abaad-logo",
+      "description": "The official logo for Abaad Institute.",
+      "imageUrl": "https://images.unsplash.com/photo-1618451286904-a8a5f3d3c11f?w=100&h=100&fit=crop",
+      "imageHint": "abstract logo"
+    },
+    {
       "id": "hero-1",
       "description": "A classroom presentation scene.",
       "imageUrl": "https://images.unsplash.com/photo-1559223694-98ed5e272fef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbGFzc3Jvb20lMjBwcmVzZW50YXRpb258ZW58MHx8fHwxNzYxODMyMTUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -135,7 +141,7 @@
     {
       "id": "course-content-creation",
       "description": "Image for content creation course",
-      "imageUrl": "https://images.unsplash.com/photo-1548809685-e3831a2aaa5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb250ZW50JTIwY3JlYXRpb258ZW58MHx8fHwxNzYxNzg3NzE2fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1548809685-e3831a2aaa5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb250ZW50JTIwY3JlYXRpb258ZW58MHx8fHwxNzYxNzg3NzE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "content creation"
     },
     {
@@ -147,7 +153,7 @@
     {
       "id": "course-autocad",
       "description": "Image for autocad course",
-      "imageUrl": "https://images.unsplash.com/photo-1721244653693-1d13e68b66c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhcmNoaXRlY3R1cmUlMjBibHVlcHJpbnR8ZW58MHx8fHwxNzYxNzI2OTc3fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1721244653693-1d13e68b66c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhcmNoaXRlY3R1cmUlMjBibHVlcHJpbnR8ZW58MHx8fHwxNzYxNzI2OTc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "architecture blueprint"
     },
     {
@@ -165,7 +171,7 @@
     {
       "id": "course-photoshop",
       "description": "Image for photoshop course",
-      "imageUrl": "https://images.unsplash.com/photo-1520599918693-12354ce66a1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwaG90byUyMGVkaXRpbmd8ZW58MHx8fHwxNzYxODIyNTgxfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1520599918693-12354ce66a1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwaG90byUyMGVkaXRpbmd8ZW58MHx8fHwxNzYxODIyNTgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "photo editing"
     },
     {
@@ -207,7 +213,7 @@
     {
       "id": "course-mobile-dev",
       "description": "Image for mobile dev course",
-      "imageUrl": "https://images.unsplash.com/photo-1593789198788-8b21805d5fdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2JpbGUlMjBhcHBzfGVufDB8fHx8MTc2MTc5NzE3Mnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1593789198788-8b21805d5fdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2JpbGUlMjBhcHBzfGVufDB8fHx8MTc2MTc5NzE3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mobile apps"
     },
     {
@@ -219,7 +225,7 @@
     {
       "id": "course-customer-service",
       "description": "Image for customer service course",
-      "imageUrl": "https://images.unsplash.com/photo-1521898284481-a5ec348cb555?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjdXN0b21lciUyMHN1cHBvcnR8ZW58MHx8fHwxNzYxNzYzNzAyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1521898284481-a5ec348cb555?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjdXN0b21lciUyMHN1cHBvcnR8ZW58MHx8fHwxNzYxNzYzNzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "customer support"
     },
     {
@@ -231,7 +237,7 @@
     {
       "id": "course-creative-thinking",
       "description": "Image for creative thinking course",
-      "imageUrl": "https://images.unsplash.com/photo-1619120049170-dd2a873e7b35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpZGVhJTIwbGlnaHRidWxifGVufDB8fHx8MTc2MTczMzE3NHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1619120049170-dd2a873e7b35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpZGVhJTIwbGlnaHRidWxifGVufDB8fHx8MTc2MTczMzE3NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "idea lightbulb"
     },
     {

@@ -2,14 +2,15 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import { Home, GraduationCap, Users, BookOpen, Rss, HelpCircle, Info, Phone } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
-import { AbaadLogo } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import type { NavLink } from '@/lib/types';
 import { MobileNav } from './mobile-nav';
 import { ThemeToggleButton } from '../theme-toggle-button';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const navLinks: NavLink[] = [
   { href: '/', label: 'الرئيسية', icon: <Home /> },
@@ -44,11 +45,12 @@ function NavigationLinks() {
 }
 
 export function Header() {
+    const logoImage = PlaceHolderImages.find((p) => p.id === 'abaad-logo');
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <AbaadLogo className="h-8 w-8" />
+            {logoImage && <Image src={logoImage.imageUrl} alt="Abaad Logo" width={32} height={32} className="h-8 w-8" data-ai-hint={logoImage.imageHint} />}
           <span className="font-bold hidden sm:inline-block">معهد أبعاد</span>
         </Link>
 
@@ -66,3 +68,5 @@ export function Header() {
     </header>
   );
 }
+
+    

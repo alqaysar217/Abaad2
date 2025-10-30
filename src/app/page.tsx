@@ -7,7 +7,6 @@ import { ArrowLeft, BookOpen, ChevronLeft, Award, Users, Star, GraduationCap, Bu
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { AbaadLogo } from '@/components/icons';
 import { ALL_COURSES, TESTIMONIALS, ALL_TRAINERS, ALL_BOOKS } from '@/lib/data';
 import { Course, Testimonial } from '@/lib/types';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -112,6 +111,7 @@ export default function Home() {
   const featuredTrainers = ALL_TRAINERS.slice(0, 3);
   const featuredBooks = ALL_BOOKS.slice(0, 4);
   const featuredTestimonials = TESTIMONIALS.slice(0, 3);
+  const logoImage = PlaceHolderImages.find((p) => p.id === 'abaad-logo');
 
 
   return (
@@ -122,7 +122,7 @@ export default function Home() {
         <div className="absolute inset-0 z-10 bg-black/50" />
         <div className="absolute inset-0 z-20 flex h-full items-center justify-center text-center text-white">
             <div className="container mx-auto px-4">
-            <AbaadLogo className="h-24 w-auto mx-auto mb-4" />
+            {logoImage && <Image src={logoImage.imageUrl} alt="Abaad Logo" width={96} height={96} className="h-24 w-auto mx-auto mb-4" data-ai-hint={logoImage.imageHint} />}
             <h1 className="text-4xl md:text-6xl font-headline mb-4">نصنع المعرفة ونبني المستقبل</h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
                 معهد أبعاد هو منارتك لاستكشاف عوالم المعرفة واكتساب المهارات التي تفتح لك أبواب المستقبل.
@@ -413,3 +413,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
