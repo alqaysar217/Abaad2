@@ -2,33 +2,15 @@
   "placeholderImages": [
     {
       "id": "hero-1",
-      "description": "A modern classroom or learning environment",
-      "imageUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
-      "imageHint": "classroom students"
+      "description": "A classroom presentation scene.",
+      "imageUrl": "https://images.unsplash.com/photo-1559223694-98ed5e272fef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbGFzc3Jvb20lMjBwcmVzZW50YXRpb258ZW58MHx8fHwxNzYxODMyMTUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "classroom presentation"
     },
     {
       "id": "hero-2",
-      "description": "Students collaborating in a workshop",
-      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
-      "imageHint": "students collaborating"
-    },
-    {
-      "id": "hero-3",
-      "description": "A training hall with attendees",
-      "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
-      "imageHint": "training event"
-    },
-    {
-      "id": "hero-4",
-      "description": "An instructor teaching a class",
-      "imageUrl": "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
-      "imageHint": "instructor teaching"
-    },
-    {
-      "id": "hero-5",
-      "description": "A student focused on learning on a computer",
-      "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
-      "imageHint": "student working"
+      "description": "Students collaborating in a workshop.",
+      "imageUrl": "https://images.unsplash.com/photo-1596495577886-d920f1fb7238?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3R1ZGVudHMlMjB3b3Jrc2hvcHxlbnwwfHx8fDE3NjE3NTExNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "students workshop"
     },
     {
       "id": "gallery-1",
