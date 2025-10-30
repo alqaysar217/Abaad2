@@ -62,7 +62,7 @@ export function SideNav({ sections }: SideNavProps) {
     <div className="fixed left-4 top-1/2 -translate-y-1/2 z-30 flex flex-col items-center gap-4">
        <button
             onClick={() => handleArrowClick('up')}
-            className="text-white/50 hover:text-white transition-colors"
+            className="text-primary/50 hover:text-primary transition-colors"
             aria-label="Go to previous section"
         >
             <ArrowUp className="h-6 w-6" />
@@ -82,11 +82,11 @@ export function SideNav({ sections }: SideNavProps) {
           >
             <span
               className={cn(
-                'h-2 w-2 rounded-full bg-white/50 transition-all duration-300 group-hover:bg-white',
-                activeSection === section.id ? 'h-3 w-3 bg-white' : ''
+                'h-2 w-2 rounded-full bg-primary/50 transition-all duration-300 group-hover:bg-primary',
+                activeSection === section.id ? 'h-3 w-3 bg-primary' : ''
               )}
             />
-             <span className="absolute left-full ml-4 hidden scale-0 rounded bg-white px-2 py-1 text-sm text-black transition-all duration-300 group-hover:scale-100 md:block origin-left">
+             <span className="absolute left-full ml-4 hidden scale-0 rounded bg-background px-2 py-1 text-sm text-foreground shadow-md transition-all duration-300 group-hover:scale-100 md:block origin-left">
               {section.label}
             </span>
           </a>
@@ -94,7 +94,7 @@ export function SideNav({ sections }: SideNavProps) {
       </div>
       <button
         onClick={() => handleArrowClick('down')}
-        className="text-white/50 hover:text-white transition-colors"
+        className="text-primary/50 hover:text-primary transition-colors"
         aria-label="Go to next section"
       >
         <ArrowDown className="h-6 w-6" />
