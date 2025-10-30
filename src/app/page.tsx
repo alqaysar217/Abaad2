@@ -2,7 +2,7 @@
 import * as React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, ChevronLeft, Award, Users, Star, GraduationCap, Building, Rss, MessageSquare, ShieldCheck, Target, Eye } from 'lucide-react';
+import { ArrowLeft, BookOpen, ChevronLeft, Award, Users, Star, GraduationCap, Building, Rss, MessageSquare, ShieldCheck, Target, Eye, FileText } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -101,7 +101,7 @@ const features = [
 export default function Home() {
   const latestCourses = ALL_COURSES.slice(0, 3);
   const featuredTrainers = ALL_TRAINERS.slice(0, 3);
-  const featuredBooks = ALL_BOOKS.slice(0, 3);
+  const featuredBooks = ALL_BOOKS.slice(0, 4);
 
 
   return (
@@ -286,7 +286,7 @@ export default function Home() {
               مكتبة غنية بالكتب والمراجع التي أعدها مدربونا الخبراء.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredBooks.map(book => {
               const bookImage = PlaceHolderImages.find(p => p.id === book.imageId);
               return (
@@ -303,12 +303,18 @@ export default function Home() {
                         />
                       </Link>
                     )}
-                    <div className="flex-1">
-                      <CardTitle className="font-headline text-lg mb-1">
+                    <div className="flex flex-col flex-1">
+                      <CardTitle className="font-headline text-lg mb-1 flex-grow">
                         <Link href={`/books/${book.slug}`} className="hover:text-primary">{book.title}</Link>
                       </CardTitle>
-                      <p className="text-sm text-muted-foreground mb-3">للمؤلف: {book.author}</p>
-                       <Button asChild variant="link" size="sm">
+                      <p className="text-sm text-muted-foreground mb-2">للمؤلف: {book.author}</p>
+                      
+                      <div className="flex justify-center items-center gap-4 text-xs text-muted-foreground my-2">
+                        <div className="flex items-center gap-1"><Star className="h-4 w-4 fill-yellow-400 text-yellow-400" /> <span>{book.rating}</span></div>
+                        <div className="flex items-center gap-1"><FileText className="h-4 w-4" /> <span>{book.pages} صفحة</span></div>
+                      </div>
+
+                       <Button asChild variant="link" size="sm" className="mt-auto">
                           <Link href={`/books/${book.slug}`}>
                             عرض التفاصيل <ChevronLeft className="mr-1 h-4 w-4" />
                           </Link>
@@ -346,3 +352,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
