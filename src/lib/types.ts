@@ -12,7 +12,7 @@ export type Course = {
   trainerSlug: string;
   duration: string;
   rating: number;
-  tags?: ('popular' | 'discount')[];
+  tags?: ('popular' | 'discount' | 'online')[];
   imageId: string;
   description: string;
   outline: string[];

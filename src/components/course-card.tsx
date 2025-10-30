@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Star, GraduationCap, Clock, ChevronLeft } from 'lucide-react';
+import { Star, GraduationCap, Clock, ChevronLeft, Wifi } from 'lucide-react';
 
 import type { Course } from '@/lib/types';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -30,6 +30,7 @@ export function CourseCard({ course }: CourseCardProps) {
             />
           )}
           <div className="absolute top-3 right-3 flex gap-2">
+            {course.tags?.includes('online') && <Badge className="bg-blue-500 text-white border-blue-500"><Wifi className="h-3 w-3 mr-1" /> أونلاين</Badge>}
             {course.tags?.includes('popular') && <Badge className="bg-red-600 text-white border-red-600">الأكثر طلباً</Badge>}
             {course.tags?.includes('discount') && <Badge className="bg-accent text-accent-foreground border-accent">خصم</Badge>}
           </div>
